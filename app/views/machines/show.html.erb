@@ -1,0 +1,54 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Stock number:</strong>
+  <%= @machine.stock_number %>
+</p>
+
+<p>
+  <strong>Year:</strong>
+  <%= @machine.year %>
+</p>
+
+<p>
+  <strong>Make:</strong>
+  <%= @machine.make %>
+</p>
+
+<p>
+  <strong>Machine model:</strong>
+  <%= @machine.machine_model %>
+</p>
+
+<p>
+  <strong>Machine type:</strong>
+  <%= @machine.machine_type %>
+</p>
+
+<p>
+  <strong>Serial number:</strong>
+  <%= @machine.serial_number %>
+</p>
+
+<p>
+  <strong>Hours:</strong>
+  <%= @machine.hours %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @machine.price %>
+</p>
+
+<p>
+  <strong>Dealership:</strong>
+  <%= @machine.dealership %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @machine.description %>
+</p>
+
+<%= link_to 'Edit', edit_machine_path(@machine) %> |
+<%= link_to 'Back', machines_path %>
