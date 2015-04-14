@@ -1,0 +1,49 @@
+.table-container {
+  bottom: 0;
+  height: 90vh;
+  margin: 0 7%;
+  overflow-y: scroll;
+  position: absolute;
+  right: 0;
+  width: 80%;
+}
+
+.machine-table {
+  tr {
+    border-left: 4px solid #FFF;
+    border-right: 4px solid #FFF;
+    &:hover {
+      border-left: 4px solid blue;
+    }
+  }
+  td {
+    height: 50px;
+    overflow: hidden;
+    width: 100px;
+  }
+  a {
+    color: darkgrey;
+    display: block;
+    margin: -10em;
+    padding: 10em;
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}
+
+.sort-search-header {
+  background-color: #EEE;
+  color: #BBB;
+  position: relative;
+  top: 0;
+  text-align: center;
+  top: 0;
+  &:hover {
+    background-color: #DDD;
+    cursor: pointer;
+  }
+  td {
+    height: 25px;
+  }
+}

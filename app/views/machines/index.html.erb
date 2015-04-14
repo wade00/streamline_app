@@ -1,45 +1,38 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Machines</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Stock number</th>
-      <th>Year</th>
-      <th>Make</th>
-      <th>Machine model</th>
-      <th>Machine type</th>
-      <th>Serial number</th>
-      <th>Hours</th>
-      <th>Price</th>
-      <th>Dealership</th>
-      <th>Description</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @machines.each do |machine| %>
+<div class="row table-container">
+  <table class="machine-table table table-hover">
+    <thead class="table-head sort-search-header">
       <tr>
-        <td><%= machine.stock_number %></td>
-        <td><%= machine.year %></td>
-        <td><%= machine.make %></td>
-        <td><%= machine.machine_model %></td>
-        <td><%= machine.machine_type %></td>
-        <td><%= machine.serial_number %></td>
-        <td><%= machine.hours %></td>
-        <td><%= machine.price %></td>
-        <td><%= machine.dealership %></td>
-        <td><%= machine.description %></td>
-        <td><%= link_to 'Show', machine %></td>
-        <td><%= link_to 'Edit', edit_machine_path(machine) %></td>
-        <td><%= link_to 'Destroy', machine, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td colspan="7">Sort or search your inventory</td>
       </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Machine', new_machine_path %>
+    </thead>
+    <tbody>
+      <% @machines.each do |machine| %>
+        <tr>
+          <td>
+            <%= link_to "#{machine.stock_number}", edit_machine_path(machine.id) %>
+          </td>
+          <td>
+            <%= link_to "#{machine.make}", edit_machine_path(machine.id) %>
+          </td>
+          <td>
+            <%= link_to "#{machine.machine_model}", edit_machine_path(machine.id) %>
+          </td>
+          <td>
+            <%= link_to "#{machine.machine_type}", edit_machine_path(machine.id) %>
+          </td>
+          <td>
+            <%= link_to "#{machine.hours}", edit_machine_path(machine.id) %>
+          </td>
+          <td>
+            <%= link_to "#{machine.price}", edit_machine_path(machine.id) %>
+          </td>
+          <td>
+            <%= link_to "#{machine.dealership}", edit_machine_path(machine.id) %>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
