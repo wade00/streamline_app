@@ -1,57 +1,74 @@
 <%= form_for(@machine) do |f| %>
   <% if @machine.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@machine.errors.count, "error") %> prohibited this machine from being saved:</h2>
-
-      <ul>
-      <% @machine.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
+    <%= render 'shared/errors', resource: @machine %>
   <% end %>
 
-  <div class="field">
-    <%= f.label :stock_number %><br>
-    <%= f.text_field :stock_number %>
+  <div class="row">
+    <div class="col-md-6 machine-form-column">
+      <div class="form-group">
+        <%= f.label :stock, class: 'control-label' %>
+        <%= f.text_field :stock_number, class: 'form-control', autofocus: 'autofocus', value: @machine.stock_number %>
+      </div>
+
+      <div class="form-group">
+        <%= f.label :year, class: 'control-label' %>
+        <%= f.text_field :year, class: 'form-control', value: @machine.year %>
+      </div>
+
+      <div class="form-group">
+        <%= f.label :make, class: 'control-label' %>
+        <%= f.text_field :make, class: 'form-control', value: @machine.make %>
+      </div>
+
+      <div class="form-group">
+        <%= f.label :model, class: 'control-label' %>
+        <%= f.text_field :machine_model, class: 'form-control', value: @machine.machine_model %>
+      </div>
+
+      <div class="form-group">
+        <%= f.label :type, class: 'control-label' %>
+        <%= f.text_field :machine_type, class: 'form-control', value: @machine.machine_type %>
+      </div>
+
+      <div class="form-group">
+        <%= f.label :serial, class: 'control-label' %>
+        <%= f.text_field :serial_number, class: 'form-control', value: @machine.serial_number %>
+      </div>
+    </div>
+
+    <div class="col-md-6 machine-form-column">
+      <div class="form-group">
+        <%= f.label :hours, class: 'control-label' %>
+        <%= f.text_field :hours, class: 'form-control', value: @machine.hours %>
+      </div>
+
+      <div class="form-group">
+        <%= f.label :price, class: 'control-label' %>
+        <%= f.text_field :price, class: 'form-control', value: @machine.price %>
+      </div>
+
+      <div class="form-group">
+        <%= f.label :dealership, class: 'control-label' %>
+        <%= f.text_field :dealership, class: 'form-control', value: @machine.dealership %>
+      </div>
+
+      <div class="form-group">
+        <%= f.label :description, class: 'control-label' %>
+        <%= f.text_area :description, class: 'form-control', rows: '6', value: @machine.description %>
+      </div>
+    </div>
   </div>
-  <div class="field">
-    <%= f.label :year %><br>
-    <%= f.text_field :year %>
-  </div>
-  <div class="field">
-    <%= f.label :make %><br>
-    <%= f.text_field :make %>
-  </div>
-  <div class="field">
-    <%= f.label :machine_model %><br>
-    <%= f.text_field :machine_model %>
-  </div>
-  <div class="field">
-    <%= f.label :machine_type %><br>
-    <%= f.text_field :machine_type %>
-  </div>
-  <div class="field">
-    <%= f.label :serial_number %><br>
-    <%= f.text_field :serial_number %>
-  </div>
-  <div class="field">
-    <%= f.label :hours %><br>
-    <%= f.text_field :hours %>
-  </div>
-  <div class="field">
-    <%= f.label :price %><br>
-    <%= f.text_field :price %>
-  </div>
-  <div class="field">
-    <%= f.label :dealership %><br>
-    <%= f.text_field :dealership %>
-  </div>
-  <div class="field">
-    <%= f.label :description %><br>
-    <%= f.text_area :description %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
+
+  <hr />
+
+  <div class="row machine-form-buttons">
+    <div class="col-md-12 text-center">
+      <p>
+        <%= f.submit "Save", class: "btn btn-success" %>
+        or
+        <%= link_to "Cancel", machines_path %>
+      </p>
+      <%= link_to "Delete Machine", machine_path(@machine.id), method: "delete", confirm: "Are you sure you want to delete this machine?", class: "btn btn-danger" %>
+    </div>
   </div>
 <% end %>
