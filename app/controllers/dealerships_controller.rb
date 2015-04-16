@@ -1,11 +1,8 @@
 class DealershipsController < ApplicationController
-  before_action :set_dealership, only: [:show, :edit, :update, :destroy]
+  before_action :set_dealership, only: [:edit, :update, :destroy]
 
   def index
     @dealerships = Dealership.all
-  end
-
-  def show
   end
 
   def new

@@ -8,6 +8,9 @@
 </head>
 <body>
   <%= render 'shared/sidebar' %>
+  <div class="row flash-container">
+    <%= flash_messages %>
+  </div>
   <%= yield %>
 </body>
 </html>

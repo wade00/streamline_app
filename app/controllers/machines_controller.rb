@@ -1,11 +1,8 @@
 class MachinesController < ApplicationController
-  before_action :set_machine, only: [:show, :edit, :update, :destroy]
+  before_action :set_machine, only: [:edit, :update, :destroy]
 
   def index
     @machines = Machine.all
-  end
-
-  def show
   end
 
   def new
@@ -20,7 +17,7 @@ class MachinesController < ApplicationController
 
     respond_to do |format|
       if @machine.save
-        format.html { redirect_to @machine, notice: 'Machine was successfully created.' }
+        format.html { redirect_to edit_machine_path(@machine), notice: "#{@machine.stock_number} was successfully created." }
         format.json { render :show, status: :created, location: @machine }
       else
         format.html { render :new }
@@ -32,7 +29,7 @@ class MachinesController < ApplicationController
   def update
     respond_to do |format|
       if @machine.update(machine_params)
-        format.html { redirect_to @machine, notice: 'Machine was successfully updated.' }
+        format.html { redirect_to edit_machine_path(@machine), notice: "#{@machine.stock_number} was successfully updated." }
         format.json { render :show, status: :ok, location: @machine }
       else
         format.html { render :edit }
@@ -56,6 +53,7 @@ class MachinesController < ApplicationController
 
     def machine_params
       params.require(:machine).permit(:stock_number, :year, :make, :machine_model, :machine_type,
-        :serial_number, :hours, :price, :dealership, :description)
+        :serial_number, :hours, :price, :description)
+      # need to add dealership back to params
     end
 end

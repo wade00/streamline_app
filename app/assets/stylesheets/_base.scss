@@ -1,5 +1,5 @@
 .sidebar {
-  background-color: lightgray;
+  background-color: #808080;
   height: 100vh;
   position: fixed;
   text-align: center;
@@ -7,16 +7,16 @@
   width: 6%;
   nav {
     a {
-      border-bottom: 1px solid #CCC;
-      border-left: 4px solid lightgray;
-      border-right: 4px solid lightgray;
-      border-top: 1px solid #DDD;
+      border-bottom: 1px solid #8D8D8D;
+      border-left: 4px solid #808080;
+      border-right: 4px solid #808080;
+      border-top: 1px solid #737373;
       color: darkgrey;
       display: block;
       font-size: 24px;
       height: 50px;
       &:hover {
-        border-right: 4px solid blue;
+        border-right: 4px solid #6699FF;
       }
     }
   }
@@ -26,4 +26,11 @@
   bottom: 0;
   position: absolute;
   width: 100%;
+}
+
+.flash-container {
+  margin: 0 7%;
+  position: absolute;
+  right: 0;
+  width: 80%;
 }
