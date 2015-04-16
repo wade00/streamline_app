@@ -218,6 +218,17 @@ machine_info = [
     :hours => "150",
     :price => "10500",
     :description => "Kubota RTV1140 utility vehicle, 4WD, hydrostatic power steering, front bumper guard, speedometer, hydraulic cargo bed lift, transformable 4-person seating, 25 x 10-12 6 ply HD worksite tires, 24.8 hp Kubota diesel engine"
+  },
+  {
+    :stock_number => "29134",
+    :year => "2006",
+    :make => "New Holland",
+    :machine_model => "D85WT",
+    :machine_type => "Dozer",
+    :serial_number => "",
+    :hours => "1600",
+    :price => "55000",
+    :description => "cab with heater & A/C, radio, hydrostatic drive, 24 inch track pads, 110 inch 6-way blade, auxiliary hydralics & rear weights"
   }
 ]
 
