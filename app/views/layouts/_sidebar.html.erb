@@ -1,0 +1,16 @@
+<div class="sidebar">
+  <nav class="nav">
+    <%= link_to '#' do %>
+      <div><%= icon('user') %></div>
+      <span>Profile</span>
+    <% end %>
+    <%= link_to machines_path, class: 'sidebar-clicked' do %>
+      <div><%= icon('th-list') %></div>
+      <span>My Inventory</span>
+    <% end %>
+    <%= link_to new_machine_path do %>
+      <div><%= icon('plus') %></div>
+      <span>Add Machine</span>
+    <% end %>
+  </nav>
+</div>

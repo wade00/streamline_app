@@ -1,3 +1,11 @@
+// Variables
+$sm-box-shadow: 0px 1px 2px 0px rgba(0,0,0,0.5);
+$sm-inset-box-shadow: inset 1px 1px 2px 0px rgba(0,0,0,0.5);
+$navy: #183048;
+$lightgrayblock: #DDD;
+$lightgrayfont: #f4f6f8;
+$darkgrayfont: #808080;
+
 // Vendor
 @import "bootstrap-sprockets";
 @import "bootstrap";
@@ -5,5 +13,6 @@
 @import "font-awesome";
 
 // App
-@import "machines";
 @import "base";
+@import "machines";
+

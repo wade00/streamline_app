@@ -1,31 +1,56 @@
+.top-navbar {
+  background: $navy;
+  border: $navy;
+  border-radius: 0;
+  box-shadow: $sm-box-shadow;
+  z-index: 2;
+  height: 5vh;
+}
+
 .sidebar {
-  background-color: #808080;
-  height: 100vh;
+  background-color: $lightgrayblock;
+  border-right: 1px solid $navy;
+  bottom: 0;
+  box-shadow: $sm-box-shadow;
+  height: 95vh;
   position: fixed;
   text-align: center;
-  top: 0;
-  width: 6%;
+  width: 8%;
   nav {
     a {
-      border-bottom: 1px solid #8D8D8D;
-      border-left: 4px solid #808080;
-      border-right: 4px solid #808080;
-      border-top: 1px solid #737373;
       color: darkgrey;
       display: block;
       font-size: 24px;
-      height: 50px;
+      padding-top: 1em;
       &:hover {
-        border-right: 4px solid #6699FF;
+        border-right: 4px solid $navy;
+        border-left: 4px solid darken($lightgrayblock, 10%);
+        background: darken($lightgrayblock, 10%);
+        color: darken(darkgrey, 30%);
+        text-decoration: none;
+      }
+      span {
+        font-size: 14px;
       }
     }
   }
 }
 
-.signout {
-  bottom: 0;
-  position: absolute;
-  width: 100%;
+.sidebar-clicked {
+  background: #FFF;
+  border: 1px solid $navy;
+  border-radius: 2px 0 0 2px;
+  border-right: 3px solid #FFF;
+  box-shadow: $sm-inset-box-shadow;
+  margin-right: -3px;
+  margin-left: 10px;
+  padding-left: -10px;
+  div {
+    color: $navy;
+  }
+  span {
+    color: $navy;
+  }
 }
 
 .flash-container {
