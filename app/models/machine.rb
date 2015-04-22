@@ -1,6 +1,6 @@
 class Machine < ActiveRecord::Base
   belongs_to :dealership
-  validates :stock_number, :make, :model, :serial_number, presence: true
+  validates :stock_number, :make, :model,  presence: true
   validates :stock_number, :serial_number, uniqueness: true
 
   before_save :format_make_model_and_type
