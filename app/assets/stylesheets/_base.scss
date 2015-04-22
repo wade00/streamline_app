@@ -13,8 +13,8 @@
 }
 
 .top-navbar {
-  background: $navy;
-  border: $navy;
+  background: $darkgrayblock;
+  border: $darkgrayblock;
   border-radius: 0;
   box-shadow: $sm-box-shadow;
   z-index: 2;
@@ -31,15 +31,13 @@
   width: 8%;
   nav {
     a {
-      color: darkgrey;
+      color: $lightgrayfont;
       display: block;
       font-size: 24px;
       padding-top: 1em;
       &:hover {
-        border-right: 4px solid $navy;
-        border-left: 4px solid darken($lightgrayblock, 10%);
-        background: darken($lightgrayblock, 10%);
-        color: darken(darkgrey, 30%);
+        background: lighten($lightgrayblock, 5%);
+        color: lighten($lightgrayfont, 10%);
         text-decoration: none;
       }
       span {
@@ -50,19 +48,13 @@
 }
 
 .sidebar-clicked {
-  background: #FFF;
-  border-right: 1px solid lighten($navy, 50%);
-  border-radius: 2px 0 0 2px;
-  border-right: 4px solid #FFF;
-  box-shadow: $sm-inset-box-shadow;
-  margin-right: -4px;
-  margin-left: 10px;
-  padding-left: -10px;
+  background: darken($lightgrayblock, 10%);
+  border-left: 4px solid $yellow;
   div {
-    color: $navy;
+    color: darken($lightgrayfont, 20%);
   }
   span {
-    color: $navy;
+    color: darken($lightgrayfont, 20%);
   }
 }
 
