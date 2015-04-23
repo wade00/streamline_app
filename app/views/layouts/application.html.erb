@@ -7,13 +7,14 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <%= render 'layouts/header' %>
-  <%= render 'layouts/sidebar' %>
+  <%= render 'layouts/header' unless @disable_nav %>
+  <%= render 'layouts/landing_page_header' if @disable_nav %>
+  <%= render 'layouts/sidebar' unless @disable_nav %>
   <div class="row table-container">
     <% unless flash.empty? %>
       <%= render 'shared/flash_messages' %>
     <% end %>
-    <%= yield %>
   </div>
+  <%= yield %>
 </body>
 </html>

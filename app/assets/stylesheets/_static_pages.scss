@@ -1,0 +1,118 @@
+.body {
+  background: #EEE;
+}
+.background-img {
+  background: url(image_path("streamline-equipment-lot.jpg")) no-repeat center center;
+  height: 70vh;
+  left:0;
+  margin-top: -20em;
+  position: fixed;
+  z-index: -1;
+}
+
+.landing-page-navbar {
+  background: $lightgrayblock;
+  border: 0;
+  border-radius: 0;
+  height: 3vh;
+  margin-bottom: 0;
+  .landing-nav-links {
+    color: #EEE;
+    list-style: none;
+    margin-bottom: 0;
+    width: 100%;
+    li {
+      display: inline-block;
+      font-size: 14px;
+      padding-right: 3em;
+      a {
+        color: #EEE;
+        &:hover {
+          color: darken(#EEE, 20%);
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}
+
+.landing-jumbo {
+  background: rgba(0,0,0,0.4);
+  height: 50vh;
+  padding: 4em;
+  margin-bottom: 0;
+  h1, h2 {
+    color: #EEE;
+  }
+}
+
+.landing-copy-container {
+  padding: 1em;
+}
+
+.landing-page-copy {
+  background: #EEE;
+  p {
+    font-size: 18px;
+    font-weight: 300;
+  }
+}
+
+.page-header {
+  margin-top: 0;
+}
+
+.landing-page-copy-light {
+  background: #EEE;
+}
+
+.landing-page-copy-dark {
+  background: #DDD;
+}
+
+.signup-card {
+  background: rgba(120,120,120,0.4);
+  position: absolute;
+  right: 6em;
+  width: 20%;
+}
+
+.signup-card-header {
+  color: #EEE;
+  padding-top: 1em;
+}
+
+.signup-form {
+  margin: 10% 0;
+  width: 100%;
+}
+
+.parallax {
+  background: #EEE;
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+  perspective: 1px;
+}
+
+.parallax-group {
+  position: relative;
+  height: 70vh;
+  transform-style: preserve-3d;
+}
+
+.parallax-layer {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.parallax-layer-base {
+  transform: translateZ(0);
+}
+
+.parallax-layer-back {
+  transform: translateZ(-1px) scale(2);
+}

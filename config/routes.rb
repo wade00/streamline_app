@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root to: 'machines#index'
+  root to: 'static_pages#home', as: "/"
 
   devise_for :users
   resources :dealerships, except: [:show]

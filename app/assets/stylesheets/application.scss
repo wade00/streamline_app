@@ -12,9 +12,11 @@ $lightgrayblock: #6E7382;
 $lightgrayfont: #EEE;
 $navy: #183048;
 $sm-box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.5);
+$lg-box-shadow: 0px 4px 4px 0px rgba(0,0,0,0.5);
 $sm-inset-box-shadow: inset 2px 2px 2px 0px rgba(0,0,0,0.5);;
 $yellow: #BEA63F;
 
 // App
 @import "base";
 @import "machines";
+@import "static_pages";

@@ -1,63 +1,65 @@
-<div class="page-header my-inventory-header">
-  <div class="row">
-    <h3>
-      My Inventory
-      <small>(<%= @machines.count %> machines)</small>
-    </h3>
-    <form class="navbar-form pull-right" role="search">
-      <div class="row form-group">
-        <input type="text" class="form-control" placeholder="Search my inventory">
+<div class="row table-container">
+  <div class="page-header my-inventory-header">
+    <div class="row">
+      <h3>
+        My Inventory
+        <small>(<%= @machines.count %> machines)</small>
+      </h3>
+      <form class="navbar-form pull-right" role="search">
+        <div class="row form-group">
+          <input type="text" class="form-control" placeholder="Search my inventory">
+        </div>
+        <button type="submit" class="btn btn-default"><%= icon('search') %></button>
+      </form>
+    </div>
+    <div class="row">
+      <div class="sort-search-header">
+        <ul>
+          <li>Stock</li>
+          <li>Make</li>
+          <li>Model</li>
+          <li>Type</li>
+          <li>Hours</li>
+          <li>Price</li>
+          <li>Location</li>
+        </ul>
       </div>
-      <button type="submit" class="btn btn-default"><%= icon('search') %></button>
-    </form>
-  </div>
-  <div class="row">
-    <div class="sort-search-header">
-      <ul>
-        <li>Stock</li>
-        <li>Make</li>
-        <li>Model</li>
-        <li>Type</li>
-        <li>Hours</li>
-        <li>Price</li>
-        <li>Location</li>
-      </ul>
     </div>
   </div>
-</div>
-<% if @machines.count < 1 %>
+  <% if @machines.count < 1 %>
   <div class="row no-machine-alert">
     <p>No machines to see here... Let's add one!</p>
     <%= link_to "Add a machine", new_machine_url, class: "btn btn-lg btn-success" %>
   </div>
-<% else %>
+  <% else %>
   <table class="machine-table table table-hover">
     <tbody>
       <% @machines.each do |machine| %>
-        <tr>
-          <td>
-            <%= link_to "#{machine.stock_number}", edit_machine_path(machine.id) %>
-          </td>
-          <td>
-            <%= link_to "#{machine.make}", edit_machine_path(machine.id) %>
-          </td>
-          <td>
-            <%= link_to "#{machine.machine_model}", edit_machine_path(machine.id) %>
-          </td>
-          <td>
-            <%= link_to "#{machine.machine_type}", edit_machine_path(machine.id) %>
-          </td>
-          <td>
-            <%= link_to "#{machine.hours}", edit_machine_path(machine.id) %>
-          </td>
-          <td>
-            <%= link_to "#{machine.price}", edit_machine_path(machine.id) %>
-          </td>
-          <td>
-            <%= link_to "#{machine.dealership}", edit_machine_path(machine.id) %>
-          </td>
-        </tr>
+      <tr>
+        <td>
+          <%= link_to "#{machine.stock_number}", edit_machine_path(machine.id) %>
+        </td>
+        <td>
+          <%= link_to "#{machine.make}", edit_machine_path(machine.id) %>
+        </td>
+        <td>
+          <%= link_to "#{machine.machine_model}", edit_machine_path(machine.id) %>
+        </td>
+        <td>
+          <%= link_to "#{machine.machine_type}", edit_machine_path(machine.id) %>
+        </td>
+        <td>
+          <%= link_to "#{machine.hours}", edit_machine_path(machine.id) %>
+        </td>
+        <td>
+          <%= link_to "#{machine.price}", edit_machine_path(machine.id) %>
+        </td>
+        <td>
+          <%= link_to "#{machine.dealership}", edit_machine_path(machine.id) %>
+        </td>
+      </tr>
       <% end %>
     </tbody>
   </table>
-<% end %>
+  <% end %>
+</div>

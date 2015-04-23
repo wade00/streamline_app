@@ -1,7 +1,12 @@
 <% flash.each do |msg_type, message| %>
-  <% if msg_type == 'notice' %>
-    <%= content_tag :div, message, class: "alert alert-info alert-dismissible", role: "alert" %>
-  <% else %>
-    <%= content_tag :div, message, class: "alert alert-#{msg_type} alert-dismissible", role: "alert" %>
+  <% alert_type = "" %>
+  <% if msg_type == 'success' %>
+    <% alert_type = 'success' %>
+  <% elsif msg_type == 'error' %>
+    <% alert_type = 'danger' %>
+  <% elsif msg_type == 'alert' %>
+    <% alert_type = 'warning' %>
+  <% else msg_type == 'notice' %>
   <% end %>
+  <%= content_tag :div, message, class: "alert alert-#{alert_type}", role: "alert" %>
 <% end %>
