@@ -7,9 +7,9 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <%= render 'layouts/header' unless @disable_nav %>
-  <%= render 'layouts/landing_page_header' if @disable_nav %>
-  <%= render 'layouts/sidebar' unless @disable_nav %>
+  <%= render 'layouts/header' if current_user.present? %>
+  <%= render 'layouts/landing_page_header' unless current_user.present? %>
+  <%= render 'layouts/sidebar' if current_user.present? %>
   <div class="row table-container">
     <% unless flash.empty? %>
       <%= render 'shared/flash_messages' %>

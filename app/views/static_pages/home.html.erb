@@ -6,11 +6,14 @@
         <h1>Spend less time managing</h1>
         <h1>your equipment listings</h1>
         <hr >
-        <h2>Learn how Streamline can help <%= icon('play-circle') %></h2>
+        <div class="try-free-header col-md-12">
+          <h2>Sign up and start using Streamline FREE today</h2>
+          <%= link_to "Get Started Now", new_user_registration_path, class: "btn btn-warning" %>
+        </div>
       </div>
       <div class="signup-card col-md-4">
         <div class="signup-card-header text-center">
-          <p>Start a free trial today!</p>
+          <p>Get started right now!</p>
         </div>
         <div class="signup-form">
           <%= form_for(User.new, url: registration_path(:user)) do |f| %>
@@ -33,30 +36,40 @@
                                  class: "form-control",
                                  placeholder: "confirm password" %>
 
-            <%= f.submit "Get started", class: "btn btn-primary btn-block" %>
+            <%= f.submit "Get started", class: "btn btn-warning btn-block" %>
           <% end %>
         </div>
       </div>
     </div>
 
-    <div class="parallax-layer-base landing-page-copy landing-page-copy-light">
-      <div class="container text-center landing-copy-container">
+    <div class="parallax-layer-base landing-page-copy landing-page-copy-light first-landing-copy">
+      <div class="container landing-copy-container">
         <div class="col-md-10 col-md-offset-1">
-          <h2>Selling equipment online lets you reach more <br />potential customers than ever before.</h2>
-          <h2><small>That's a good thing.</small></h2>
+          <div class="col-md-8">
+            <h3>
+              Selling equipment online lets you reach more potential customers than ever before.
+            </h3>
+          </div>
+          <div class="col-md-4">
+            <h3><small>That's a good thing.</small></h3>
+          </div>
         </div>
         <div class="col-md-10 col-md-offset-1">
-          <h2>
-             Scheduling time to maintain all of your listings on sites like Machinery Trader and Equipment Locator?
-          </h2>
-          <h2><small>Not such a good thing.</small></h2>
-          <h3>&darr; We know that, and we're here to help you out. &darr;</h3>
+          <div class="col-md-8">
+            <h3>
+              Scheduling time to maintain all of your listings on sites like Machinery Trader and Equipment Locator?
+            </h3>
+          </div>
+          <div class="col-md-4">
+            <h3><small>Not such a good thing.</small></h3>
+          </div>
         </div>
       </div>
+      <h3 class="text-center">We know that, and we're here to help you out. &darr;</h3>
     </div>
     <div class="parallax-layer-base landing-page-copy landing-page-copy-dark">
       <div class="container landing-copy-container">
-        <div class="col-md-8 col-md-offset-2">
+        <div class="col-md-10 col-md-offset-1">
         <div class="page-header"><h2>What Streamline does</h2></div>
           <p>
             Streamline gives you a master copy of your inventory that you can access on any listing site. With just one click you can update a listing and then move on to the next site. No more tabbing between windows copying and pasting one field into another. With Streamline it's easy - one click and all the fields are updated. <%= link_to "See how it works ->", "#" %>
@@ -66,7 +79,7 @@
     </div>
     <div class="parallax-layer-base landing-page-copy landing-page-copy-light">
       <div class="container landing-copy-container">
-        <div class="col-md-8 col-md-offset-2">
+        <div class="col-md-10 col-md-offset-1">
           <h2><strong>Sites we work with:</strong></h2>
         </div>
       </div>

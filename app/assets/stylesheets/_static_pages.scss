@@ -38,6 +38,7 @@
 
 .landing-jumbo {
   background: rgba(0,0,0,0.4);
+  border-bottom: 10px solid $lightgrayblock;
   height: 50vh;
   padding: 4em;
   margin-bottom: 0;
@@ -46,8 +47,23 @@
   }
 }
 
+.try-free-header {
+  vertical-align: top;
+  h2 {
+    display: inline-block;
+    margin: 0;
+  }
+  a {
+    float: right;
+  }
+}
+
 .landing-copy-container {
   padding: 1em;
+}
+
+.first-landing-copy {
+  height: 35vh;
 }
 
 .landing-page-copy {
@@ -59,6 +75,7 @@
 }
 
 .page-header {
+  border-bottom: 1px solid #BBB;
   margin-top: 0;
 }
 
