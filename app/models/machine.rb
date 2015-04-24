@@ -12,5 +12,6 @@ class Machine < ActiveRecord::Base
     self.make = self.make.titleize
     self.machine_model = self.machine_model.upcase
     self.machine_type = self.machine_type.titleize
+    self.serial_number = self.serial_number.upcase
   end
 end
