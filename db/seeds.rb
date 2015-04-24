@@ -278,13 +278,13 @@ user_info = [
   {
     email: "waden@example.com",
     password: "12341234",
-    password_confirmation: "12341234"
+    password_confirmation: "12341234",
     company_name: "novak equipment"
   },
   {
     email: "erikan@example.com",
     password: "12341234",
-    password_confirmation: "12341234"
+    password_confirmation: "12341234",
     company_name: "martin implement"
   }
 ]
@@ -306,7 +306,7 @@ dealership_info = [
   {
     address: "801 w ohio st",
     city: "urbana",
-    state: "il"
+    state: "il",
     zip: "69103",
     phone: "7082345678",
     equipment_alley_account: "",
@@ -315,7 +315,7 @@ dealership_info = [
   {
     address: "3451 n w 53rd st",
     city: "champaign",
-    state: "il"
+    state: "il",
     zip: "69144",
     phone: "7089876543",
     equipment_alley_account: "",
@@ -324,7 +324,7 @@ dealership_info = [
   {
     address: "10983 n county ln.",
     city: "san fernando valley",
-    state: "ca"
+    state: "ca",
     zip: "99019",
     phone: "9573451092",
     equipment_alley_account: "123432",
@@ -333,7 +333,7 @@ dealership_info = [
   {
     address: "33 rainbow road",
     city: "san francisco",
-    state: "ca"
+    state: "ca",
     zip: "99011",
     phone: "9572349857",
     equipment_alley_account: "9876789",
