@@ -2,7 +2,7 @@ class MachinesController < ApplicationController
   before_action :set_machine, only: [:edit, :update, :destroy]
 
   def index
-    @machines = Machine.all
+    @machines = current_user.machines
   end
 
   def new

@@ -12,7 +12,7 @@ class Machine < ActiveRecord::Base
   def format_make_model_and_type
     self.make = self.make.titleize
     self.machine_model = self.machine_model.upcase
-    self.machine_type = self.machine_type.titleize
+    self.machine_type  = self.machine_type.titleize
     self.serial_number = self.serial_number.upcase
   end
 end
