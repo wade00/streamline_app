@@ -7,8 +7,10 @@ class CreateDealerships < ActiveRecord::Migration
       t.string :zip
       t.string :phone
       t.string :equipment_alley_account
+      t.references :user, index: true
 
       t.timestamps null: false
     end
+    add_foreign_key :dealerships, :users
   end
 end

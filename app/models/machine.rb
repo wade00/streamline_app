@@ -1,6 +1,7 @@
 class Machine < ActiveRecord::Base
-  belongs_to :user
-  belongs_to :dealership
+  belongs_to :owner, foreign_key: :user_id, class_name: "User"
+  belongs_to :location, foreign_key: :dealership_id, class_name: "Dealership"
+
   validates :stock_number, :make, :machine_model, :machine_type, presence: true
   validates :stock_number, :serial_number, uniqueness: true
 

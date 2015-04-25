@@ -23,9 +23,12 @@ ActiveRecord::Schema.define(version: 20150422165736) do
     t.string   "zip"
     t.string   "phone"
     t.string   "equipment_alley_account"
+    t.integer  "user_id"
     t.datetime "created_at",              null: false
     t.datetime "updated_at",              null: false
   end
+
+  add_index "dealerships", ["user_id"], name: "index_dealerships_on_user_id", using: :btree
 
   create_table "machines", force: :cascade do |t|
     t.string   "stock_number"
@@ -36,11 +39,15 @@ ActiveRecord::Schema.define(version: 20150422165736) do
     t.string   "serial_number"
     t.string   "hours"
     t.string   "price"
-    t.string   "dealership"
     t.text     "description"
+    t.integer  "user_id"
+    t.integer  "dealership_id"
     t.datetime "created_at",    null: false
     t.datetime "updated_at",    null: false
   end
+
+  add_index "machines", ["dealership_id"], name: "index_machines_on_dealership_id", using: :btree
+  add_index "machines", ["user_id"], name: "index_machines_on_user_id", using: :btree
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
@@ -61,4 +68,7 @@ ActiveRecord::Schema.define(version: 20150422165736) do
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
 
+  add_foreign_key "dealerships", "users"
+  add_foreign_key "machines", "dealerships"
+  add_foreign_key "machines", "users"
 end
