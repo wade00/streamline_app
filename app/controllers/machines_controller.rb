@@ -14,6 +14,7 @@ class MachinesController < ApplicationController
 
   def create
     @machine = Machine.new(machine_params)
+    @machine.owner = current_user
 
     respond_to do |format|
       if @machine.save

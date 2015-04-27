@@ -21,7 +21,6 @@
 
 .my-inventory-header {
   background-color: #FFF;
-  border-bottom: 0px solid #FFF;
   color: $darkgrayfont;
   height: 15vh;
   margin: 0;
@@ -72,11 +71,13 @@
   ul {
     height: 50px;
     list-style: none;
-    padding: 1em;
+    padding: 1em 0em;
     margin: 0;
     li {
       display: inline-block;
-      width: 13%;
+      margin-right: -4px;
+      padding-left: 8px;
+      width: 14.28%;
     }
   }
 }
