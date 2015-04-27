@@ -7,6 +7,8 @@ class User < ActiveRecord::Base
   has_many :machines, dependent: :destroy
   has_many :dealerships, dependent: :destroy
 
+  validates :email, :company_name, uniqueness: true
+
   before_save :format_company_name
 
   private

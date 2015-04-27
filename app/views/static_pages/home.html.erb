@@ -3,8 +3,7 @@
     <div class="background-img parallax-layer parallax-layer-back"></div>
     <div class="jumbotron landing-jumbo">
       <div class="jumbo-container col-md-8">
-        <h1>Spend less time managing</h1>
-        <h1>your equipment listings</h1>
+        <h1>Spend less time managing your equipment listings</h1>
         <hr >
         <div class="try-free-header col-md-12">
           <h2>Sign up and start using Streamline FREE today</h2>
@@ -29,18 +28,14 @@
             <%= f.password_field :password,
                                  autocomplete: "off",
                                  class: "form-control",
-                                 placeholder: "password" %>
-
-            <% if @validatable %>
-              <em>(<%= @minimum_password_length %> characters minimum)</em>
-            <% end %>
+                                 placeholder: "password (#{@minimum_password_length} char min)" %>
 
             <%= f.password_field :password_confirmation,
                                  autocomplete: "off",
                                  class: "form-control",
                                  placeholder: "confirm password" %>
 
-            <%= f.submit "Get started", class: "btn btn-warning btn-block" %>
+            <%= f.submit "Get Started", class: "btn btn-warning btn-block" %>
           <% end %>
         </div>
       </div>

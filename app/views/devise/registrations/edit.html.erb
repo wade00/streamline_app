@@ -8,7 +8,9 @@
                              url: registration_path(resource_name),
                              html: { method: :put }) do |f| %>
 
-        <%= devise_error_messages! %>
+        <% if resource.errors.any? %>
+            <%= render 'shared/errors', resource: resource %>
+          <% end %>
 
         <div class="col-md-8 col-md-offset-2">
           <div class="form-group">
