@@ -15,7 +15,7 @@
   margin: 0 10%;
   overflow-y: scroll;
   position: absolute;
-  right: 0;
+  left: 6%;
   width: 74%;
 }
 
@@ -61,6 +61,11 @@
   }
 }
 
+.sort-header {
+  padding-left: 1em;
+  padding-right: 1em;
+}
+
 .sort-search-header {
   background-color: $lightgrayblock;
   box-shadow: $sm-box-shadow;
@@ -103,6 +108,7 @@
 }
 
 /* sidebar from extension */
+
 .inventory-table-preview {
   background: #6E7382;
   border-collapse: collapse;
@@ -306,4 +312,10 @@
 
 .sorted-by {
   color: #BEA63F;
+}
+
+.machine-link {
+  display: block;
+  margin: -1em;
+  padding: 1em;
 }

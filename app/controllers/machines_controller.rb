@@ -10,6 +10,11 @@ class MachinesController < ApplicationController
   end
 
   def edit
+    respond_to do |format|
+      format.html
+      format.json
+      format.js
+    end
   end
 
   def create

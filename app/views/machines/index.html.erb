@@ -1,15 +1,15 @@
 <div class="row table-container">
-  <div>
-      <%= form_tag('/machines') do %>
-        <div class="form-group">
-          <%= label_tag "Sort by:", nil, class: "control-label" %>
-          <%= select("machines",
-                     "sort",
-                     [ "Stock number", "Make", "Model", "Type", "Hours", "Price", "Location" ],
-                     {},
-                     { class: 'form-control' }) %>
-        </div>
-      <% end %>
+  <div class="sort-header">
+    <%= form_tag('/machines') do %>
+      <div class="form-group">
+        <%= label_tag "Sort by:", nil, class: "control-label" %>
+        <%= select("machines",
+                   "sort",
+                   [ "Stock number", "Make", "Model", "Type", "Hours", "Price", "Location" ],
+                   {},
+                   { class: 'form-control' }) %>
+      </div>
+    <% end %>
   </div>
   <div class='inventory-table-container'>
     <table class='inventory-table'>
@@ -17,24 +17,26 @@
         <% @machines.each do |machine| %>
           <tr class='sidebar-preview'>
             <td class='machine-preview-cell' colspan='3' id="<%= machine.stock_number %>">
-              <strong class='stock-number' id="<%= machine.stock_number %>">
-                <span class='sorted-by'>Stock <%= machine.stock_number %></span>
-                <%= machine.make %> <%= machine.machine_model %> <%= machine.machine_type %>
-              </strong>
-              <small>
-                <p>
-                  <strong>Hours:</strong> <%= machine.hours %>
-                </p>
-                <p>
-                  <strong>Price:</strong> <%= machine.price %>
-                </p>
-                <p class="med-stat">
-                  <strong>Location:</strong> <%= machine.location.city %>
-                </p>
-                <p class="lg-stat">
-                  <strong>Description:</strong> <%= truncate(machine.description, length: 60) %>
-                </p>
-              </small>
+              <%= link_to edit_machine_path(machine), class: 'machine-link', remote: true do %>
+                <strong class='stock-number' id="<%= machine.stock_number %>">
+                  <span class='sorted-by'>Stock <%= machine.stock_number %></span>
+                  <%= machine.make %> <%= machine.machine_model %> <%= machine.machine_type %>
+                </strong>
+                <small>
+                  <p>
+                    <strong>Hours:</strong> <%= machine.hours %>
+                  </p>
+                  <p>
+                    <strong>Price:</strong> <%= machine.price %>
+                  </p>
+                  <p class="med-stat">
+                    <strong>Location:</strong> <%= machine.location.city %>
+                  </p>
+                  <p class="lg-stat">
+                    <strong>Description:</strong> <%= truncate(machine.description, length: 60) %>
+                  </p>
+                </small>
+              <% end %>
             </td>
           </tr>
         <% end %>
@@ -42,3 +44,4 @@
     </table>
   </div>
 </div>
+<div id="edit-form-container"></div>
