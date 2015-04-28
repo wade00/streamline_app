@@ -12,5 +12,9 @@
       <div><%= icon('plus') %></div>
       <span>Add Machine</span>
     <% end %>
+    <%= link_to destroy_user_session_path, method: "delete" do %>
+      <div><%= icon('sign-out') %></div>
+      <span>Sign out</span>
+    <% end %>
   </nav>
 </div>

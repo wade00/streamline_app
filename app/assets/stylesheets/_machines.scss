@@ -11,12 +11,12 @@
 
 .table-container {
   bottom: 0;
-  height: 90vh;
-  margin: 0 4%;
+  height: 100vh;
+  margin: 0 10%;
   overflow-y: scroll;
   position: absolute;
   right: 0;
-  width: 84%;
+  width: 74%;
 }
 
 .my-inventory-header {
@@ -100,4 +100,210 @@
     margin-top: 0;
     color: $darkgrayfont;
   }
+}
+
+/* sidebar from extension */
+.inventory-table-preview {
+  background: #6E7382;
+  border-collapse: collapse;
+  border-bottom: 4px solid #4A5063;
+  border-left: 4px solid #4A5063;
+  border-top: 4px solid #4A5063;
+  box-shadow: 1px 2px 5px black;
+  display: none;
+  font-family: Helvetica, 'sans-serif';
+  position: fixed;
+  right: 0;
+  top: 5%;
+}
+
+#inventorySidebar {
+  position: fixed;
+  top: 0px;
+  right: 0px;
+  width: 25%;
+  height: 100%;
+  padding: 0;
+  background: #4A5063;
+  color: #EEE;
+  font-size: 16px;
+  font-family: Helvetica, 'sans-serif';
+  box-shadow: 5px 0 4em black;
+  z-index: 999999;
+  overflow: scroll;
+  display: none;
+  font-weight: normal;
+}
+
+.divider {
+  margin: 0;
+  border-top: 1px solid #636875;
+  border-bottom: 1px solid #6E7382;
+}
+
+.header {
+  text-align: center;
+  background: #434859;
+}
+
+#close-popup {
+  float: right;
+  font-size: 20px;
+  font-family: "Helvetica", "Arial", "sans-serif";
+  padding-right: 10px;
+  cursor: pointer;
+}
+
+.streamline-logo {
+  margin: 0;
+  padding: 20px 0;
+  color: #CCC;
+  font-size: 24px;
+  font-family: "Helvetica", "Arial", "sans-serif";
+  font-weight: 200;
+}
+
+.my-inventory-header {
+  color: #6D7886;
+  padding-left: 20px;
+  margin-top: 20px;
+  clear: both;
+  font-size: 18px;
+  font-family: "Helvetica", "Arial", "sans-serif";
+  font-weight: 100;
+}
+
+.inventory-table {
+  width: 100%;
+  border-collapse: collapse;
+  border-left: 4px solid #4A5063;
+  border-right: 4px solid #4A5063;
+  background: #6E7382;
+}
+
+.machine-preview {
+  height: 50px;
+  border-top: 1px solid #4D5463;
+  font-weight: 100;
+}
+
+.machine-preview:hover {
+  background: #394152;
+  height: 50px;
+  color: #EFF1F4;
+  border-bottom: 4px solid #394152;
+  border-left: 4px solid #BEA63F;
+  border-top: 4px solid #394152;
+}
+
+.machine-preview:hover .copy-machine {
+  height: 46px;
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.sidebar-preview {
+  height: 100px;
+  border-top: 1px solid #4D5463;
+  font-weight: 100;
+}
+
+.sidebar-preview:hover {
+  background: #394152;
+  color: #EFF1F4;
+  border-left: 4px solid #BEA63F;
+}
+
+.sidebar-preview:hover .copy-machine {
+  height: 46px;
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.machine-preview-cell {
+  cursor: pointer;
+  display: table-cell;
+  height: 50px;
+  overflow: hidden;
+  padding-left: 20px;
+  padding-right: 10px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  vertical-align: middle;
+  width: 100%;
+  small {
+    color: #BBB;
+    font-size: 14px;
+    font-family: "Helvetica", "sans-serif";
+    p {
+      display: inline-block;
+      margin-right: -4px;
+      margin-top: 1em;
+      width: 10%;
+    }
+    .med-stat {
+      width: 20%;
+    }
+    .lg-stat {
+      width: 60%;
+    }
+  }
+}
+
+.add-machine-preview-cell {
+  padding-left: 20px;
+  padding-right: 10px;
+  overflow: hidden;
+  max-width: 300px;
+  height: 50px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  cursor: pointer;
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.add-machine-preview-cell small {
+  color: #BBB;
+  font-size: 12px;
+  font-family: "Helvetica", "sans-serif";
+}
+
+.stock-number {
+  color: #EFF1F4;
+  font-size: 16px;
+  font-family: "Helvetica", "sans-serif";
+  font-weight: 300;
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.copy-machine {
+  color: #BEA63F;
+  cursor: pointer;
+  display: table-cell;
+  font-family: "Helvetica", "sans-serif";
+  font-size: 11px;
+  padding-right: 10px;
+  vertical-align: middle;
+}
+
+.copy-machine-sidebar{
+  display: none;
+}
+
+#add-new-machine {
+  color: #EFF1F4;
+  display: none;
+  font-size: 14px;
+  padding: 10px;
+  vertical-align: middle;
+}
+
+#add-new-machine:hover {
+  cursor: pointer;
+}
+
+.sorted-by {
+  color: #BEA63F;
 }

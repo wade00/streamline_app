@@ -1,65 +1,44 @@
 <div class="row table-container">
-  <div class="my-inventory-header">
-    <div class="row">
-      <h3>
-        My Inventory
-        <small>(<%= @machines.count %> machines)</small>
-      </h3>
-      <form class="navbar-form pull-right" role="search">
-        <div class="row form-group">
-          <input type="text" class="form-control" placeholder="Search my inventory">
+  <div>
+      <%= form_tag('/machines') do %>
+        <div class="form-group">
+          <%= label_tag "Sort by:", nil, class: "control-label" %>
+          <%= select("machines",
+                     "sort",
+                     [ "Stock number", "Make", "Model", "Type", "Hours", "Price", "Location" ],
+                     {},
+                     { class: 'form-control' }) %>
         </div>
-        <button type="submit" class="btn btn-default"><%= icon('search') %></button>
-      </form>
-    </div>
-    <div class="row">
-      <div class="sort-search-header">
-        <ul>
-          <li>Stock</li>
-          <li>Make</li>
-          <li>Model</li>
-          <li>Type</li>
-          <li>Hours</li>
-          <li>Price</li>
-          <li>Location</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-  <% if @machines.count < 1 %>
-    <div class="row no-machine-alert">
-      <p>No machines to see here... Let's add one!</p>
-      <%= link_to "Add a machine", new_machine_url, class: "btn btn-lg btn-warning" %>
-    </div>
-  <% else %>
-  <table class="machine-table table table-hover">
-    <tbody>
-      <% @machines.each do |machine| %>
-      <tr>
-        <td>
-          <%= link_to "#{machine.stock_number}", edit_machine_path(machine.id) %>
-        </td>
-        <td>
-          <%= link_to "#{machine.make}", edit_machine_path(machine.id) %>
-        </td>
-        <td>
-          <%= link_to "#{machine.machine_model}", edit_machine_path(machine.id) %>
-        </td>
-        <td>
-          <%= link_to "#{machine.machine_type}", edit_machine_path(machine.id) %>
-        </td>
-        <td>
-          <%= link_to "#{machine.hours}", edit_machine_path(machine.id) %>
-        </td>
-        <td>
-          <%= link_to "#{machine.price}", edit_machine_path(machine.id) %>
-        </td>
-        <td>
-          <%= link_to "#{machine.location.city}", edit_machine_path(machine.id) %>
-        </td>
-      </tr>
       <% end %>
-    </tbody>
-  </table>
-  <% end %>
+  </div>
+  <div class='inventory-table-container'>
+    <table class='inventory-table'>
+      <tbody id='inventory'>
+        <% @machines.each do |machine| %>
+          <tr class='sidebar-preview'>
+            <td class='machine-preview-cell' colspan='3' id="<%= machine.stock_number %>">
+              <strong class='stock-number' id="<%= machine.stock_number %>">
+                <span class='sorted-by'>Stock <%= machine.stock_number %></span>
+                <%= machine.make %> <%= machine.machine_model %> <%= machine.machine_type %>
+              </strong>
+              <small>
+                <p>
+                  <strong>Hours:</strong> <%= machine.hours %>
+                </p>
+                <p>
+                  <strong>Price:</strong> <%= machine.price %>
+                </p>
+                <p class="med-stat">
+                  <strong>Location:</strong> <%= machine.location.city %>
+                </p>
+                <p class="lg-stat">
+                  <strong>Description:</strong> <%= truncate(machine.description, length: 60) %>
+                </p>
+              </small>
+            </td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
 </div>
