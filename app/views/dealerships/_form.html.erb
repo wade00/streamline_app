@@ -1,41 +1,57 @@
 <%= form_for(@dealership) do |f| %>
   <% if @dealership.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@dealership.errors.count, "error") %> prohibited this dealership from being saved:</h2>
-
-      <ul>
-      <% @dealership.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
+    <%= render 'shared/errors', resource: @dealership %>
   <% end %>
 
-  <div class="field">
-    <%= f.label :address %><br>
-    <%= f.text_field :address %>
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3 machine-form-column">
+      <div class="form-group">
+        <%= f.label :address, class: "control-label" %>
+        <%= f.text_field :address, class: "form-control" %>
+      </div>
+
+      <div class="form-group">
+        <%= f.label :city, class: "control-label" %>
+        <%= f.text_field :city, class: "form-control" %>
+      </div>
+
+      <div class="form-group">
+        <%= f.label :state, class: "control-label" %>
+        <%= f.text_field :state, class: "form-control", placeholder: "Ex. IL, CA, NY" %>
+      </div>
+
+      <div class="form-group">
+        <%= f.label :zip, class: "control-label" %>
+        <%= f.text_field :zip, class: "form-control" %>
+      </div>
+
+      <div class="form-group">
+        <%= f.label :phone, class: "control-label" %>
+        <%= f.text_field :phone, class: "form-control", placeholder: "No spaces, parentheses or hyphens" %>
+      </div>
+
+      <div class="form-group">
+        <%= f.label :equipment_alley_account, "Equipment Alley Account", class: "control-label" %> <span>(?)</span>
+        <%= f.text_field :equipment_alley_account, class: "form-control" %>
+      </div>
+    </div>
   </div>
-  <div class="field">
-    <%= f.label :city %><br>
-    <%= f.text_field :city %>
-  </div>
-  <div class="field">
-    <%= f.label :state %><br>
-    <%= f.text_field :state %>
-  </div>
-  <div class="field">
-    <%= f.label :zip %><br>
-    <%= f.text_field :zip %>
-  </div>
-  <div class="field">
-    <%= f.label :phone %><br>
-    <%= f.text_field :phone %>
-  </div>
-  <div class="field">
-    <%= f.label :equipment_alley_account %><br>
-    <%= f.text_field :equipment_alley_account %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
+
+  <hr />
+
+  <div class="row machine-form-buttons">
+    <div class="col-md-12 text-center">
+      <p>
+        <%= f.submit "Save", class: "btn btn-success" %>
+        or
+        <%= link_to "Cancel", :back %>
+      </p>
+      <p>
+        <%= link_to "Delete Dealership", @dealership,
+                                          class: "btn btn-danger",
+                                          method: "delete",
+                                          confirm: "Are you sure you want to delete this machine?" %>
+      </p>
+    </div>
   </div>
 <% end %>

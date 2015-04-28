@@ -12,7 +12,8 @@
             <%= render 'shared/errors', resource: resource %>
           <% end %>
 
-        <div class="col-md-8 col-md-offset-2">
+        <div class="col-md-5">
+          <h3>Account Info</h3>
           <div class="form-group">
             <%= f.label :company_name, "Company Name", class: 'control-label' %>
             <%= f.text_field :company_name, class: 'form-control', autofocus: true %>
@@ -48,9 +49,35 @@
           </div>
         </div>
       <% end %>
+      <div class="col-md-5 col-md-offset-2 dealerships-display">
+        <h3>Dealerships</h3>
+        <div>
+          <% if current_user.dealerships.count == 0 %>
+            <p>
+              No locations yet!
+              <%= link_to "Add a location", new_dealership_path, class: "btn" %>
+            </p>
+          <% end %>
+          <% current_user.dealerships.each do |dealership| %>
+            <div class="panel panel-default dealerships-summary">
+              <div class="panel-heading">
+                <p class="panel-title">
+                  <strong><%= dealership.city %></strong>
+                  <%= link_to "(Edit)", edit_dealership_path(dealership), class: "btn" %>
+                </p>
+              </div>
+              <div class="panel-body">
+                <p><%= dealership.address %></p>
+                <p><%= dealership.city %>, <%= dealership.state %> <%= dealership.zip %></p>
+              </div>
+            </div>
+          <% end %>
+        </div>
+      </div>
 
       <div class="text-center col-md-12">
         <hr />
+
         <h3>Cancel my account</h3>
 
         <p><%= button_to "Cancel my account", registration_path(resource_name),
