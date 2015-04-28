@@ -55,7 +55,7 @@
           <%= link_to "#{machine.price}", edit_machine_path(machine.id) %>
         </td>
         <td>
-          <%= link_to "#{machine.location}", edit_machine_path(machine.id) %>
+          <%= link_to "#{machine.location.city}", edit_machine_path(machine.id) %>
         </td>
       </tr>
       <% end %>

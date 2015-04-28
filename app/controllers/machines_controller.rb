@@ -30,7 +30,7 @@ class MachinesController < ApplicationController
   def update
     respond_to do |format|
       if @machine.update(machine_params)
-        format.html { redirect_to edit_machine_path(@machine), notice: "#{@machine.stock_number} was successfully updated." }
+        format.html { redirect_to machines_path, notice: "#{@machine.stock_number} was successfully updated." }
         format.json { render :show, status: :ok, location: @machine }
       else
         format.html { render :edit }
@@ -54,7 +54,6 @@ class MachinesController < ApplicationController
 
     def machine_params
       params.require(:machine).permit(:stock_number, :year, :make, :machine_model, :machine_type,
-        :serial_number, :hours, :price, :description)
-      # need to add dealership back to params
+        :serial_number, :hours, :price, :dealership_id, :description)
     end
 end

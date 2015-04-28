@@ -369,6 +369,7 @@ machine_info.each do |machine_hash|
   m.price = machine_hash[:price]
   m.description = machine_hash[:description]
   m.user_id = machine_hash[:user_id]
+  m.dealership_id = machine_hash[:dealership_id]
   m.save
 end
 

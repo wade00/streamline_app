@@ -14,7 +14,9 @@
 
       <div class="form-group">
         <%= f.label :year, class: 'control-label' %>
-        <%= f.select :year, [], {}, {class: 'form-control'} do %>
+        <%= f.select :year, [], {}, { class: 'form-control' } do %>
+          <%= content_tag(:option, @machine.year) %>
+          <%= content_tag(:option, "--", disabled: "disabled") %>
           <% 41.times do |n| %>
             <%= content_tag(:option, (Time.now.year + 1) - n) %>
           <% end %>
@@ -60,8 +62,14 @@
       </div>
 
       <div class="form-group">
-        <%= f.label :location, class: 'control-label' %>
-        <%= f.text_field :location, class: 'form-control', value: @machine.location %>
+        <%= f.label :dealership_id, "Location", class: 'control-label' %>
+        <%= f.select :dealership_id, [], {}, { class: 'form-control' } do %>
+          <%= content_tag(:option, @machine.location.city) %>
+          <%= content_tag(:option, "--", disabled: "disabled") %>
+          <% current_user.dealerships.each do |dealership| %>
+            <%= content_tag :option, dealership.city, value: dealership.id %>
+          <% end %>
+        <% end %>
       </div>
 
       <div class="form-group">
