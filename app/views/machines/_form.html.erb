@@ -1,14 +1,16 @@
-<div class="page-header machine-form-header">
-  <h1>Stock <%= @machine.stock_number %></h1>
-  <div class="listing-on">
-    Listing on:
-    <%= link_to "Equipment Alley", "https://www.equipmentalley.com/main/user/login", target: '_blank' %>
-    |
-    <%= link_to "Equipment Locator", "http://www.equipmentlocator.com/maint/login.aspx?", target: '_blank'  %>
-    |
-    <%= link_to "Machinery Trader", "http://dscrm.sandhills.com/main.aspx", target: '_blank'  %>
+<% if @machine.persisted? %>
+  <div class="page-header machine-form-header">
+    <h1>Stock <%= @machine.stock_number %></h1>
+    <div class="listing-on">
+      Listing on:
+      <%= link_to "Equipment Alley", "https://www.equipmentalley.com/main/user/login", target: '_blank' %>
+      |
+      <%= link_to "Equipment Locator", "http://www.equipmentlocator.com/maint/login.aspx?", target: '_blank'  %>
+      |
+      <%= link_to "Machinery Trader", "http://dscrm.sandhills.com/main.aspx", target: '_blank'  %>
+    </div>
   </div>
-</div>
+<% end %>
 <%= form_for(@machine) do |f| %>
   <% if @machine.errors.any? %>
     <%= render 'shared/errors', resource: @machine %>
@@ -27,14 +29,14 @@
         <%= f.label :year, class: 'control-label' %>
         <%= f.select :year, [], {}, { class: 'form-control' } do %>
           <% if @machine.year != nil %>
-            <%= content_tag(:option, @machine.year) %>
-            <%= content_tag(:option, "--", disabled: "disabled") %>
+            <%= content_tag :option, @machine.year, selected: "selected" %>
+            <%= content_tag :option, "--", disabled: "disabled"  %>
           <% end %>
-          <%= content_tag(:option, "Choose year:", disabled: "disabled") %>
+          <%= content_tag :option, "Choose year:", disabled: "disabled" %>
           <% 41.times do |n| %>
             <%= content_tag(:option, (Time.now.year + 1) - n) %>
           <% end %>
-          <%= content_tag(:option, 'Other...') %>
+          <%= content_tag :option, 'Other...' %>
         <% end %>
       </div>
 
@@ -79,10 +81,13 @@
         <%= f.label :dealership_id, "Location", class: 'control-label' %>
         <%= f.select :dealership_id, [], {}, { class: 'form-control' } do %>
           <% if @machine.year != nil %>
-            <%= content_tag(:option, @machine.location.city) %>
-            <%= content_tag(:option, "--", disabled: "disabled") %>
+            <%= content_tag :option,
+                            @machine.location.city,
+                            selected: "selected",
+                            value: @machine.location.id %>
+            <%= content_tag :option, "--", disabled: "disabled" %>
           <% end %>
-          <%= content_tag(:option, "Choose location:", disabled: "disabled") %>
+          <%= content_tag :option, "Choose location:", disabled: "disabled" %>
           <% current_user.dealerships.each do |dealership| %>
             <%= content_tag :option, dealership.city, value: dealership.id %>
           <% end %>

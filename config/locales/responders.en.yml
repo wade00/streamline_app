@@ -2,11 +2,11 @@ en:
   flash:
     actions:
       create:
-        notice_html: "<strong>BOOM!</strong> %{resource_name} was successfully created."
+        notice: "BOOM! %{resource_name} was successfully created."
         # alert: "%{resource_name} could not be created."
       update:
-        notice_html: "%{resource_name} was successfully updated. <strong>POW!</strong>"
+        notice: "%{resource_name} was successfully updated. POW!"
         # alert: "%{resource_name} could not be updated."
       destroy:
-        notice_html: "<strong> Bye bye %{resource_name}!</strong> You just got deleted."
+        notice: "Bye bye %{resource_name}! You just got deleted."
         alert: "Sorry, %{resource_name} couldn't be deleted."

@@ -1,8 +1,9 @@
 class DealershipsController < ApplicationController
   before_action :set_dealership, only: [:edit, :update, :destroy]
+  responders :flash
 
   def index
-    @dealerships = Dealership.all
+    @dealerships = current_user.dealerships
   end
 
   def new
@@ -16,37 +17,19 @@ class DealershipsController < ApplicationController
     @dealership = Dealership.new(dealership_params)
     @dealership.owner = current_user
 
-    respond_to do |format|
-      if @dealership.save
-        format.html { redirect_to edit_registration_path(current_user),
-                      notice: 'Dealership was successfully created.' }
-        format.json { render :edit, status: :created, location: @dealership }
-      else
-        format.html { render :new }
-        format.json { render json: @dealership.errors, status: :unprocessable_entity }
-      end
-    end
+    flash[:notice] if @dealership.save
+    respond_with(@dealership, location: edit_registration_path(current_user))
   end
 
   def update
-    respond_to do |format|
-      if @dealership.update(dealership_params)
-        format.html { redirect_to edit_registration_path(current_user),
-                      notice: 'Dealership was successfully updated.' }
-        format.json { render :edit, status: :ok, location: @dealership }
-      else
-        format.html { render :edit }
-        format.json { render json: @dealership.errors, status: :unprocessable_entity }
-      end
-    end
+    flash[:notice]
+    respond_with(@dealership, location: edit_registration_path(current_user))
   end
 
   def destroy
     @dealership.destroy
-    respond_to do |format|
-      format.html { redirect_to :back, notice: 'Dealership was successfully destroyed.' }
-      format.json { head :no_content }
-    end
+    flash[:notice]
+    respond_with(@dealership, location: edit_registration_path(current_user))
   end
 
   private
@@ -56,5 +39,9 @@ class DealershipsController < ApplicationController
 
     def dealership_params
       params.require(:dealership).permit(:address, :city, :state, :zip, :phone, :equipment_alley_account)
+    end
+
+    def interpolation_options
+      { resource_name: "#{@dealership.city} dealership" }
     end
 end

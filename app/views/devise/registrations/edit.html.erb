@@ -50,13 +50,13 @@
         </div>
       <% end %>
       <div class="col-md-5 col-md-offset-2 dealerships-display">
-        <h3>Dealerships</h3>
+        <h3>
+          Dealerships
+          <small><%= link_to "Add a location", new_dealership_path, class: "btn" %></small>
+        </h3>
         <div>
           <% if current_user.dealerships.count == 0 %>
-            <p>
-              No locations yet!
-              <%= link_to "Add a location", new_dealership_path, class: "btn" %>
-            </p>
+            <strong>No locations yet!</strong>
           <% end %>
           <% current_user.dealerships.each do |dealership| %>
             <div class="panel panel-default dealerships-summary">
