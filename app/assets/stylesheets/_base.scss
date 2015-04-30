@@ -1,29 +1,28 @@
-.top-navbar {
-  background: $darkgrayblock;
-  border: $darkgrayblock;
-  border-radius: 0;
-  box-shadow: $sm-box-shadow;
-  z-index: 2;
-  height: 5vh;
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x:hidden;
+}
+
+.body-container {
+  height: 100vh;
+  width: 100vw;
 }
 
 .sidebar {
-  background-color: $lightgrayblock;
-  bottom: 0;
-  box-shadow: 2px 0px 2px 0px rgba(0,0,0,0.5);
-  height: 100vh;
-  position: fixed;
+  background-color: $tan;
+  height: 100%;
   text-align: center;
   width: 6%;
   nav {
     a {
-      color: $lightgrayfont;
+      color: $darkgray;
       display: block;
       font-size: 24px;
       padding-top: 1em;
       &:hover {
-        background: lighten($lightgrayblock, 5%);
-        color: lighten($lightgrayfont, 10%);
+        background: lighten($tan, 5%);
+        color: lighten($darkgray, 10%);
         text-decoration: none;
       }
       span {
@@ -34,12 +33,6 @@
 }
 
 .sidebar-clicked {
-  background: darken($lightgrayblock, 10%);
-  border-left: 4px solid $yellow;
-  div {
-    color: darken($lightgrayfont, 20%);
-  }
-  span {
-    color: darken($lightgrayfont, 20%);
-  }
+  background: lighten($darktan, 20%);
+  border-bottom: 4px solid $darktan;
 }
