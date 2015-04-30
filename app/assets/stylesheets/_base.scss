@@ -36,3 +36,10 @@ html, body {
   background: lighten($darktan, 20%);
   border-bottom: 4px solid $darktan;
 }
+
+/* Misc Utility Classes */
+
+.unactive-link {
+  cursor: default;
+  pointer-event: none;
+}

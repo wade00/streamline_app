@@ -37,9 +37,9 @@
             </td>
             <td class='description-cell' id="<%= machine.stock_number %>">
               <%= link_to edit_machine_path(machine), class: 'edit-machine-link', remote: true do %>
-                  <p>
-                    <strong>Description:</strong> <%= truncate(machine.description, length: 300) %>
-                  </p>
+                <p>
+                  <strong>Description:</strong> <%= truncate(machine.description, length: 300) %>
+                </p>
               <% end %>
             </td>
           </tr>

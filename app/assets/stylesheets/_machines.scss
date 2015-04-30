@@ -25,6 +25,16 @@
   width: 30%;
 }
 
+.edit-form-container-show {
+  height: 100vh;
+  margin: 0px;
+  padding: 2em;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 64%;
+}
+
 /* Table */
 
 .sort-header {
@@ -69,16 +79,16 @@
 }
 
 .hours-price-location-stat {
- width: 33%;
+  width: 33%;
 }
 
 .description-cell {
- font-weight: 300;
- height: 6em;
- width: 50%;
- p {
-   color: $darkgray;
- }
+  font-weight: 300;
+  height: 6em;
+  width: 50%;
+  p {
+    color: $darkgray;
+  }
 }
 
 .description-cell-hide {
@@ -91,8 +101,25 @@
   height: 100px;
   &:hover {
     background: $offwhite;
-    border-left: 4px solid $bluegray;
   }
+}
+
+.sidebar-preview-blur {
+  -webkit-filter: blur(1px);
+  -moz-filter: blur(1px);
+  -o-filter: blur(1px);
+  -ms-filter: blur(1px);
+  filter: blur(1px);
+  opacity: 0.5;
+}
+
+.sidebar-preview-override {
+  -webkit-filter: blur(0px) !important;
+  -moz-filter: blur(0px) !important;
+  -o-filter: blur(0px) !important;
+  -ms-filter: blur(0px) !important;
+  filter: blur(0px) !important;
+  opacity: 1 !important;
 }
 
 .stock-number {
