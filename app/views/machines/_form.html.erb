@@ -103,7 +103,7 @@
       <p>
         <%= f.submit "Save", class: "btn btn-success" %>
         or
-        <%= link_to "Cancel", machines_path, class: "cancel-machine-form" %>
+        <%= link_to "Cancel", machines_path, class: "cancel-machine-form", remote: true %>
       </p>
       <% if @machine.persisted? %>
         <%= link_to "Delete Machine", machine_path(@machine.id),
