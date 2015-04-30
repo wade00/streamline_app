@@ -63,6 +63,11 @@
   }
 }
 
+.machine-preview-cell-narrow {
+  padding-left: 0;
+  padding-right: 0;
+}
+
 .hours-price-location-stat {
  width: 33%;
 }
@@ -74,6 +79,10 @@
  p {
    color: $darkgray;
  }
+}
+
+.description-cell-hide {
+  display: none;
 }
 
 .sidebar-preview {
