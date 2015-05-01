@@ -11,13 +11,13 @@
 
 .table-container-wide {
   bottom: 0;
-  left: 13%;
+  left: 18%;
   margin: 0;
   max-height: 100vh;
   overflow-x: hidden;
   overflow-y: scroll;
   position: absolute;
-  width: 80%;
+  width: 70%;
 }
 
 .table-container-narrow {
@@ -38,33 +38,47 @@
 /* Table */
 
 .sort-header {
+  height: 10vh;
   padding-left: 1em;
   padding-right: 1em;
+  position: fixed;
+  top: 0;
+  width: 70%;
 }
 
-.inventory-table {
-  background: $white;
-  border-collapse: collapse;
-  border-left: 4px solid $white;
-  border-right: 4px solid $white;
-  width: 100%;
+.machine-inventory-list {
+  height: 90vh;
+  padding: 0;
 }
 
-.machine-preview-cell {
+.machine-preview-cell-narrow {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.machine-stats {
+  width: 25%;
+}
+
+.machine-preview {
+  border-top: 1px solid $lightgray;
   cursor: pointer;
-  display: table-cell;
-  height: 6em;
+  display: block;
+  font-weight: 100;
+  height: 100px;
   overflow: hidden;
-  padding-left: 2em;
-  padding-right: 2em;
+  padding: 1em;
   text-overflow: ellipsis;
-  vertical-align: middle;
   white-space: nowrap;
-  width: 50%;
+  width: 100%;
+  &:hover {
+    background: lighten($lightgray, 10%);
+  }
   small {
     color: $darkgray;
     font-size: 14px;
     font-family: "Helvetica", "sans-serif";
+    width: 60%;
     p {
       display: inline-block;
       margin-right: -4px;
@@ -73,35 +87,18 @@
   }
 }
 
-.machine-preview-cell-narrow {
-  padding-left: 0;
-  padding-right: 0;
-}
-
-.hours-price-location-stat {
-  width: 33%;
-}
-
-.description-cell {
+.stock-number {
+  color: $darkgray;
+  display: table-cell;
+  font-family: "Helvetica", "sans-serif";
+  font-size: 18px;
   font-weight: 300;
-  height: 6em;
-  width: 50%;
-  p {
-    color: $darkgray;
-  }
+  vertical-align: middle;
 }
 
-.description-cell-hide {
-  display: none;
-}
-
-.sidebar-preview {
-  border-top: 1px solid $lightgray;
-  font-weight: 100;
-  height: 100px;
-  &:hover {
-    background: lighten($lightgray, 10%);
-  }
+.sorted-by {
+  color: $darkblue;
+  font-weight: 700;
 }
 
 .sidebar-preview-blur {
@@ -120,20 +117,6 @@
   -ms-filter: blur(0px) !important;
   filter: blur(0px) !important;
   opacity: 1 !important;
-}
-
-.stock-number {
-  color: $darkgray;
-  display: table-cell;
-  font-family: "Helvetica", "sans-serif";
-  font-size: 16px;
-  font-weight: 300;
-  vertical-align: middle;
-}
-
-.sorted-by {
-  color: $darkblue;
-  font-weight: 700;
 }
 
 .edit-machine-link {

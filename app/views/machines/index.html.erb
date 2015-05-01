@@ -11,41 +11,31 @@
       </div>
     <% end %>
   </div>
-  <div class='inventory-table-container'>
-    <table class='inventory-table'>
-      <tbody id='inventory'>
-        <% @machines.each do |machine| %>
-          <tr class='sidebar-preview'>
-            <td class='machine-preview-cell' id="<%= machine.stock_number %>">
-              <%= link_to edit_machine_path(machine), class: 'edit-machine-link', remote: true do %>
-                <strong class='stock-number'>
-                  <span class='sorted-by'>Stock <%= machine.stock_number %></span>
-                  <%= machine.make %> <%= machine.machine_model %> <%= machine.machine_type %>
-                </strong>
-                <small>
-                  <p class="hours-price-location-stat">
-                    <strong>Hours:</strong> <%= machine.hours %>
-                  </p>
-                  <p class="hours-price-location-stat">
-                    <strong>Price:</strong> <%= machine.price %>
-                  </p>
-                  <p class="hours-price-location-stat">
-                    <strong>Location:</strong> <%= machine.location.city %>
-                  </p>
-                </small>
-              <% end %>
-            </td>
-            <td class='description-cell' id="<%= machine.stock_number %>">
-              <%= link_to edit_machine_path(machine), class: 'edit-machine-link', remote: true do %>
-                <p>
-                  <strong>Description:</strong> <%= truncate(machine.description, length: 300) %>
-                </p>
-              <% end %>
-            </td>
-          </tr>
+  <ul class="machine-inventory-list">
+    <% @machines.each do |machine| %>
+      <li class='machine-preview' id="<%= machine.stock_number %>">
+        <%= link_to edit_machine_path(machine), class: 'edit-machine-link', remote: true do %>
+          <strong class='stock-number'>
+            <span class='sorted-by'>Stock <%= machine.stock_number %></span>
+            <%= machine.make %> <%= machine.machine_model %> <%= machine.machine_type %>
+          </strong>
+          <small>
+            <p class="machine-stats">
+              <strong>Serial:</strong> <%= machine.serial_number %>
+            </p>
+            <p class="machine-stats">
+              <strong>Hours:</strong> <%= machine.hours %>
+            </p>
+            <p class="machine-stats">
+              <strong>Price:</strong> <%= machine.price %>
+            </p>
+            <p class="machine-stats">
+              <strong>Location:</strong> <%= machine.location.city %>, <%= machine.location.state %>
+            </p>
+          </small>
         <% end %>
-      </tbody>
-    </table>
-  </div>
+      </li>
+    <% end %>
+  </ul>
 </div>
 <div id="edit-form-container"></div>
