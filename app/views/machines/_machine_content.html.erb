@@ -1,0 +1,10 @@
+<strong class="stock-number">
+  <span class="sorted-by">Stock <%= machine.stock_number %></span>
+  <%= machine.make %> <%= machine.machine_model %> <%= machine.machine_type %>
+</strong>
+<small class="machine-stats">
+  <p><strong>Serial:</strong> <%= machine.serial_number %></p>
+  <p><strong>Hours:</strong> <%= machine.hours %></p>
+  <p><strong>Price:</strong> <%= machine.price %></p>
+  <p><strong>Location:</strong> <%= machine.location.city %>, <%= machine.location.state %></p>
+</small>

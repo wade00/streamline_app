@@ -41,5 +41,9 @@ html, body {
 
 .unactive-link {
   cursor: default;
-  pointer-event: none;
+  pointer-events: none;
+}
+
+.hide-element {
+  display: none !important;
 }

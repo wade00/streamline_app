@@ -1,41 +1,18 @@
 <div class="row table-container-wide">
   <div class="sort-header">
-    <%= form_tag('/machines') do %>
+    <%= form_tag("/machines") do %>
       <div class="form-group">
         <%= label_tag "Sorted by:", nil, class: "control-label" %>
         <%= select("machines",
                    "sort",
                    [ "Stock number", "Make", "Model", "Type", "Hours", "Price", "Location" ],
                    {},
-                   { class: 'form-control' }) %>
+                   { class: "form-control" }) %>
       </div>
     <% end %>
   </div>
   <ul class="machine-inventory-list">
-    <% @machines.each do |machine| %>
-      <li class='machine-preview' id="<%= machine.stock_number %>">
-        <%= link_to edit_machine_path(machine), class: 'edit-machine-link', remote: true do %>
-          <strong class='stock-number'>
-            <span class='sorted-by'>Stock <%= machine.stock_number %></span>
-            <%= machine.make %> <%= machine.machine_model %> <%= machine.machine_type %>
-          </strong>
-          <small>
-            <p class="machine-stats">
-              <strong>Serial:</strong> <%= machine.serial_number %>
-            </p>
-            <p class="machine-stats">
-              <strong>Hours:</strong> <%= machine.hours %>
-            </p>
-            <p class="machine-stats">
-              <strong>Price:</strong> <%= machine.price %>
-            </p>
-            <p class="machine-stats">
-              <strong>Location:</strong> <%= machine.location.city %>, <%= machine.location.state %>
-            </p>
-          </small>
-        <% end %>
-      </li>
-    <% end %>
+    <%= render @machines %>
   </ul>
 </div>
 <div id="edit-form-container"></div>

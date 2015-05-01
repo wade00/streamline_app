@@ -21,7 +21,7 @@
 }
 
 .table-container-narrow {
-  left: 6%;
+  left: 8%;
   width: 30%;
 }
 
@@ -32,7 +32,7 @@
   position: absolute;
   right: 0;
   top: 0;
-  width: 64%;
+  width: 62%;
 }
 
 /* Table */
@@ -46,6 +46,10 @@
   width: 70%;
 }
 
+.sort-header-narrow {
+  width: 30%;
+}
+
 .machine-inventory-list {
   height: 90vh;
   padding: 0;
@@ -57,7 +61,14 @@
 }
 
 .machine-stats {
-  width: 25%;
+  color: $darkgray;
+  font-size: 14px;
+  p {
+    display: inline-block;
+    margin-right: -4px;
+    margin-top: 1em;
+    width: 25%;
+  }
 }
 
 .machine-preview {
@@ -74,23 +85,11 @@
   &:hover {
     background: lighten($lightgray, 10%);
   }
-  small {
-    color: $darkgray;
-    font-size: 14px;
-    font-family: "Helvetica", "sans-serif";
-    width: 60%;
-    p {
-      display: inline-block;
-      margin-right: -4px;
-      margin-top: 1em;
-    }
-  }
 }
 
 .stock-number {
   color: $darkgray;
   display: table-cell;
-  font-family: "Helvetica", "sans-serif";
   font-size: 18px;
   font-weight: 300;
   vertical-align: middle;
@@ -101,7 +100,7 @@
   font-weight: 700;
 }
 
-.sidebar-preview-blur {
+.machine-preview-blur {
   -webkit-filter: blur(1px);
   -moz-filter: blur(1px);
   -o-filter: blur(1px);
@@ -110,13 +109,15 @@
   opacity: 0.5;
 }
 
-.sidebar-preview-override {
+.machine-preview-override {
+  background: lighten($lightgray, 10%);
+  border-bottom: 1px solid $lightgray;
+  opacity: 1 !important;
   -webkit-filter: blur(0px) !important;
   -moz-filter: blur(0px) !important;
   -o-filter: blur(0px) !important;
   -ms-filter: blur(0px) !important;
   filter: blur(0px) !important;
-  opacity: 1 !important;
 }
 
 .edit-machine-link {
