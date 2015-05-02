@@ -1,4 +1,4 @@
-$(document).ready(function(){
+ $(document).ready(function(){
   $('.machine-preview').click( function() {
     $('.machine-stats').toggleClass('hide-element');
     $('.table-container-wide').toggleClass('table-container-narrow', 600, 'easeOutSine');
