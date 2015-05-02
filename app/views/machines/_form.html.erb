@@ -1,14 +1,6 @@
 <% if @machine.persisted? %>
   <div class="page-header machine-form-header">
     <h1>Stock <%= @machine.stock_number %></h1>
-    <div class="listing-on">
-      Listing on:
-      <%= link_to "Equipment Alley", "https://www.equipmentalley.com/main/user/login", target: "_blank" %>
-      |
-      <%= link_to "Equipment Locator", "http://www.equipmentlocator.com/maint/login.aspx?", target: "_blank"  %>
-      |
-      <%= link_to "Machinery Trader", "http://dscrm.sandhills.com/main.aspx", target: "_blank"  %>
-    </div>
   </div>
 <% end %>
 <%= form_for @machine, remote: true do |f| %>
