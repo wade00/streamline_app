@@ -167,3 +167,54 @@
     color: $darkgray;
   }
 }
+
+/* Site Checklist */
+
+#site-checklist-container {
+  border-left: 2px solid lighten($darkblue, 30%);
+  height: 100vh;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 20%;
+}
+
+.site-checklist-header {
+  background: $lightgray;
+  border-bottom: 2px solid lighten($darkblue, 30%);
+  color: $lightblue;
+  height: 10vh;
+  font-size: 20px;
+  font-weight: 300;
+  padding-top: 1em;
+}
+
+.update-sites-container {
+  height: 70vh;
+  overflow-y: scroll;
+}
+
+.site-logo-container {
+  height: 25vh;
+  padding-top: 3em;
+}
+
+.site-logo {
+  margin: 1em 0;
+}
+
+.current-listing {
+  background: $green;
+  border-bottom: 4px solid darken($green, 30%);
+}
+
+.outdated-listing {
+  background: $red;
+  border-bottom: 4px solid darken($red, 30%);
+}
+
+.checklist-actions {
+  border-top: 2px solid lighten($darkblue, 30%);
+  height: 20vh;
+  padding-top: 2em;
+}

@@ -1,0 +1,39 @@
+<div class="site-checklist-header text-center">
+  <p>Time to update those listings!</p>
+</div>
+
+<div class="update-sites-container">
+  <div class="site-logo-container current-listing text-center">
+    <%= image_tag image_path("equipment-alley.png"), class: "site-logo" %>
+    <p>
+      <%= link_to "√ Up to date", "https://www.equipmentalley.com/main/user/login",
+                                    target: "_blank",
+                                    class: "btn btn-sm btn-success",
+                                    disabled: true %>
+    </p>
+  </div>
+
+  <div class="site-logo-container outdated-listing text-center">
+    <%= image_tag image_path("equipment-locator.png"), class: "site-logo" %>
+    <p>
+      <%= link_to "X Update listing", "http://www.equipmentlocator.com/maint/login.aspx",
+                                    target: "_blank",
+                                    class: "btn btn-sm btn-danger" %>
+    </p>
+  </div>
+
+  <div class="site-logo-container outdated-listing text-center">
+    <%= image_tag image_path("machinery-trader.png"), class: "site-logo" %>
+    <p>
+      <%= link_to "X Update listing", "https://dscrm.sandhills.com/main.aspx",
+                                    target: "_blank",
+                                    class: "btn btn-sm btn-danger" %>
+    </p>
+  </div>
+</div>
+
+<div class="checklist-actions text-center">
+  <p><%= link_to "Mark as complete", machines_path, class: "btn btn-primary" %></p>
+  or
+  <p><%= link_to "Finish later", machines_path, class: "btn" %></p>
+</div>

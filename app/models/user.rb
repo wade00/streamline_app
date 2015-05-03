@@ -11,6 +11,7 @@ class User < ActiveRecord::Base
 
   before_save :format_company_name
 
+  # This might not be necessary
   # scope :mach_trader_inventory, -> { self.machines.where(mach_trader: true) }
 
   private
@@ -19,15 +20,4 @@ class User < ActiveRecord::Base
     self.company_name = self.company_name.titleize
   end
 
-  # def self.mach_trader_inventory
-  #   self.machines.where(mach_trader: true)
-  # end
-
-  # def self.equip_locator_inventory
-  #   self.machines.where(equip_locator: true)
-  # end
-
-  # def self.equip_alley_inventory
-  #   self.machines.where(equip_alley: true)
-  # end
 end
