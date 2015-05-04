@@ -28,7 +28,7 @@ class MachinesController < ApplicationController
 
   def destroy
     @machine.destroy
-    flash[:notice_html]
+    flash[:notice]
     respond_with(@machine, location: machines_url)
   end
 

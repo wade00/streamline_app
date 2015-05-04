@@ -1,5 +1,5 @@
-<div class="row table-container-wide table-container-narrow">
-  <div class="sort-header sort-header-narrow">
+<div class="row table-container-wide">
+  <div class="sort-header">
     <%= form_tag("/machines") do %>
       <div class="form-group">
         <%= label_tag "Sorted by:", nil, class: "control-label" %>
@@ -16,6 +16,4 @@
   </ul>
 </div>
 <div id="edit-form-container"></div>
-<div id="site-checklist-container">
-  <%= render "site_checklist" %>
-</div>
+<div id="site-checklist-container" hidden></div>

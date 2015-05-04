@@ -1,5 +1,6 @@
- $(document).ready(function(){
-  $('.machine-preview').click( function() {
+ $(document).ready(function() {
+
+  $('.machine-preview').click(function() {
     $('.machine-stats').toggleClass('hide-element');
     $('.table-container-wide').toggleClass('table-container-narrow', 600, 'easeOutSine');
     $('.sort-header').toggleClass('sort-header-narrow', 600, 'easeOutSine');
@@ -13,4 +14,9 @@
     $(this).toggleClass('machine-preview-override');
     $(this).toggleClass('unactive-link');
   });
+
+  // $('body').on('click', '.save-machine', function() {
+  //   alert('here');
+  // });
+
 });

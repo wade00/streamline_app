@@ -21,7 +21,7 @@ html, body {
       font-size: 24px;
       padding-top: 1em;
       &:hover {
-        background: lighten($darkgray, 5%);
+        background: darken($lightgray, 5%);
         color: lighten($lightblue, 10%);
         text-decoration: none;
       }

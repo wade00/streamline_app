@@ -205,11 +205,17 @@
 .current-listing {
   background: $green;
   border-bottom: 4px solid darken($green, 30%);
+  &:hover {
+    background: darken($green, 5%);
+  }
 }
 
 .outdated-listing {
   background: $red;
   border-bottom: 4px solid darken($red, 30%);
+  &:hover {
+    background: darken($red, 5%);
+  }
 }
 
 .checklist-actions {
