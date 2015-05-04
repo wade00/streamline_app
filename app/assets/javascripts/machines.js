@@ -15,8 +15,9 @@
     $(this).toggleClass('unactive-link');
   });
 
-  // $('body').on('click', '.save-machine', function() {
-  //   alert('here');
-  // });
-
 });
+
+function displayChecklist() {
+  $('#site-checklist-container').show();
+  return false
+}

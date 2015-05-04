@@ -47,7 +47,7 @@
 /* Table */
 
 .sort-header {
-  height: 10vh;
+  height: 100px;
   padding-left: 1em;
   padding-right: 1em;
   padding-top: 2em;
@@ -64,11 +64,6 @@
   height: 90vh;
   padding: 0;
   padding-top: 2em;
-}
-
-.machine-preview-cell-narrow {
-  padding-left: 0;
-  padding-right: 0;
 }
 
 .machine-stats {

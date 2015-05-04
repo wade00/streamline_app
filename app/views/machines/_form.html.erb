@@ -3,7 +3,7 @@
     <h1>Stock <%= @machine.stock_number %></h1>
   </div>
 <% end %>
-<%= form_for @machine, remote: true do |f| %>
+<%= form_for @machine, remote: true, html: { onsubmit: "displayChecklist()" } do |f| %>
   <% if @machine.errors.any? %>
     <%= render "shared/errors", resource: @machine %>
   <% end %>
