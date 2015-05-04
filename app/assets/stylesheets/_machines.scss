@@ -171,7 +171,6 @@
 /* Site Checklist */
 
 #site-checklist-container {
-  border-left: 2px solid lighten($darkblue, 30%);
   height: 100vh;
   position: absolute;
   right: 0;
@@ -214,6 +213,7 @@
 }
 
 .checklist-actions {
+  background: $lightgray;
   border-top: 2px solid lighten($darkblue, 30%);
   height: 20vh;
   padding-top: 2em;
