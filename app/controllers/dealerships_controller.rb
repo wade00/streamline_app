@@ -22,7 +22,7 @@ class DealershipsController < ApplicationController
   end
 
   def update
-    flash[:notice]
+    flash[:notice] if @dealership.update(dealership_params)
     respond_with(@dealership, location: edit_registration_path(current_user))
   end
 
