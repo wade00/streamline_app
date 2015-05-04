@@ -93,10 +93,7 @@ machine_info = [
     price: "99000",
     description: "36 inch tracks, 10 foot boom, 8 foot arm, cab with heater, suspension seat, rearview camera, JRB quick coupler, N&B piping, 60 inch bucket with teeth",
     user_id: "1",
-    dealership_id: "1",
-    mach_trader: true,
-    equip_locator: true,
-    equip_alley: false
+    dealership_id: "1"
   },
   {
     stock_number: "39808",
@@ -109,10 +106,7 @@ machine_info = [
     price: "45000",
     description: "2-speed drive, cab with heater and A/C, suspension seat, manual quick coupler, block heater, turn signals, High Flow, 12 x 16.5 tires, 72 inch LPE bucket with bolt-on edge",
     user_id: "1",
-    dealership_id: "1",
-    mach_trader: false,
-    equip_locator: true,
-    equip_alley: false
+    dealership_id: "1"
   },
   {
     stock_number: "39800",
@@ -125,10 +119,7 @@ machine_info = [
     price: "19000",
     description: "2-speed drive, cab with heater and A/C, suspension seat, manual quick coupler, block heater, turn signals, High Flow, 12 x 16.5 tires, 72 inch LPE bucket with bolt-on edge",
     user_id: "1",
-    dealership_id: "2",
-    mach_trader: true,
-    equip_locator: true,
-    equip_alley: false
+    dealership_id: "2"
   },
   {
     stock_number: "39700",
@@ -141,10 +132,7 @@ machine_info = [
     price: "49000",
     description: "3 nozzles, 90 hp Kubota diesel engine",
     user_id: "1",
-    dealership_id: "2",
-    mach_trader: true,
-    equip_locator: true,
-    equip_alley: false
+    dealership_id: "2"
   },
   {
     stock_number: "38999",
@@ -157,10 +145,7 @@ machine_info = [
     price: "25000",
     description: "2-speed drive, cab with heater and A/C, suspension seat, manual quick coupler, block heater, turn signals, High Flow, 12 x 16.5 tires, 72 inch LPE bucket with bolt-on edge",
     user_id: "1",
-    dealership_id: "1",
-    mach_trader: true,
-    equip_locator: true,
-    equip_alley: false
+    dealership_id: "1"
   },
   {
     stock_number: "38990",
@@ -173,10 +158,7 @@ machine_info = [
     price: "28000",
     description: "2-speed drive, cab with heater and A/C, suspension seat, manual quick coupler, block heater, turn signals, High Flow, 12 x 16.5 tires, 72 inch LPE bucket with bolt-on edge",
     user_id: "1",
-    dealership_id: "2",
-    mach_trader: false,
-    equip_locator: true,
-    equip_alley: false
+    dealership_id: "2"
   },
   {
     stock_number: "38900",
@@ -189,10 +171,7 @@ machine_info = [
     price: "33500",
     description: "2-speed drive, cab with heater and A/C, suspension seat, manual quick coupler, block heater, turn signals, 10 x 16.5 tires, 66 inch LPE bucket with bolt-on edge",
     user_id: "1",
-    dealership_id: "2",
-    mach_trader: true,
-    equip_locator: false,
-    equip_alley: false
+    dealership_id: "2"
   },
   {
     stock_number: "38899",
@@ -205,10 +184,7 @@ machine_info = [
     price: "70000",
     description: "double 3/8 inch wire screens, truck hitch",
     user_id: "1",
-    dealership_id: "2",
-    mach_trader: true,
-    equip_locator: true,
-    equip_alley: false
+    dealership_id: "2"
   },
   {
     stock_number: "38832",
@@ -221,10 +197,7 @@ machine_info = [
     price: "40000",
     description: "",
     user_id: "1",
-    dealership_id: "1",
-    mach_trader: true,
-    equip_locator: true,
-    equip_alley: false
+    dealership_id: "1"
   },
   {
     stock_number: "38815",
@@ -237,10 +210,7 @@ machine_info = [
     price: "55000",
     description: "33.5 hp Kubota diesel engine",
     user_id: "2",
-    dealership_id: "3",
-    mach_trader: false,
-    equip_locator: true,
-    equip_alley: true
+    dealership_id: "3"
   },
   {
     stock_number: "38800",
@@ -253,10 +223,7 @@ machine_info = [
     price: "40000",
     description: "2-speed drive, cab with heater and A/C, suspension seat, manual quick coupler, block heater, turn signals, High Flow, 14 x 17.5 tires, 78 inch LPE bucket with bolt-on edge",
     user_id: "2",
-    dealership_id: "3",
-    mach_trader: true,
-    equip_locator: true,
-    equip_alley: true
+    dealership_id: "3"
   },
   {
     stock_number: "38639",
@@ -269,10 +236,7 @@ machine_info = [
     price: "",
     description: "2-speed drive, cab with heater and A/C, suspension seat, manual quick coupler, block heater, turn signals, 14 x 17.5 tires, 78 inch LPE bucket with bolt-on edge",
     user_id: "2",
-    dealership_id: "4",
-    mach_trader: false,
-    equip_locator: true,
-    equip_alley: true
+    dealership_id: "4"
   },
   {
     stock_number: "38613",
@@ -285,10 +249,7 @@ machine_info = [
     price: "",
     description: "2-speed drive, cab with heater and A/C, suspension seat, manual quick coupler, block heater, turn signals, 12 x 16.5 tires, 72 inch LPE bucket with bolt-on edge",
     user_id: "2",
-    dealership_id: "3",
-    mach_trader: true,
-    equip_locator: true,
-    equip_alley: true
+    dealership_id: "3"
   },
   {
     stock_number: "37966",
@@ -301,10 +262,7 @@ machine_info = [
     price: "18000",
     description: "2-speed drive, cab with heater and A/C, suspension seat, manual quick coupler, block heater, turn signals, 12 x 16.5 tires, 72 inch LPE bucket with bolt-on edge",
     user_id: "2",
-    dealership_id: "4",
-    mach_trader: true,
-    equip_locator: false,
-    equip_alley: true
+    dealership_id: "4"
   },
   {
     stock_number: "37960",
@@ -317,10 +275,7 @@ machine_info = [
     price: "39493",
     description: "",
     user_id: "2",
-    dealership_id: "4",
-    mach_trader: false,
-    equip_locator: true,
-    equip_alley: false
+    dealership_id: "4"
   },
   {
     stock_number: "36695",
@@ -333,10 +288,7 @@ machine_info = [
     price: "105000",
     description: "2-speed drive, cab with heater and A/C, suspension seat, manual quick coupler, block heater, turn signals, 12 x 16.5 tires, 72 inch LPE bucket with bolt-on edge",
     user_id: "2",
-    dealership_id: "4",
-    mach_trader: true,
-    equip_locator: true,
-    equip_alley: true
+    dealership_id: "4"
   },
   {
     stock_number: "36694",
@@ -349,10 +301,7 @@ machine_info = [
     price: "85500",
     description: "Tier 3 engine, standard speed transmission, ROPS cab with heater & A/C, 405/70 R20 STP9 L2 tires/wheels, 1.44 cubic yard bucket with bolt-on cutting edge",
     user_id: "2",
-    dealership_id: "3",
-    mach_trader: true,
-    equip_locator: false,
-    equip_alley: true
+    dealership_id: "3"
   },
   {
     stock_number: "36356",
@@ -365,10 +314,7 @@ machine_info = [
     price: "59500",
     description: "Tier 3 engine, standard speed transmission, ROPS cab with heater & A/C, 405/70 R20 STP9 L2 tires/wheels, 1.44 cubic yard bucket with bolt-on cutting edge",
     user_id: "2",
-    dealership_id: "3",
-    mach_trader: true,
-    equip_locator: true,
-    equip_alley: true
+    dealership_id: "3"
   },
   {
     stock_number: "36353",
@@ -381,10 +327,7 @@ machine_info = [
     price: "55000",
     description: "",
     user_id: "2",
-    dealership_id: "4",
-    mach_trader: true,
-    equip_locator: true,
-    equip_alley: false
+    dealership_id: "4"
   },
   {
     stock_number: "35353",
@@ -397,10 +340,7 @@ machine_info = [
     price: "10500",
     description: "Kubota RTV1140 utility vehicle, 4WD, hydrostatic power steering, front bumper guard, speedometer, hydraulic cargo bed lift, transformable 4-person seating, 25 x 10-12 6 ply HD worksite tires, 24.8 hp Kubota diesel engine",
     user_id: "2",
-    dealership_id: "4",
-    mach_trader: false,
-    equip_locator: true,
-    equip_alley: true
+    dealership_id: "4"
   },
   {
     stock_number: "29134",
@@ -411,12 +351,9 @@ machine_info = [
     serial_number: "",
     hours: "1600",
     price: "55000",
-    description: "cab with heater & A/C, radio, hydrostatic drive, 24 inch track pads, 110 inch 6-way blade, auxiliary hydralics & rear weights",
+    description: "cab with heater & A/C, radio, hydrostatic drive, 24 inch track pads, 110 inch 6-way blade, auxiliary hydraulics & rear weights",
     user_id: "2",
-    dealership_id: "3",
-    mach_trader: true,
-    equip_locator: true,
-    equip_alley: true
+    dealership_id: "3"
   }
 ]
 
@@ -433,10 +370,288 @@ machine_info.each do |machine_hash|
   m.description = machine_hash[:description]
   m.user_id = machine_hash[:user_id]
   m.dealership_id = machine_hash[:dealership_id]
-  m.mach_trader = machine_hash[:mach_trader]
-  m.equip_locator = machine_hash[:equip_locator]
-  m.equip_alley = machine_hash[:equip_alley]
   m.save
 end
 
 puts "There are now #{Machine.count} machines in the database."
+
+# LISTINGS
+listing_info = [
+  {
+    equip_alley: true,
+    user_id: "1",
+    machine_id: "1"
+  },
+  {
+    equip_locator: true,
+    user_id: "1",
+    machine_id: "1"
+  },
+  {
+    mach_trader: true,
+    user_id: "1",
+    machine_id: "1"
+  },
+  {
+    equip_alley: true,
+    user_id: "1",
+    machine_id: "2"
+  },
+  {
+    equip_locator: true,
+    user_id: "1",
+    machine_id: "2"
+  },
+  {
+    mach_trader: true,
+    user_id: "1",
+    machine_id: "2"
+  },
+  {
+    equip_alley: true,
+    user_id: "1",
+    machine_id: "3"
+  },
+  {
+    equip_locator: true,
+    user_id: "1",
+    machine_id: "3"
+  },
+  {
+    mach_trader: true,
+    user_id: "1",
+    machine_id: "3"
+  },
+  {
+    equip_alley: true,
+    user_id: "1",
+    machine_id: "4"
+  },
+  {
+    equip_locator: true,
+    user_id: "1",
+    machine_id: "4"
+  },
+  {
+    equip_locator: true,
+    user_id: "1",
+    machine_id: "5"
+  },
+  {
+    mach_trader: true,
+    user_id: "1",
+    machine_id: "5"
+  },
+  {
+    equip_alley: true,
+    user_id: "1",
+    machine_id: "6"
+  },
+  {
+    equip_locator: true,
+    user_id: "1",
+    machine_id: "6"
+  },
+  {
+    mach_trader: true,
+    user_id: "1",
+    machine_id: "6"
+  },
+  {
+    equip_alley: true,
+    user_id: "1",
+    machine_id: "7"
+  },
+  {
+    mach_trader: true,
+    user_id: "1",
+    machine_id: "7"
+  },
+  {
+    equip_alley: true,
+    user_id: "1",
+    machine_id: "8"
+  },
+  {
+    equip_locator: true,
+    user_id: "1",
+    machine_id: "8"
+  },
+  {
+    mach_trader: true,
+    user_id: "1",
+    machine_id: "8"
+  },
+  {
+    equip_alley: true,
+    user_id: "1",
+    machine_id: "9"
+  },
+  {
+    equip_locator: true,
+    user_id: "1",
+    machine_id: "9"
+  },
+  {
+    equip_alley: true,
+    user_id: "2",
+    machine_id: "10"
+  },
+  {
+    equip_locator: true,
+    user_id: "2",
+    machine_id: "10"
+  },
+  {
+    mach_trader: true,
+    user_id: "2",
+    machine_id: "10"
+  },
+  {
+    equip_locator: true,
+    user_id: "2",
+    machine_id: "11"
+  },
+  {
+    mach_trader: true,
+    user_id: "2",
+    machine_id: "11"
+  },
+  {
+    equip_alley: true,
+    user_id: "2",
+    machine_id: "12"
+  },
+  {
+    equip_locator: true,
+    user_id: "2",
+    machine_id: "12"
+  },
+  {
+    mach_trader: true,
+    user_id: "2",
+    machine_id: "12"
+  },
+  {
+    equip_alley: true,
+    user_id: "2",
+    machine_id: "13"
+  },
+  {
+    mach_trader: true,
+    user_id: "2",
+    machine_id: "13"
+  },
+  {
+    equip_alley: true,
+    user_id: "2",
+    machine_id: "14"
+  },
+  {
+    equip_locator: true,
+    user_id: "2",
+    machine_id: "14"
+  },
+  {
+    mach_trader: true,
+    user_id: "2",
+    machine_id: "14"
+  },
+  {
+    equip_alley: true,
+    user_id: "2",
+    machine_id: "15"
+  },
+  {
+    equip_locator: true,
+    user_id: "2",
+    machine_id: "15"
+  },
+  {
+    equip_alley: true,
+    user_id: "2",
+    machine_id: "16"
+  },
+  {
+    equip_locator: true,
+    user_id: "2",
+    machine_id: "16"
+  },
+  {
+    mach_trader: true,
+    user_id: "2",
+    machine_id: "16"
+  },
+  {
+    equip_alley: true,
+    user_id: "2",
+    machine_id: "17"
+  },
+  {
+    mach_trader: true,
+    user_id: "2",
+    machine_id: "17"
+  },
+  {
+    equip_alley: true,
+    user_id: "2",
+    machine_id: "18"
+  },
+  {
+    equip_locator: true,
+    user_id: "2",
+    machine_id: "18"
+  },
+  {
+    mach_trader: true,
+    user_id: "2",
+    machine_id: "18"
+  },
+  {
+    equip_locator: true,
+    user_id: "2",
+    machine_id: "19"
+  },
+  {
+    mach_trader: true,
+    user_id: "2",
+    machine_id: "19"
+  },
+  {
+    equip_alley: true,
+    user_id: "2",
+    machine_id: "20"
+  },
+  {
+    equip_locator: true,
+    user_id: "2",
+    machine_id: "20"
+  },
+  {
+    equip_alley: true,
+    user_id: "2",
+    machine_id: "21"
+  },
+  {
+    equip_locator: true,
+    user_id: "2",
+    machine_id: "21"
+  },
+  {
+    mach_trader: true,
+    user_id: "2",
+    machine_id: "21"
+  },
+]
+
+listing_info.each do |listing_hash|
+  l = Listing.new
+  l.equip_alley = listing_hash[:equip_alley] if listing_hash[:equip_alley] != nil
+  l.equip_locator = listing_hash[:equip_locator] if listing_hash[:equip_locator] != nil
+  l.mach_trader = listing_hash[:mach_trader] if listing_hash[:mach_trader] != nil
+  l.user_id = listing_hash[:user_id]
+  l.machine_id = listing_hash[:machine_id]
+  l.save
+end
+
+puts "There are now #{Listing.count} listings in the database."

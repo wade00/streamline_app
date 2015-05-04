@@ -6,6 +6,7 @@ class User < ActiveRecord::Base
 
   has_many :machines, dependent: :destroy
   has_many :dealerships, dependent: :destroy
+  has_many :listings, dependent: :destroy
 
   validates :email, :company_name, uniqueness: true
 

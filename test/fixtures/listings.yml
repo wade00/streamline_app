@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  equip_alley_id: MyString
+  equip_locator_id: MyString
+  mach_trader_id: MyString
+  user_id: 
+  machine_id: 
+
+two:
+  equip_alley_id: MyString
+  equip_locator_id: MyString
+  mach_trader_id: MyString
+  user_id: 
+  machine_id: 

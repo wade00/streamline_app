@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150502161355) do
+ActiveRecord::Schema.define(version: 20150504164505) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -30,6 +30,19 @@ ActiveRecord::Schema.define(version: 20150502161355) do
 
   add_index "dealerships", ["user_id"], name: "index_dealerships_on_user_id", using: :btree
 
+  create_table "listings", force: :cascade do |t|
+    t.boolean  "equip_alley",   default: false
+    t.boolean  "equip_locator", default: false
+    t.boolean  "mach_trader",   default: false
+    t.integer  "user_id"
+    t.integer  "machine_id"
+    t.datetime "created_at",                    null: false
+    t.datetime "updated_at",                    null: false
+  end
+
+  add_index "listings", ["machine_id"], name: "index_listings_on_machine_id", using: :btree
+  add_index "listings", ["user_id"], name: "index_listings_on_user_id", using: :btree
+
   create_table "machines", force: :cascade do |t|
     t.string   "stock_number"
     t.string   "year"
@@ -42,11 +55,8 @@ ActiveRecord::Schema.define(version: 20150502161355) do
     t.text     "description"
     t.integer  "user_id"
     t.integer  "dealership_id"
-    t.datetime "created_at",                    null: false
-    t.datetime "updated_at",                    null: false
-    t.boolean  "mach_trader",   default: false
-    t.boolean  "equip_locator", default: false
-    t.boolean  "equip_alley",   default: false
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
   end
 
   add_index "machines", ["dealership_id"], name: "index_machines_on_dealership_id", using: :btree
@@ -72,6 +82,8 @@ ActiveRecord::Schema.define(version: 20150502161355) do
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
 
   add_foreign_key "dealerships", "users"
+  add_foreign_key "listings", "machines"
+  add_foreign_key "listings", "users"
   add_foreign_key "machines", "dealerships"
   add_foreign_key "machines", "users"
 end
