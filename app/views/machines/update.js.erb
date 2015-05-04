@@ -13,3 +13,5 @@ $('.machine-preview').removeClass('unactive-link');
 $('.machine-preview').removeClass('machine-preview-override');
 
 $('#<%= dom_id @machine %>').html('<%= j(render 'machine_content', machine: @machine) %>');
+
+// $('#site-checklist-modal').html('<%= j(render 'site_checklist_modal', listings: @machine.listings) %>');

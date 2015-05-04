@@ -1,4 +1,4 @@
- $(document).ready(function() {
+$(document).ready(function() {
 
   $('.machine-preview').click(function() {
     $('.machine-stats').toggleClass('hide-element');
@@ -17,7 +17,3 @@
 
 });
 
-function displayChecklist() {
-  $('#site-checklist-container').show();
-  return false
-}
