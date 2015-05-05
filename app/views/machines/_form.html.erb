@@ -98,11 +98,6 @@
   <div class="row machine-form-buttons">
     <div class="col-md-12 text-center">
       <p>
-        <%= f.submit "Save", class: "btn btn-success save-machine" %>
-        or
-        <%= link_to "Cancel", machines_path, class: "cancel-machine", remote: true %>
-      </p>
-      <p>
         <%= button_tag "Save", type: "button",
                                "data-toggle" => "modal",
                                "data-target" => "#listing-checklist-modal",
@@ -128,19 +123,47 @@
           <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
           <h4 class="modal-title">Let's go update those listings!</h4>
         </div>
-        <div class="modal-body">
+        <div class="modal-body listing-checklist-body text-center">
           <% @machine.listings.each do |listing| %>
-            <%= image_tag image_path("equipment-alley.png") if listing.equip_alley %>
-            <%= image_tag image_path("equipment-locator.png") if listing.equip_locator %>
-            <%= image_tag image_path("machinery-trader.png") if listing.mach_trader %>
+            <% if listing.equip_alley %>
+              <div class="site-checkbox current-listing">
+                <%= image_tag image_path("equipment-alley.png") %>
+                <p>
+                  <%= link_to "Up to date", "https://www.equipmentalley.com/main/user/login",
+                                                target: "_blank",
+                                                class: "btn btn-sm btn-success",
+                                                disabled: true %>
+                </p>
+              </div>
+            <% end %>
+            <% if listing.equip_locator %>
+              <div class="site-checkbox outdated-listing">
+                <%= image_tag image_path("equipment-locator.png") %>
+                <p>
+                  <%= link_to "Update listing", "http://www.equipmentlocator.com/maint/login.aspx",
+                                                target: "_blank",
+                                                class: "btn btn-sm btn-danger" %>
+                </p>
+              </div>
+            <% end %>
+            <% if listing.mach_trader %>
+              <div class="site-checkbox outdated-listing">
+                <%= image_tag image_path("machinery-trader.png") %>
+                <p>
+                  <%= link_to "Update listing", "https://dscrm.sandhills.com/main.aspx",
+                                                target: "_blank",
+                                                class: "btn btn-sm btn-danger" %>
+                </p>
+              </div>
+            <% end %>
           <% end %>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-default" data-dismiss="modal">I'll do this later</button>
-          <button type="button" class="btn btn-primary">I'm Done</button>
+          <%= f.submit "I'll do this later", class: "btn btn-default save-machine listings-done-later" %>
+          <%= f.submit "I'm done", class: "btn btn-primary save-machine listings-done-now" %>
         </div>
-      </div><!-- /.modal-content -->
-    </div><!-- /.modal-dialog -->
-  </div><!-- /.modal -->
+      </div>
+    </div>
+  </div>
 <% end %>
 
