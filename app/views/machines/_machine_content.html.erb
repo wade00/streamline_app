@@ -4,21 +4,21 @@
     <%= machine.make %> <%= machine.machine_model %> <%= machine.machine_type %>
   </strong>
   <small class="machine-stats">
-    <p>
-      <strong>Serial: </strong>
-      <span class="sort-serial"><%= machine.serial_number %></span>
-    </p>
-    <p>
+    <p class="sm-stat">
       <strong>Hours: </strong>
       <span class="sort-hours"><%= machine.hours %></span>
     </p>
-    <p>
+    <p class="sm-stat">
       <strong>Price: </strong>
       <span class="sort-price"><%= machine.price %></span>
     </p>
-    <p>
+    <p class="lg-stat">
       <strong>Location: </strong>
       <span class="sort-location"><%= machine.location.city %>, <%= machine.location.state %></span>
+    </p>
+    <p class="lg-stat">
+      <strong>Serial: </strong>
+      <span class="sort-serial"><%= machine.serial_number %></span>
     </p>
   </small>
 <% end %>

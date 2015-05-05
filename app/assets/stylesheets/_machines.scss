@@ -57,7 +57,7 @@
 /* Table */
 
 .sort-header {
-  height: 100px;
+  height: 10vh;
   padding-left: 1em;
   padding-right: 1em;
   padding-top: 2em;
@@ -71,20 +71,9 @@
 }
 
 .machine-inventory-list {
-  height: 90vh;
+  height: 85vh;
   padding: 0;
   padding-top: 2em;
-}
-
-.machine-stats {
-  color: $darkgrey;
-  font-size: 14px;
-  p {
-    display: inline-block;
-    margin-right: -4px;
-    margin-top: 1em;
-    width: 25%;
-  }
 }
 
 .machine-preview {
@@ -111,6 +100,25 @@
   vertical-align: middle;
 }
 
+.machine-stats {
+  color: $darkgrey;
+  font-size: 16px;
+  p {
+    display: inline-block;
+    font-weight: 300;
+    margin-right: -4px;
+    margin-top: 1em;
+  }
+}
+
+.sm-stat {
+  width: 20%;
+}
+
+.lg-stat {
+  width: 30%;
+}
+
 .sorted-by {
   color: $yellow;
   font-weight: 700;
@@ -127,8 +135,8 @@
 
 .machine-preview-override {
   background: $offwhitehover;
-  border-bottom: 1px solid $grey;
-  border-top: 1px solid $grey;
+  border-bottom: 1px solid lighten($grey, 40%);
+  border-top: 1px solid lighten($grey, 40%);
   opacity: 1 !important;
   -webkit-filter: blur(0px) !important;
   -moz-filter: blur(0px) !important;

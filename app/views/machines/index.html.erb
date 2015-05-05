@@ -1,15 +1,23 @@
 <div class="row table-container-wide">
   <div class="sort-header">
-    <%= form_tag("/machines") do %>
+    <div class="col-lg-6">
       <div class="form-group">
-        <%= label_tag "Sorted by:", nil, class: "control-label" %>
-        <%= select("machines",
-                   "sort",
-                   [ "Stock number", "Make", "Model", "Type", "Hours", "Price", "Location" ],
-                   {},
-                   { class: "form-control" }) %>
+        <label for="search-inventory">Search my inventory:</label>
+        <input type="search" class="form-control" id="search-inventory" placeholder="Search stock, make, model...">
       </div>
-    <% end %>
+    </div>
+    <div class="col-md-6">
+      <%= form_tag("/machines") do %>
+        <div class="form-group">
+          <%= label_tag "Sorted by:", nil, class: "control-label" %>
+          <%= select("machines",
+                     "sort",
+                     [ "Stock number", "Make", "Model", "Type", "Hours", "Price", "Location" ],
+                     {},
+                     { class: "form-control" }) %>
+        </div>
+      <% end %>
+    </div>
   </div>
   <ul class="machine-inventory-list">
     <%= render @machines %>
