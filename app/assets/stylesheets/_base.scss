@@ -1,7 +1,8 @@
 html, body {
+  background: $offwhite;
   margin: 0;
+  overflow-x: hidden;
   padding: 0;
-  overflow-x:hidden;
 }
 
 .body-container {
@@ -10,20 +11,20 @@ html, body {
 }
 
 .sidebar {
-  background-color: $lightgray;
+  background-color: $grey;
   height: 100%;
   text-align: center;
   width: 8%;
   nav {
     a {
-      color: $lightblue;
+      color: $lightgrey;
       display: block;
       font-size: 24px;
       height: 100px;
       padding-top: 1em;
       &:hover {
-        background: darken($lightgray, 5%);
-        color: lighten($lightblue, 10%);
+        background: darken($grey, 5%);
+        color: lighten($lightgrey, 10%);
         text-decoration: none;
       }
       span {
@@ -34,8 +35,8 @@ html, body {
 }
 
 .sidebar-clicked {
-  background: darken($lightgray, 10%);
-  border-bottom: 4px solid $darkblue;
+  background: darken($grey, 10%);
+  border-bottom: 4px solid $darkgrey;
 }
 
 /* Misc Utility Classes */

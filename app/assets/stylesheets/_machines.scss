@@ -1,5 +1,5 @@
 .no-machine-alert{
-  color: $darkgray;
+  color: $darkgrey;
   font-size: 36px;
   font-weight: 500;
   margin-left: 20%;
@@ -39,7 +39,7 @@
 }
 
 .edit-form-container-show-background {
-  background: lighten($lightgray, 10%);
+  background: $offwhitehover;
 }
 
 .edit-form-container-show-narrow {
@@ -77,7 +77,7 @@
 }
 
 .machine-stats {
-  color: $darkgray;
+  color: $darkgrey;
   font-size: 14px;
   p {
     display: inline-block;
@@ -88,7 +88,7 @@
 }
 
 .machine-preview {
-  border-top: 1px solid $lightgray;
+  border-top: 1px solid lighten($grey, 40%);
   cursor: pointer;
   display: block;
   font-weight: 100;
@@ -99,12 +99,12 @@
   white-space: nowrap;
   width: 100%;
   &:hover {
-    background: lighten($lightgray, 10%);
+    background: $offwhitehover;
   }
 }
 
 .stock-number {
-  color: $darkgray;
+  color: $darkgrey;
   display: table-cell;
   font-size: 18px;
   font-weight: 300;
@@ -112,7 +112,7 @@
 }
 
 .sorted-by {
-  color: $darkblue;
+  color: $yellow;
   font-weight: 700;
 }
 
@@ -126,8 +126,9 @@
 }
 
 .machine-preview-override {
-  background: lighten($lightgray, 10%);
-  border-bottom: 1px solid $lightgray;
+  background: $offwhitehover;
+  border-bottom: 1px solid $grey;
+  border-top: 1px solid $grey;
   opacity: 1 !important;
   -webkit-filter: blur(0px) !important;
   -moz-filter: blur(0px) !important;
@@ -158,43 +159,11 @@
   padding: 0;
   h1 {
     margin: 0;
-    color: $darkgray;
+    color: $darkgrey;
   }
 }
 
 /* Site Checklist */
-
-#site-checklist-container {
-  height: 100vh;
-  position: absolute;
-  right: 0;
-  top: 0;
-  width: 20%;
-}
-
-.site-checklist-header {
-  background: $lightgray;
-  border-bottom: 2px solid lighten($darkblue, 30%);
-  color: $lightblue;
-  height: 10vh;
-  font-size: 20px;
-  font-weight: 300;
-  padding-top: 1em;
-}
-
-.update-sites-container {
-  height: 70vh;
-  overflow-y: scroll;
-}
-
-.site-logo-container {
-  height: 25vh;
-  padding-top: 3em;
-}
-
-.site-logo {
-  margin: 1em 0;
-}
 
 .current-listing {
   background: $green;
@@ -208,13 +177,6 @@
   &:hover {
     background: darken($red, 5%);
   }
-}
-
-.checklist-actions {
-  background: $lightgray;
-  border-top: 2px solid lighten($darkblue, 30%);
-  height: 20vh;
-  padding-top: 2em;
 }
 
 .site-checkbox {

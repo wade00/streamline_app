@@ -1,5 +1,5 @@
 .body {
-  background: #EEE;
+  background: $offwhite;
 }
 .background-img {
   background: url(image_path("streamline-equipment-lot.jpg")) no-repeat center center;
@@ -11,13 +11,13 @@
 }
 
 .landing-page-navbar {
-  background: $lightgray;
+  background: $grey;
   border: 0;
   border-radius: 0;
   height: 3vh;
   margin-bottom: 0;
   .landing-nav-links {
-    color: #EEE;
+    color: $offwhite;
     list-style: none;
     margin-bottom: 0;
     width: 100%;
@@ -26,9 +26,9 @@
       font-size: 14px;
       padding-right: 3em;
       a {
-        color: #EEE;
+        color: $offwhite;
         &:hover {
-          color: darken(#EEE, 20%);
+          color: darken($offwhite, 20%);
           text-decoration: none;
         }
       }
@@ -38,12 +38,12 @@
 
 .landing-jumbo {
   background: rgba(0,0,0,0.4);
-  border-bottom: 10px solid $lightgray;
+  border-bottom: 10px solid $grey;
   height: 50vh;
   padding: 4em;
   margin-bottom: 0;
   h1, h2 {
-    color: #EEE;
+    color: $offwhite;
   }
 }
 
@@ -67,7 +67,7 @@
 }
 
 .landing-page-copy {
-  background: #EEE;
+  background: $offwhite;
   p {
     font-size: 18px;
     font-weight: 300;
@@ -75,12 +75,12 @@
 }
 
 .page-header {
-  border-bottom: 1px solid #BBB;
+  border-bottom: 1px solid $lightgrey;
   margin-top: 0;
 }
 
 .landing-page-copy-light {
-  background: #EEE;
+  background: $offwhite;
 }
 
 .landing-page-copy-dark {
@@ -95,7 +95,7 @@
 }
 
 .signup-card-header {
-  color: #EEE;
+  color: $offwhite;
   padding-top: 1em;
 }
 
@@ -109,7 +109,7 @@
 }
 
 .parallax {
-  background: #EEE;
+  background: $offwhite;
   height: 100vh;
   overflow-x: hidden;
   overflow-y: auto;
