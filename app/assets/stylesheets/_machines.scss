@@ -33,6 +33,9 @@
   right: 0;
   top: 0;
   width: 62%;
+  form {
+    padding-top: 1em;
+  }
 }
 
 .edit-form-container-show-background {
@@ -143,10 +146,6 @@
 }
 
 /* Edit Form */
-
-.edit_machine {
-  padding-top: 1em;
-}
 
 .machine-form-column {
   padding-left: 40px;

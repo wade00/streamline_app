@@ -1,4 +1,5 @@
 $(document).ready(function() {
+
   // Not working
   // $('.sidebar-link').click(function() {
   //   $('.sidebar-link').removeClass('sidebar-clicked');
@@ -17,4 +18,5 @@ $(document).ready(function() {
     $('.machine-preview').toggleClass('machine-preview-blur', 600, 'easeOutSine');
     $('.machine-preview').toggleClass('unactive-link');
   });
+
 });
