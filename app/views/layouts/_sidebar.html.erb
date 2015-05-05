@@ -8,9 +8,13 @@
       <div><%= icon("th-list") %></div>
       <span>My Inventory</span>
     <% end %>
-    <%= link_to new_machine_path, class: "add-machine-link", remote: true do %>
+    <%= link_to new_machine_path, class: "sidebar-link add-machine-link", remote: true do %>
       <div><%= icon("plus") %></div>
       <span>Add Machine</span>
+    <% end %>
+    <%= link_to listings_path, class: "listings-link" do %>
+      <div><%= icon("tasks") %></div>
+      <span>My Listings</span>
     <% end %>
     <%= link_to destroy_user_session_path, class: "sidebar-link", method: "delete" do %>
       <div><%= icon("sign-out") %></div>

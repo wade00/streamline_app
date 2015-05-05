@@ -4,4 +4,5 @@ Rails.application.routes.draw do
   devise_for :users, controllers: { registrations: :registrations }
   resources :dealerships, except: [:show]
   resources :machines, except: [:show]
+  resources :listings, except: [:show]
 end

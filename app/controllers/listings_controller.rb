@@ -2,7 +2,10 @@ class ListingsController < ApplicationController
   before_action :set_listing, only: [:edit, :update, :destroy]
 
   def index
-    @listings = @machine.listings
+    @listings = current_user.listings
+    @equip_alley_listings = @listings.where(equip_alley: true)
+    @equip_locator_listings = @listings.where(equip_locator: true)
+    @mach_trader_listings = @listings.where(mach_trader: true)
   end
 
   def new
