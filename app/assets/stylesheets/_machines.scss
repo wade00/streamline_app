@@ -44,6 +44,13 @@
   left: 38%;
 }
 
+.add-new-machine-container {
+  height: 90vh;
+  .machine-form-header {
+    margin-bottom: 1em;
+  }
+}
+
 /* Table */
 
 .sort-header {
@@ -139,13 +146,6 @@
 
 .edit_machine {
   padding-top: 1em;
-}
-
-.machine-form-panel {
-  box-shadow: $sm-box-shadow;
-  .control-label {
-    color: $darkgray;
-  }
 }
 
 .machine-form-column {

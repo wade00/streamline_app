@@ -1,19 +1,19 @@
 <div class="sidebar">
   <nav class="nav">
-    <%= link_to edit_user_registration_path do %>
-      <div><%= icon('user') %></div>
+    <%= link_to edit_user_registration_path, class: "sidebar-link" do %>
+      <div><%= icon("user") %></div>
       <span>Profile</span>
     <% end %>
-    <%= link_to machines_path, class: 'sidebar-clicked' do %>
-      <div><%= icon('th-list') %></div>
+    <%= link_to machines_path, class: "sidebar-link" do %>
+      <div><%= icon("th-list") %></div>
       <span>My Inventory</span>
     <% end %>
-    <%= link_to new_machine_path do %>
-      <div><%= icon('plus') %></div>
+    <%= link_to new_machine_path, class: "add-machine-link", remote: true do %>
+      <div><%= icon("plus") %></div>
       <span>Add Machine</span>
     <% end %>
-    <%= link_to destroy_user_session_path, method: "delete" do %>
-      <div><%= icon('sign-out') %></div>
+    <%= link_to destroy_user_session_path, class: "sidebar-link", method: "delete" do %>
+      <div><%= icon("sign-out") %></div>
       <span>Sign out</span>
     <% end %>
   </nav>

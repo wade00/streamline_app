@@ -1,0 +1,8 @@
+var newMachineForm = $('<%= j(render 'form') %>');
+newMachineForm.hide();
+
+$('#edit-form-container').html(newMachineForm);
+
+newMachineForm.fadeIn(1200);
+
+$('.edit-form-container-show').addClass('edit-form-container-show-background', 1200);

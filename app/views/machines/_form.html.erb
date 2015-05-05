@@ -1,8 +1,11 @@
-<% if @machine.persisted? %>
-  <div class="page-header machine-form-header">
+<div class="page-header machine-form-header">
+  <% if @machine.persisted? %>
     <h1>Stock <%= @machine.stock_number %></h1>
-  </div>
-<% end %>
+  <% else %>
+    <h1>Add a Machine</h1>
+  <% end %>
+</div>
+
 <%= form_for @machine, remote: true do |f| %>
   <% if @machine.errors.any? %>
     <%= render "shared/errors", resource: @machine %>
@@ -160,10 +163,9 @@
         </div>
         <div class="modal-footer">
           <%= f.submit "I'll do this later", class: "btn btn-default save-machine listings-done-later" %>
-          <%= f.submit "I'm done", class: "btn btn-primary save-machine listings-done-now" %>
+          <%= f.submit "All listings up to date", class: "btn btn-primary save-machine listings-done-now" %>
         </div>
       </div>
     </div>
   </div>
 <% end %>
-
