@@ -1,5 +1,4 @@
 # USERS
-User.destroy_all
 user_info = [
   {
     email: "waden@example.com",
@@ -378,267 +377,280 @@ puts "There are now #{Machine.count} machines in the database."
 # LISTINGS
 listing_info = [
   {
-    equip_alley: true,
+    website: :equipment_alley,
+    current: false,
     user_id: "1",
     machine_id: "1"
   },
   {
-    equip_locator: true,
+    website: :equipment_locator,
     user_id: "1",
     machine_id: "1"
   },
   {
-    mach_trader: true,
+    website: :machinery_trader,
     user_id: "1",
     machine_id: "1"
   },
   {
-    equip_alley: true,
+    website: :equipment_alley,
     user_id: "1",
     machine_id: "2"
   },
   {
-    equip_locator: true,
+    website: :equipment_locator,
+    current: false,
     user_id: "1",
     machine_id: "2"
   },
   {
-    mach_trader: true,
+    website: :machinery_trader,
     user_id: "1",
     machine_id: "2"
   },
   {
-    equip_alley: true,
+    website: :equipment_alley,
     user_id: "1",
     machine_id: "3"
   },
   {
-    equip_locator: true,
+    website: :equipment_locator,
     user_id: "1",
     machine_id: "3"
   },
   {
-    mach_trader: true,
+    website: :machinery_trader,
+    current: false,
     user_id: "1",
     machine_id: "3"
   },
   {
-    equip_alley: true,
+    website: :equipment_alley,
     user_id: "1",
     machine_id: "4"
   },
   {
-    equip_locator: true,
+    website: :equipment_locator,
     user_id: "1",
     machine_id: "4"
   },
   {
-    equip_locator: true,
+    website: :equipment_locator,
+    current: false,
     user_id: "1",
     machine_id: "5"
   },
   {
-    mach_trader: true,
+    website: :machinery_trader,
     user_id: "1",
     machine_id: "5"
   },
   {
-    equip_alley: true,
+    website: :equipment_alley,
     user_id: "1",
     machine_id: "6"
   },
   {
-    equip_locator: true,
+    website: :equipment_locator,
+    current: false,
     user_id: "1",
     machine_id: "6"
   },
   {
-    mach_trader: true,
+    website: :machinery_trader,
     user_id: "1",
     machine_id: "6"
   },
   {
-    equip_alley: true,
+    website: :equipment_alley,
     user_id: "1",
     machine_id: "7"
   },
   {
-    mach_trader: true,
+    website: :machinery_trader,
+    current: false,
     user_id: "1",
     machine_id: "7"
   },
   {
-    equip_alley: true,
+    website: :equipment_alley,
     user_id: "1",
     machine_id: "8"
   },
   {
-    equip_locator: true,
+    website: :equipment_locator,
     user_id: "1",
     machine_id: "8"
   },
   {
-    mach_trader: true,
+    website: :machinery_trader,
     user_id: "1",
     machine_id: "8"
   },
   {
-    equip_alley: true,
+    website: :equipment_alley,
+    current: false,
     user_id: "1",
     machine_id: "9"
   },
   {
-    equip_locator: true,
+    website: :equipment_locator,
     user_id: "1",
     machine_id: "9"
   },
   {
-    equip_alley: true,
+    website: :equipment_alley,
     user_id: "2",
     machine_id: "10"
   },
   {
-    equip_locator: true,
+    website: :equipment_locator,
     user_id: "2",
     machine_id: "10"
   },
   {
-    mach_trader: true,
+    website: :machinery_trader,
+    current: false,
     user_id: "2",
     machine_id: "10"
   },
   {
-    equip_locator: true,
+    website: :equipment_locator,
     user_id: "2",
     machine_id: "11"
   },
   {
-    mach_trader: true,
+    website: :machinery_trader,
     user_id: "2",
     machine_id: "11"
   },
   {
-    equip_alley: true,
+    website: :equipment_alley,
     user_id: "2",
     machine_id: "12"
   },
   {
-    equip_locator: true,
+    website: :equipment_locator,
     user_id: "2",
     machine_id: "12"
   },
   {
-    mach_trader: true,
+    website: :machinery_trader,
+    current: false,
     user_id: "2",
     machine_id: "12"
   },
   {
-    equip_alley: true,
+    website: :equipment_alley,
     user_id: "2",
     machine_id: "13"
   },
   {
-    mach_trader: true,
+    website: :machinery_trader,
     user_id: "2",
     machine_id: "13"
   },
   {
-    equip_alley: true,
+    website: :equipment_alley,
     user_id: "2",
     machine_id: "14"
   },
   {
-    equip_locator: true,
+    website: :equipment_locator,
+    current: false,
     user_id: "2",
     machine_id: "14"
   },
   {
-    mach_trader: true,
+    website: :machinery_trader,
     user_id: "2",
     machine_id: "14"
   },
   {
-    equip_alley: true,
+    website: :equipment_alley,
     user_id: "2",
     machine_id: "15"
   },
   {
-    equip_locator: true,
+    website: :equipment_locator,
     user_id: "2",
     machine_id: "15"
   },
   {
-    equip_alley: true,
+    website: :equipment_alley,
     user_id: "2",
     machine_id: "16"
   },
   {
-    equip_locator: true,
+    website: :equipment_locator,
     user_id: "2",
     machine_id: "16"
   },
   {
-    mach_trader: true,
+    website: :machinery_trader,
     user_id: "2",
     machine_id: "16"
   },
   {
-    equip_alley: true,
+    website: :equipment_alley,
     user_id: "2",
     machine_id: "17"
   },
   {
-    mach_trader: true,
+    website: :machinery_trader,
+    current: false,
     user_id: "2",
     machine_id: "17"
   },
   {
-    equip_alley: true,
+    website: :equipment_alley,
     user_id: "2",
     machine_id: "18"
   },
   {
-    equip_locator: true,
+    website: :equipment_locator,
     user_id: "2",
     machine_id: "18"
   },
   {
-    mach_trader: true,
+    website: :machinery_trader,
     user_id: "2",
     machine_id: "18"
   },
   {
-    equip_locator: true,
+    website: :equipment_locator,
     user_id: "2",
     machine_id: "19"
   },
   {
-    mach_trader: true,
+    website: :machinery_trader,
+    current: false,
     user_id: "2",
     machine_id: "19"
   },
   {
-    equip_alley: true,
+    website: :equipment_alley,
     user_id: "2",
     machine_id: "20"
   },
   {
-    equip_locator: true,
+    website: :equipment_locator,
     user_id: "2",
     machine_id: "20"
   },
   {
-    equip_alley: true,
+    website: :equipment_alley,
     user_id: "2",
     machine_id: "21"
   },
   {
-    equip_locator: true,
+    website: :equipment_locator,
     user_id: "2",
     machine_id: "21"
   },
   {
-    mach_trader: true,
+    website: :machinery_trader,
+    current: false,
     user_id: "2",
     machine_id: "21"
   },
@@ -646,9 +658,8 @@ listing_info = [
 
 listing_info.each do |listing_hash|
   l = Listing.new
-  l.equip_alley = listing_hash[:equip_alley] if listing_hash[:equip_alley] != nil
-  l.equip_locator = listing_hash[:equip_locator] if listing_hash[:equip_locator] != nil
-  l.mach_trader = listing_hash[:mach_trader] if listing_hash[:mach_trader] != nil
+  l.website = listing_hash[:website]
+  l.current = listing_hash[:current] if listing_hash[:current] != nil
   l.user_id = listing_hash[:user_id]
   l.machine_id = listing_hash[:machine_id]
   l.save

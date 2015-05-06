@@ -31,13 +31,12 @@ ActiveRecord::Schema.define(version: 20150504164505) do
   add_index "dealerships", ["user_id"], name: "index_dealerships_on_user_id", using: :btree
 
   create_table "listings", force: :cascade do |t|
-    t.boolean  "equip_alley",   default: false
-    t.boolean  "equip_locator", default: false
-    t.boolean  "mach_trader",   default: false
+    t.integer  "website"
+    t.boolean  "current",    default: true
     t.integer  "user_id"
     t.integer  "machine_id"
-    t.datetime "created_at",                    null: false
-    t.datetime "updated_at",                    null: false
+    t.datetime "created_at",                null: false
+    t.datetime "updated_at",                null: false
   end
 
   add_index "listings", ["machine_id"], name: "index_listings_on_machine_id", using: :btree
