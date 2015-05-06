@@ -2,10 +2,9 @@ class ListingsController < ApplicationController
   before_action :set_listing, only: [:edit, :update, :destroy]
 
   def index
-    @listings = current_user.listings
-    @equip_alley_listings = @listings.where(equip_alley: true)
-    @equip_locator_listings = @listings.where(equip_locator: true)
-    @mach_trader_listings = @listings.where(mach_trader: true)
+    @equip_alley_listings   = outdated_listings(0)
+    @equip_locator_listings = outdated_listings(1)
+    @mach_trader_listings   = outdated_listings(2)
   end
 
   def new
@@ -35,6 +34,18 @@ class ListingsController < ApplicationController
     respond_with(@listing, location: edit_machine_path(@machine))
   end
 
+  def equip_alley
+    @equip_alley_listings = outdated_listings(0)
+  end
+
+  def equip_locator
+    @equip_locator_listings = outdated_listings(1)
+  end
+
+  def mach_trader
+    @mach_trader_listings = outdated_listings(2)
+  end
+
   private
     def set_listing
       @listing = Listing.find(params[:id])
@@ -44,7 +55,8 @@ class ListingsController < ApplicationController
       params.require(:listing).permit(:equip_alley, :equip_locator, :mach_trader)
     end
 
-    def set_machine
-      @machine = Machine.find_by(machine_id: params[:listing][:machine_id])
+    def outdated_listings(site_number)
+      @outdated_listings = current_user.listings.where(current: false)
+      return @outdated_listings.where(website: site_number)
     end
 end

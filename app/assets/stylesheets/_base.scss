@@ -13,6 +13,8 @@ html, body {
 .sidebar {
   background-color: $grey;
   height: 100%;
+  position: absolute;
+  left: 0;
   text-align: center;
   width: 8%;
   nav {
@@ -27,7 +29,7 @@ html, body {
         color: lighten($lightgrey, 10%);
         text-decoration: none;
       }
-      span {
+      small {
         font-size: 14px;
       }
     }
@@ -37,6 +39,12 @@ html, body {
 .sidebar-clicked {
   background: darken($grey, 10%);
   border-bottom: 4px solid $darkgrey;
+}
+
+.outdated-listing-count {
+  background: $yellow;
+  color: $grey;
+  font-size: 22px;
 }
 
 /* Misc Utility Classes */

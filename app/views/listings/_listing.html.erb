@@ -1,28 +1,28 @@
-<li class="machine-preview">
-  <%= link_to "#", class: "edit-machine-link", remote: true do %>
-    <strong class="stock-number">
-      <span class="sorted-by">Stock <span class="sort-stock"><%= listing.machine.stock_number %></span></span>
-      <%= listing.machine.make %> <%= listing.machine.machine_model %> <%= listing.machine.machine_type %>
-    </strong>
-    <small class="machine-stats">
-      <p class="sm-stat">
-        <strong>Hours: </strong>
-        <span class="sort-hours"><%= listing.machine.hours %></span>
-      </p>
-      <p class="sm-stat">
-        <strong>Price: </strong>
-        <span class="sort-price"><%= listing.machine.price %></span>
-      </p>
-      <p class="lg-stat">
-        <strong>Location: </strong>
-        <span class="sort-location">
-          <%= listing.machine.location.city %>, <%= listing.machine.location.state %>
-        </span>
-      </p>
-      <p class="lg-stat">
-        <strong>Serial: </strong>
-        <span class="sort-serial"><%= listing.machine.serial_number %></span>
-      </p>
-    </small>
-  <% end %>
+<li class="listing-preview">
+  <strong class="stock-number">
+    <span class="sorted-by">Stock <span class="sort-stock"><%= listing.machine.stock_number %></span></span>
+    <%= listing.machine.make %> <%= listing.machine.machine_model %> <%= listing.machine.machine_type %>
+  </strong>
+  <small class="listing-stats">
+    <strong>Hours: </strong>
+    <span class="sort-hours"><%= listing.machine.hours %></span>
+  </small>
+  <small class="listing-stats">
+    <strong>Price: </strong>
+    <span class="sort-price"><%= listing.machine.price %></span>
+  </small>
+  <small class="listing-stats">
+    <strong>Location: </strong>
+    <span class="sort-location">
+      <%= listing.machine.location.city %>, <%= listing.machine.location.state %>
+    </span>
+  </small>
+  <small class="listing-stats">
+    <strong>Serial: </strong>
+    <span class="sort-serial"><%= listing.machine.serial_number %></span>
+  </small>
+  <small class="listing-stats listing-description">
+    <strong>Description: </strong>
+    <%= listing.machine.description %>
+  </small>
 </li>

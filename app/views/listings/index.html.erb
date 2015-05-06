@@ -1,27 +1,14 @@
-<div class="row table-container-wide">
-  <div class="page-header listing-site-header">
-    <h3>Equipment Alley Listings</h3>
+<div class="row table-container-wide listing-panel-container">
+  <div>
+    <h3 class="text-center">Which site do you want to update?</h3>
   </div>
-  <ul class="machine-inventory-list">
-    <%= render @equip_alley_listings %>
-  </ul>
-
-  <hr />
-
-  <div class="page-header listing-site-header">
-    <h3>Equipment Locator Listings</h3>
-  </div>
-  <ul class="machine-inventory-list">
-    <%= render @equip_locator_listings %>
-  </ul>
-
-  <hr />
-
-  <div class="page-header listing-site-header">
-    <h3>Machinery Trader Listings</h3>
-  </div>
-  <ul class="machine-inventory-list">
-    <%= render @mach_trader_listings %>
-  </ul>
+  <%= render 'listing_site_panel_link', website: "Equipment Alley",
+                                        website_listings: @equip_alley_listings,
+                                        site_path: listings_equip_alley_path %>
+  <%= render 'listing_site_panel_link', website: "Equipment Locator",
+                                        website_listings: @equip_locator_listings,
+                                        site_path: listings_equip_locator_path %>
+  <%= render 'listing_site_panel_link', website: "Machinery Trader",
+                                        website_listings: @mach_trader_listings,
+                                        site_path: listings_mach_trader_path %>
 </div>
-<div id="edit-form-container"></div>
