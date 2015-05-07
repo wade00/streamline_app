@@ -1,6 +1,5 @@
 $(document).ready(function() {
-
-  $('.machine-preview').click(function() {
+  $('body').on('click', '.machine-preview', function() {
     $('.machine-stats').toggleClass('hide-element');
     $('.table-container-wide').toggleClass('table-container-narrow', 600, 'easeOutSine');
     $('.sort-header').toggleClass('sort-header-narrow', 600, 'easeOutSine');
@@ -14,5 +13,4 @@ $(document).ready(function() {
     $(this).toggleClass('machine-preview-override');
     $(this).toggleClass('unactive-link');
   });
-
 });

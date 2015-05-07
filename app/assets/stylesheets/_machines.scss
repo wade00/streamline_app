@@ -57,10 +57,9 @@
 /* Table */
 
 .sort-header {
+  background: $offwhite;
   height: 10vh;
-  padding-left: 1em;
-  padding-right: 1em;
-  padding-top: 2em;
+  padding: 1em;
   position: fixed;
   top: 0;
   width: 70%;
@@ -71,7 +70,7 @@
 }
 
 .machine-inventory-list {
-  height: 85vh;
+  height: 90vh;
   padding: 0;
   padding-top: 2em;
 }

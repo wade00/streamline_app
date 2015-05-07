@@ -19,11 +19,21 @@
   width: 30%;
 }
 
+.listing-list-header {
+  height: 5vh;
+}
+
 .listing-list {
   padding-left: 0;
+  height: 90vh;
+  margin-bottom: 0;
+  overflow: hidden;
+  overflow-y: scroll;
 }
 
 .listing-site-frame {
+  border-left: 6px solid $lightgrey;
+  border-right: 6px solid $lightgrey;
   height: 100vh;
   margin: 0px;
   position: absolute;

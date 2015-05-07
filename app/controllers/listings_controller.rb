@@ -17,21 +17,20 @@ class ListingsController < ApplicationController
   def create
     @listing = Listing.new(listing_params)
     @listing.owner = current_user
-    @listing.machine = @machine
 
     flash[:notice] if @listing.save
-    respond_with(@listing, location: edit_machine_path(@machine))
+    respond_with(@listing, location: machines_path)
   end
 
   def update
     flash[:notice] if @listing.update(listing_params)
-    respond_with(@listing, location: edit_machine_path(@machine))
+    respond_with(@listing, location: machines_path)
   end
 
   def destroy
     @listing.destroy
     flash[:notice]
-    respond_with(@listing, location: edit_machine_path(@machine))
+    respond_with(@listing, location: machines_path)
   end
 
   def equip_alley
@@ -52,7 +51,7 @@ class ListingsController < ApplicationController
     end
 
     def listing_params
-      params.require(:listing).permit(:equip_alley, :equip_locator, :mach_trader)
+      params.require(:listing).permit(:website, :machine_id, :current)
     end
 
     def outdated_listings(site_number)

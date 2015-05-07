@@ -12,10 +12,16 @@ class Machine < ActiveRecord::Base
   private
 
   def format_machine_categories
-    self.stock_number = self.stock_number.upcase
-    self.make = self.make.titleize
+    self.stock_number  = self.stock_number.upcase
+    self.make          = self.make.titleize
     self.machine_model = self.machine_model.upcase
     self.machine_type  = self.machine_type.titleize
     self.serial_number = self.serial_number.upcase
+  end
+
+  def listing_outdated?
+    if self.changed?
+      self.current = false
+    end
   end
 end

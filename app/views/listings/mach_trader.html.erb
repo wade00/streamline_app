@@ -1,7 +1,12 @@
 <div class="row outdated-listings-narrow">
-  <h3 class="text-center">Outdated Listings</h3>
+  <h3 class="listing-list-header text-center">Outdated Listings</h3>
   <ul class="listing-list">
-    <%= render @mach_trader_listings %>
+    <% if @mach_trader_listings.count == 0 %>
+      <hr />
+      <h4 class="text-center">All listings up to date!</h4>
+    <% else %>
+      <%= render @mach_trader_listings %>
+    <% end %>
   </ul>
 </div>
 <div class="listing-site-frame">
