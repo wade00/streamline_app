@@ -56,14 +56,14 @@
           </div>
         </div>
 
-        <div class="col-md-6 dealerships-display">
+        <div class="col-md-6">
           <div class="form-column-header">
             <h3>Dealerships</h3>
             <p class="header-link-right"><%= link_to "Add a location", new_dealership_path, class: "btn" %></p>
           </div>
           <hr />
 
-          <div>
+          <div class="dealerships-display">
             <% if current_user.dealerships.count == 0 %>
               <strong>No locations yet!</strong>
             <% end %>

@@ -6,7 +6,8 @@
     <% alert_type = 'danger' %>
   <% elsif msg_type == 'alert' %>
     <% alert_type = 'warning' %>
-  <% else msg_type == 'notice' %>
+  <% elsif msg_type == 'notice' %>
+    <% alert_type = 'warning' %>
   <% end %>
-  <%= content_tag :div, message, class: "alert alert-#{alert_type}", role: "alert" %>
+  <%= content_tag :div, message, class: "flash-container alert alert-#{alert_type}", id: "flash", role: "alert" %>
 <% end %>

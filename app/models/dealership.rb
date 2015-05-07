@@ -17,7 +17,7 @@ class Dealership < ActiveRecord::Base
 
   def format_dealership_categories
     self.address = self.address.titleize
-    self.city = self.city.titleize
-    self.state = self.state.upcase
+    self.city    = self.city.titleize
+    self.state   = self.state.upcase
   end
 end

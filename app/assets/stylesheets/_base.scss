@@ -47,6 +47,13 @@ html, body {
   font-size: 22px;
 }
 
+.flash-container {
+  position: fixed;
+  top: 1em;
+  width: 70%;
+  z-index: 9999;
+}
+
 /* Misc Utility Classes */
 
 .unactive-link {

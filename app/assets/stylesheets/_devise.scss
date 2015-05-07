@@ -33,6 +33,11 @@
   }
 }
 
+.dealerships-display {
+  height: 50vh;
+  overflow-y: scroll;
+}
+
 .delete-account-link {
   color: darken($red, 30%);
 }

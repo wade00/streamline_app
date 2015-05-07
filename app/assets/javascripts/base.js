@@ -19,4 +19,8 @@ $(document).ready(function() {
     $('.machine-preview').toggleClass('unactive-link');
   });
 
+  setTimeout(function() {
+    $('#flash').fadeOut();
+  }, 2000);
+
 });
