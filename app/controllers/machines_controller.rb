@@ -3,7 +3,13 @@ class MachinesController < ApplicationController
   responders :flash
 
   def index
-    @machines = current_user.machines
+    if params[:search]
+      @machines = current_user.machines.search(params[:search])
+    elsif params[:sort]
+      @machines = current_user.machines.order(params[:sort])
+    else
+      @machines = current_user.machines.order("stock_number DESC")
+    end
   end
 
   def new

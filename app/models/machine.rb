@@ -24,4 +24,23 @@ class Machine < ActiveRecord::Base
       self.current = false
     end
   end
+
+  def self.search(query)
+    wildcard_search = "%#{query}%"
+
+    where("stock_number ilike ? OR
+           make ilike ? OR
+           machine_model ilike ? OR
+           machine_type ilike ? OR
+           hours ilike ? OR
+           price ilike ? OR
+           description ilike ?",
+           wildcard_search,
+           wildcard_search,
+           wildcard_search,
+           wildcard_search,
+           wildcard_search,
+           wildcard_search,
+           wildcard_search)
+  end
 end

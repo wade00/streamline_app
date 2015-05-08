@@ -1,20 +1,33 @@
 <div class="row table-container-wide">
   <div class="sort-header">
     <div class="col-lg-6">
-      <div class="form-group">
-        <label for="search-inventory">Search my inventory:</label>
-        <input type="search" class="form-control" id="search-inventory" placeholder="Search stock, make, model...">
-      </div>
+      <%= form_tag(machines_path, method: "get", class: "machines-searchbar", id: "machine-search") do %>
+        <div class="input-group">
+          <%= text_field_tag :search, params[:search],
+                                      class: "form-control",
+                                      placeholder: "Search my inventory..." %>
+          <span class="input-group-btn">
+            <button class="btn btn-default" type="submit">Search</button>
+          </span>
+        </div>
+      <% end %>
     </div>
     <div class="col-md-6">
-      <%= form_tag("/machines") do %>
+      <%= form_tag(machines_path, method: "get", class: "machines-sort", id: "machine-sort") do %>
         <div class="form-group">
           <%= label_tag "Sorted by:", nil, class: "control-label" %>
           <%= select("machines",
                      "sort",
-                     [ "Stock number", "Make", "Model", "Type", "Hours", "Price", "Location" ],
+                     [ ["Stock Number", "stock_number"],
+                       ["Make", "make"],
+                       ["Model", "machine_model"],
+                       ["Type", "machine_type"],
+                       ["Serial Number", "serial_number"],
+                       ["Hours", "hours"],
+                       ["Price", "price"],
+                     ],
                      {},
-                     { class: "form-control" }) %>
+                     { class: "form-control", onchange: "this.form.submit()" }) %>
         </div>
       <% end %>
     </div>
