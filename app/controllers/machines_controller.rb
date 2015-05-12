@@ -28,6 +28,7 @@ class MachinesController < ApplicationController
   end
 
   def update
+    @machine.listings_outdated?
     flash[:notice] if @machine.update(machine_params)
     respond_with(@machine, location: machines_url)
   end

@@ -31,6 +31,11 @@
       <% end %>
     </div>
   </div>
+  <div class="fields-header">
+    <%= machine_list_header("stock") %>
+    <%= machine_list_header("model") %>
+    <%= machine_list_header("status") %>
+  </div>
   <ul class="machine-inventory-list">
     <%= render @machines %>
   </ul>

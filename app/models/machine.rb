@@ -9,6 +9,15 @@ class Machine < ActiveRecord::Base
 
   before_save :format_machine_categories
 
+  def listings_outdated?
+    if self.changed?
+      self.listings.each do |listing|
+        listing.current = false
+        listing.save
+      end
+    end
+  end
+
   private
 
   def format_machine_categories
@@ -19,11 +28,6 @@ class Machine < ActiveRecord::Base
     self.serial_number = self.serial_number.upcase
   end
 
-  def listing_outdated?
-    if self.changed?
-      self.current = false
-    end
-  end
 
   def self.search(query)
     wildcard_search = "%#{query}%"
