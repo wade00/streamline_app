@@ -13,4 +13,9 @@ $(document).ready(function() {
     $(this).toggleClass('machine-preview-override');
     $(this).toggleClass('unactive-link');
   });
+
+  $('body').on('change', '#machine-sort', function() {
+    $(this).submit();
+    // $(this).setAttribute("selected", "selected");
+  });
 });

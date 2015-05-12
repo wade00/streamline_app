@@ -32,9 +32,11 @@ class Machine < ActiveRecord::Base
            make ilike ? OR
            machine_model ilike ? OR
            machine_type ilike ? OR
+           serial_number ilike ? OR
            hours ilike ? OR
            price ilike ? OR
            description ilike ?",
+           wildcard_search,
            wildcard_search,
            wildcard_search,
            wildcard_search,

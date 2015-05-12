@@ -5,8 +5,8 @@ class MachinesController < ApplicationController
   def index
     if params[:search]
       @machines = current_user.machines.search(params[:search])
-    elsif params[:sort]
-      @machines = current_user.machines.order(params[:sort])
+    elsif params[:machines] != nil && params[:machines][:sort]
+      @machines = current_user.machines.order(params[:machines][:sort])
     else
       @machines = current_user.machines.order("stock_number DESC")
     end
@@ -49,6 +49,6 @@ class MachinesController < ApplicationController
     end
 
     def interpolation_options
-      { resource_name: "Stock number #{@machine.stock_number}" }
+      { resource_name: "stock number #{@machine.stock_number}" }
     end
 end
