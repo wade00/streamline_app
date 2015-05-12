@@ -1,7 +1,5 @@
-<div class="row table-container-wide listing-panel-container">
-  <div>
-    <h3 class="text-center">Which site do you want to update?</h3>
-  </div>
+<div class="table-container-narrow listing-site-container">
+
   <%= render 'listing_site_panel_link', website: "Equipment Alley",
                                         website_listings: @equip_alley_listings,
                                         site_path: listings_equip_alley_path %>
@@ -11,4 +9,35 @@
   <%= render 'listing_site_panel_link', website: "Machinery Trader",
                                         website_listings: @mach_trader_listings,
                                         site_path: listings_mach_trader_path %>
+</div>
+
+<div class="listing-site-frame">
+  <div class="panel panel-default listings-instructions-panel">
+    <div class="panel-heading">
+      <h4 class="panel-title text-center">Time to update those listings!</h4>
+    </div>
+    <div class="panel-body text-center">
+      <div class="listings-instructions">
+        <p>
+          <h4>Choose a website from the list on the left.</h4> You can visit those sites right here! Once you log in and find the machine you want to update just click the 'copy' button that appears at the top of the screen!
+        </p>
+      </div>
+
+      <hr />
+
+      <div class="listings-instructions">
+      <p>
+        <h4>You need to download TWO things to make this magic work:</h4>
+          <a href="https://www.google.com/chrome/browser/desktop/" target="_blank">
+            Google's Chrome internet browser
+          </a>
+          AND
+          <a href="https://www.google.com/chrome/browser/desktop/" target="_blank">
+            the Streamline browser extension
+          </a>
+        They're simple and easy to install. If you have trouble contact us and we'll help!
+      </p>
+      </div>
+    </div>
+  </div>
 </div>

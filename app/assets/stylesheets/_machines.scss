@@ -11,7 +11,7 @@
 
 .table-container-wide {
   bottom: 0;
-  left: 18%;
+  left: 20%;
   margin: 0;
   max-height: 100vh;
   overflow-x: hidden;
@@ -21,8 +21,10 @@
 }
 
 .table-container-narrow {
-  left: 8%;
+  left: 10%;
+  position: absolute;
   width: 30%;
+  height: 100vh;
 }
 
 .edit-form-container-show {
@@ -32,7 +34,7 @@
   position: absolute;
   right: 0;
   top: 0;
-  width: 62%;
+  width: 60%;
   form {
     padding-top: 1em;
   }
@@ -43,8 +45,8 @@
 }
 
 .edit-form-container-show-narrow {
-  width: 32%;
-  left: 38%;
+  width: 30%;
+  left: 40%;
 }
 
 .add-new-machine-container {

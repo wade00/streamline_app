@@ -1,21 +1,21 @@
-  <div class="panel panel-default listing-site-panel">
-    <div class="panel-heading">
-      <h3 class="panel-title panel-header-text-left"><%= website %></h3>
-      <p class="header-link-right">
-        <%= link_to "#", class: "btn pull-right" do %>
-          Outdated listings <span class="badge"><%= website_listings.count %></span>
-        <% end %>
-      </p>
-    </div>
-    <div class="panel-body text-center">
-      <%= link_to site_path do %>
-        <% if website == "Equipment Alley" %>
-          <%= image_tag image_path("equipment-alley.png") %>
-        <% elsif website == "Equipment Locator" %>
-          <%= image_tag image_path("equipment-locator.png") %>
-        <% elsif website == "Machinery Trader" %>
-          <%= image_tag image_path("machinery-trader.png") %>
-        <% end %>
+<div class="panel panel-default listing-site-panel">
+  <div class="panel-heading">
+    <h3 class="panel-title panel-header-text-left"><%= website %></h3>
+    <p class="header-link-right">
+      <%= link_to site_path, class: "btn pull-right" do %>
+        Outdated listings <span class="badge"><%= website_listings.count %></span>
       <% end %>
-    </div>
+    </p>
   </div>
+  <div class="panel-body text-center">
+    <%= link_to site_path do %>
+      <% if website == "Equipment Alley" %>
+        <%= image_tag image_path("equipment-alley.png") %>
+      <% elsif website == "Equipment Locator" %>
+        <%= image_tag image_path("equipment-locator.png") %>
+      <% elsif website == "Machinery Trader" %>
+        <%= image_tag image_path("machinery-trader.png") %>
+      <% end %>
+    <% end %>
+  </div>
+</div>

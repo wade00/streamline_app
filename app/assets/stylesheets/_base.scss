@@ -12,11 +12,11 @@ html, body {
 
 .sidebar {
   background-color: $grey;
-  height: 100%;
-  position: absolute;
+  height: 100vh;
   left: 0;
+  position: absolute;
   text-align: center;
-  width: 8%;
+  width: 10%;
   nav {
     a {
       color: $lightgrey;
@@ -63,4 +63,8 @@ html, body {
 
 .hide-element {
   display: none !important;
+}
+
+.page-header-headline {
+  margin-top: 0;
 }

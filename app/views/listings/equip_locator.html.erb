@@ -1,8 +1,9 @@
-<div class="row outdated-listings-narrow">
-  <h3 class="listing-list-header text-center">Outdated Listings</h3>
+<div class="table-container-narrow listing-site-container">
+  <div class="page-header">
+    <h3 class="page-header-headline">Update these listings...</h3>
+  </div>
   <ul class="listing-list">
     <% if @equip_locator_listings.count == 0 %>
-      <hr />
       <h4 class="text-center">All listings up to date!</h4>
     <% else %>
       <%= render @equip_locator_listings %>
