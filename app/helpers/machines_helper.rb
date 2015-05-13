@@ -1,6 +1,6 @@
 module MachinesHelper
-  def machine_list_header(field)
-    content_tag :li, class: "columns-4 #{ 'sorted' if params[:sorted] == field}" do
+  def machine_list_header(field, class_value)
+    content_tag :th, class: "#{class_value} table-header-column#{ 'sorted' if params[:sorted] == field}" do
       field.titleize
     end
   end

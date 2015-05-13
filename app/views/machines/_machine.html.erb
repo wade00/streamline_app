@@ -1,5 +1,3 @@
-<%= link_to edit_machine_path(machine), class: "edit-machine-link", remote: true do %>
-  <li class="machine-preview" id="<%= dom_id machine %>">
-    <%= render 'machine_content', machine: machine %>
-  </li>
-<% end %>
+<tr class="machine-preview" id="<%= dom_id machine %>">
+  <%= render 'machine_content', machine: machine %>
+</tr>

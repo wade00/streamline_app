@@ -31,17 +31,20 @@
       <% end %>
     </div>
   </div>
-  <div class="fields-header">
-    <ul>
-      <%= machine_list_header("Stock") %>
-      <%= machine_list_header("Make") %>
-      <%= machine_list_header("Model") %>
-      <%= machine_list_header("Type") %>
-      <%= machine_list_header("Status") %>
-    </ul>
+  <table class="table table-hover machine-inventory-list">
+    <thead>
+      <tr class="machine-preview">
+        <%= machine_list_header("Stock", "stock-number-cell") %>
+        <%= machine_list_header("Make", "make-cell") %>
+        <%= machine_list_header("Model", "machine-model-cell") %>
+        <%= machine_list_header("Type", "machine-type-cell") %>
+        <%= machine_list_header("Status", "machine-status-cell") %>
+      </tr>
+    </thead>
+    <tbody>
+      <%= render @machines %>
+    </tbody>
+  </table>
   </div>
-  <ul class="machine-inventory-list">
-    <%= render @machines %>
-  </ul>
 </div>
 <div id="edit-form-container"></div>

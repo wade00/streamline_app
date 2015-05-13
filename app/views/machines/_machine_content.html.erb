@@ -1,4 +1,37 @@
-<strong class="stock-number">
-  <span class="sorted-by">Stock <span class="sort-stock"><%= machine.stock_number %></span></span>
-  <%= machine.make %> <%= machine.machine_model %> <%= machine.machine_type %>
-</strong>
+<td class="stock-number-cell">
+  <strong class="stock-number">
+    <%= link_to edit_machine_path(machine), class: "edit-machine-link", remote: true do %>
+      <span class="sorted-by"><%= machine.stock_number %></span>
+    <% end %>
+  </strong>
+</td>
+
+<td class="make-cell">
+  <strong class="stock-number">
+    <%= link_to edit_machine_path(machine), class: "edit-machine-link", remote: true do %>
+      <%= machine.make %>
+    <% end %>
+  </strong>
+</td>
+
+<td class="machine-model-cell">
+  <strong class="stock-number">
+    <%= link_to edit_machine_path(machine), class: "edit-machine-link", remote: true do %>
+      <%= machine.machine_model %>
+    <% end %>
+  </strong>
+</td>
+
+<td class="machine-type-cell">
+  <strong class="stock-number">
+    <%= link_to edit_machine_path(machine), class: "edit-machine-link", remote: true do %>
+      <%= machine.machine_type %>
+    <% end %>
+  </strong>
+</td>
+
+<td class="machine-status-cell">
+  <strong class="stock-number">
+    <%= link_to "Status", listings_path, class: "btn btn-xs btn-warning" %>
+  </strong>
+</td>
