@@ -1,4 +1,4 @@
-<div class="row table-container-wide">
+<div class="table-container-wide">
   <div class="sort-header">
     <div class="col-lg-6">
       <%= form_tag(machines_path, method: "get", class: "machines-searchbar", id: "machine-search") do %>
@@ -32,9 +32,13 @@
     </div>
   </div>
   <div class="fields-header">
-    <%= machine_list_header("stock") %>
-    <%= machine_list_header("model") %>
-    <%= machine_list_header("status") %>
+    <ul>
+      <%= machine_list_header("Stock") %>
+      <%= machine_list_header("Make") %>
+      <%= machine_list_header("Model") %>
+      <%= machine_list_header("Type") %>
+      <%= machine_list_header("Status") %>
+    </ul>
   </div>
   <ul class="machine-inventory-list">
     <%= render @machines %>

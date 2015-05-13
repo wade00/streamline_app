@@ -1,10 +1,12 @@
-$(document).ready(function() {
-  $('body').on('click', '.listing-confirm-button', function() {
+function confirmListings() {
+  $('.listing-confirm-button').click(function() {
     $(this).val('√');
     $(this).removeClass('btn-primary');
   });
+}
 
-  $('body').on('click', '.listing-show-more', function() {
+function showMoreListing() {
+  $('.listing-show-more').click(function() {
     var listingId = $(this).attr('id');
     $('#' + listingId + '_stats').slideToggle();
 
@@ -14,4 +16,4 @@ $(document).ready(function() {
       $(this).html('<i class="fa fa-minus-square"></i>');
     }
   });
-});
+}

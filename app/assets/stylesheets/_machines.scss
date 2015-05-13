@@ -24,7 +24,7 @@
   left: 10%;
   position: absolute;
   width: 30%;
-  height: 100vh;
+  height: 90vh;
 }
 
 .edit-form-container-show {
@@ -148,9 +148,6 @@
 }
 
 .edit-machine-link {
-  display: block;
-  margin: -1em;
-  padding: 1em;
   &:hover {
     text-decoration: none;
   }

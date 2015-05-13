@@ -1,14 +1,14 @@
 <div class="sidebar">
   <nav class="nav">
+    <%= link_to machines_path, class: "sidebar-link" do %>
+      <div><%= icon("th-list") %></div>
+      <small>My Inventory</small>
+    <% end %>
     <%= link_to listings_path, class: "listings-link" do %>
       <div>
         <span class="badge outdated-listing-count"><%= current_user.listings.where(current: false).count %></span>
       </div>
-      <small>Listings</small>
-    <% end %>
-    <%= link_to machines_path, class: "sidebar-link" do %>
-      <div><%= icon("th-list") %></div>
-      <small>My Inventory</small>
+      <small>Outdated Listings</small>
     <% end %>
     <%= link_to new_machine_path, class: "sidebar-link add-machine-link", remote: true do %>
       <div><%= icon("plus") %></div>
