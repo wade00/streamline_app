@@ -1,8 +1,14 @@
 html, body {
   background: $offwhite;
+  font-family: 'Open-sans', 'Helvetica', sans-serif;
+  font-size: 16px;
   margin: 0;
   overflow-x: hidden;
   padding: 0;
+}
+
+label {
+  font-size: 14px;
 }
 
 .body-container {
@@ -22,6 +28,7 @@ html, body {
       color: $lightgrey;
       display: block;
       font-size: 24px;
+      font-weight: 300;
       height: 100px;
       padding-top: 1em;
       &:hover {

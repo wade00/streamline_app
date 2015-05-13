@@ -10,7 +10,6 @@
 }
 
 .table-container-wide {
-  bottom: 0;
   left: 20%;
   margin: 0;
   max-height: 100vh;
@@ -49,13 +48,6 @@
   left: 40%;
 }
 
-.add-new-machine-container {
-  height: 90vh;
-  .machine-form-header {
-    margin-bottom: 1em;
-  }
-}
-
 .search-machines-container {
   padding: 0;
 }
@@ -77,9 +69,9 @@
 }
 
 .machine-inventory-list {
-  height: 100vh;
   margin-top: 10vh;
   padding: 0;
+  overflow-y: scroll;
   tbody {
     width: 100%;
   }
@@ -87,7 +79,6 @@
 
 .machine-table-header {
   cursor: pointer;
-  font-weight: 100;
   height: 60px;
   width: 100%;
   a {
@@ -97,11 +88,6 @@
     cursor: default;
     pointer-events: none;
   }
-}
-
-.table-header-column {
-  font-size: 18px;
-  font-weight: 700;
 }
 
 .machine-preview {
@@ -128,7 +114,6 @@
 .stock-number {
   color: $darkgrey;
   display: table-cell;
-  font-size: 18px;
   font-weight: 300;
   vertical-align: middle;
 }
@@ -142,26 +127,6 @@
 }
 
 .machine-type-cell {
-  width: 30%;
-}
-
-.machine-stats {
-  color: $darkgrey;
-  display: block;
-  font-size: 16px;
-  p {
-    display: inline-block;
-    font-weight: 300;
-    margin-right: -4px;
-    margin-top: 1em;
-  }
-}
-
-.sm-stat {
-  width: 20%;
-}
-
-.lg-stat {
   width: 30%;
 }
 

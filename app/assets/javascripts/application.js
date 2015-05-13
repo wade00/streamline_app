@@ -25,7 +25,7 @@ function setupMachinesIndex() {
 }
 
 function setupListingsIndex() {
-  if ($('.listing-confirm-button').length > 0) {
+  if ($('#new_machine').length > 0) {
     confirmListings();
   }
 

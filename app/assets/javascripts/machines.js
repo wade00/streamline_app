@@ -1,4 +1,4 @@
-function showForm() {
+function toggleForm() {
   $('.search-header').toggleClass('hide-element');
   $('.table-container-wide').toggleClass('table-container-narrow', 600, 'easeOutSine');
   $('.sort-header').toggleClass('sort-header-narrow', 600, 'easeOutSine');
@@ -14,7 +14,7 @@ function showForm() {
 
 function showEditForm() {
   $('.machine-preview').click(function() {
-    showForm();
+    toggleForm();
     $(this).toggleClass('machine-preview-override');
     $(this).toggleClass('unactive-link');
   });
@@ -22,11 +22,6 @@ function showEditForm() {
 
 function showAddForm() {
   $('.add-machine-link').click(function() {
-    showForm();
+    toggleForm();
   });
 }
-
-// $('body').on('change', '#machine-sort', function() {
-//   $(this).submit();
-//   // $(this).setAttribute("selected", "selected");
-// });

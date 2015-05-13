@@ -6,7 +6,7 @@ function confirmListings() {
 }
 
 function showMoreListing() {
-  $('.listing-show-more').click(function() {
+  $('body').on('click', '.listing-show-more', function() {
     var listingId = $(this).attr('id');
     $('#' + listingId + '_stats').slideToggle();
 

@@ -24,12 +24,17 @@ class MachinesController < ApplicationController
     @machine = Machine.new(machine_params)
     @machine.owner = current_user
 
-    flash[:notice] if @machine.save
-    respond_with(@machine, location: machines_url)
+    if @machine.save
+      flash[:notice]
+      respond_with(@machine, location: machines_url)
+    else
+      render 'machines/form', errors: @machine.errors
+    end
   end
 
   def update
     @machine.listings_outdated?
+
     flash[:notice] if @machine.update(machine_params)
     respond_with(@machine, location: machines_url)
   end

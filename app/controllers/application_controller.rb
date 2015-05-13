@@ -15,10 +15,6 @@ class ApplicationController < ActionController::Base
     devise_parameter_sanitizer.for(:sign_up) << :company_name
   end
 
-  def disable_nav
-    @disable_nav = true
-  end
-
   def after_sign_in_path_for(resource)
     machines_path
   end
