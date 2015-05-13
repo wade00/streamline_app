@@ -28,15 +28,19 @@ class MachinesController < ApplicationController
       flash[:notice]
       respond_with(@machine, location: machines_url)
     else
-      render 'machines/form', errors: @machine.errors
+      render 'new', errors: @machine.errors
     end
   end
 
   def update
-    @machine.listings_outdated?
+    # @machine.listings_outdated?
 
-    flash[:notice] if @machine.update(machine_params)
-    respond_with(@machine, location: machines_url)
+    if @machine.update(machine_params)
+      flash[:notice]
+      respond_with(@machine, location: machines_url)
+    else
+      render 'edit'
+    end
   end
 
   def destroy
