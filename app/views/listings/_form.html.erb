@@ -1,53 +1,55 @@
-<div class="page-header machine-form-header text-center">
-  <h1>Which sites do you want to list stock <%= machine.stock_number %> on?</h1>
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h4>Which sites do you want to list stock <%= machine.stock_number %> on?</h4>
+  </div>
+  <div class="panel-body">
+  <div class="text-center">
+    <div id="ea-listing-container">
+      <%= form_for Listing.new, class: "listing-form-2", remote: true do |f| %>
+        <div class="row">
+          <%= image_tag image_path("equipment-alley.png") %>
+          <%= f.hidden_field :machine_id, value: machine.id %>
+          <%= f.hidden_field :website, value: :equipment_alley %>
+          <%= f.hidden_field :current, value: false %>
+          <p>
+            <%= f.submit "List on Equipment Alley", class: "btn btn-primary listing-confirm-button" %>
+          </p>
+        </div>
+      <% end %>
+    </div>
+
+    <div id="els-listing-container">
+      <%= form_for Listing.new, class: "listing-form-2", remote: true do |f| %>
+        <div class="row">
+          <%= image_tag image_path("equipment-locator.png") %>
+          <%= f.hidden_field :machine_id, value: machine.id %>
+          <%= f.hidden_field :website, value: :equipment_locator %>
+          <%= f.hidden_field :current, value: false %>
+          <p>
+            <%= f.submit "List on Equipment Locator", class: "btn btn-primary listing-confirm-button" %>
+          </p>
+        </div>
+      <% end %>
+    </div>
+
+    <div id="mt-listing-container">
+      <%= form_for Listing.new, class: "listing-form-2", remote: true do |f| %>
+        <div class="row">
+          <%= image_tag image_path("machinery-trader.png") %>
+          <%= f.hidden_field :machine_id, value: machine.id %>
+          <%= f.hidden_field :website, value: :machinery_trader %>
+          <%= f.hidden_field :current, value: false %>
+          <p>
+            <%= f.submit "List on Machinery Trader", class: "btn btn-primary listing-confirm-button" %>
+          </p>
+        </div>
+      <% end %>
+    </div>
+  </div>
+
+  <hr />
+
+  <p class="text-center">
+    <%= link_to "I'm Done", machines_path, class: "btn btn-primary" %>
+  </p>
 </div>
-
-<div class="text-center">
-  <div id="ea-listing-container">
-    <%= form_for Listing.new, class: "listing-form-2", remote: true do |f| %>
-      <div class="row">
-        <%= image_tag image_path("equipment-alley.png") %>
-        <%= f.hidden_field :machine_id, value: machine.id %>
-        <%= f.hidden_field :website, value: :equipment_alley %>
-        <%= f.hidden_field :current, value: false %>
-        <p>
-          <%= f.submit "List on Equipment Alley", class: "btn btn-primary listing-confirm-button" %>
-        </p>
-      </div>
-    <% end %>
-  </div>
-
-  <div id="els-listing-container">
-    <%= form_for Listing.new, class: "listing-form-2", remote: true do |f| %>
-      <div class="row">
-        <%= image_tag image_path("equipment-locator.png") %>
-        <%= f.hidden_field :machine_id, value: machine.id %>
-        <%= f.hidden_field :website, value: :equipment_locator %>
-        <%= f.hidden_field :current, value: false %>
-        <p>
-          <%= f.submit "List on Equipment Locator", class: "btn btn-primary listing-confirm-button" %>
-        </p>
-      </div>
-    <% end %>
-  </div>
-
-  <div id="mt-listing-container">
-    <%= form_for Listing.new, class: "listing-form-2", remote: true do |f| %>
-      <div class="row">
-        <%= image_tag image_path("machinery-trader.png") %>
-        <%= f.hidden_field :machine_id, value: machine.id %>
-        <%= f.hidden_field :website, value: :machinery_trader %>
-        <%= f.hidden_field :current, value: false %>
-        <p>
-          <%= f.submit "List on Machinery Trader", class: "btn btn-primary listing-confirm-button" %>
-        </p>
-      </div>
-    <% end %>
-  </div>
-</div>
-
-<hr />
-
-<p class="text-center">
-  <%= link_to "I'm Done", machines_path, class: "btn btn-primary" %>
-</p>
