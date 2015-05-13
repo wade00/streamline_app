@@ -25,5 +25,8 @@ module StreamlineRails
 
     # Do not swallow errors in after_commit/after_rollback callbacks.
     config.active_record.raise_in_transactional_callbacks = true
+
+    # Added for Devise custom redirect if user not signed in
+    config.autoload_paths << Rails.root.join('lib')
   end
 end
