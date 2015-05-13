@@ -18,6 +18,10 @@ function setupMachinesIndex() {
   if ($('.machine-preview').length > 0) {
     showEditForm();
   }
+
+  if ($('.add-machine-link').length > 0) {
+    showAddForm();
+  }
 }
 
 function setupListingsIndex() {

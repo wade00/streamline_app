@@ -1,6 +1,6 @@
 <div class="table-container-wide">
-  <div class="sort-header">
-    <div class="col-lg-6">
+  <div class="search-header">
+    <div class="col-md-10 search-machines-container">
       <%= form_tag(machines_path, method: "get", class: "machines-searchbar", id: "machine-search") do %>
         <div class="input-group">
           <%= text_field_tag :search, params[:search],
@@ -12,33 +12,20 @@
         </div>
       <% end %>
     </div>
-    <div class="col-md-6">
-      <%= form_tag(machines_path, method: "get", class: "machines-sort", id: "machine-sort") do %>
-        <div class="form-group">
-          <%= select("machines",
-                     "sort",
-                     [ ["Sort by Stock Number", "stock_number"],
-                       ["Sort by Make", "make"],
-                       ["Sort by Model", "machine_model"],
-                       ["Sort by Type", "machine_type"],
-                       ["Sort by Serial Number", "serial_number"],
-                       ["Sort by Hours", "hours"],
-                       ["Sort by Price", "price"],
-                     ],
-                     {},
-                     { class: "form-control" }) %>
-        </div>
-      <% end %>
+    <div class="col-md-2 search-machines-container">
+      <%= link_to "Add a new machine", new_machine_path,
+                                       class: "btn btn-warning add-machine-link pull-right",
+                                       remote: true %>
     </div>
   </div>
   <table class="table table-hover machine-inventory-list">
     <thead>
-      <tr class="machine-preview">
-        <%= machine_list_header("Stock", "stock-number-cell") %>
-        <%= machine_list_header("Make", "make-cell") %>
-        <%= machine_list_header("Model", "machine-model-cell") %>
-        <%= machine_list_header("Type", "machine-type-cell") %>
-        <%= machine_list_header("Status", "machine-status-cell") %>
+      <tr class="machine-table-header">
+        <%= machine_list_header("stock", "stock-number-cell", "stock_number") %>
+        <%= machine_list_header("make", "make-cell", "make") %>
+        <%= machine_list_header("model", "machine-model-cell", "machine_model") %>
+        <%= machine_list_header("type", "machine-type-cell", "machine_type") %>
+        <%= machine_list_header("status", "machine-status-cell", "none") %>
       </tr>
     </thead>
     <tbody>

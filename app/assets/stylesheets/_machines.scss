@@ -56,12 +56,16 @@
   }
 }
 
+.search-machines-container {
+  padding: 0;
+}
+
 /* Table */
 
-.sort-header {
+.search-header {
   background: $offwhite;
   height: 10vh;
-  padding-top: 2em;
+  padding: 2em 0;
   position: fixed;
   top: 0;
   width: 70%;
@@ -77,6 +81,20 @@
   padding: 0;
   tbody {
     width: 100%;
+  }
+}
+
+.machine-table-header {
+  cursor: pointer;
+  font-weight: 100;
+  height: 60px;
+  width: 100%;
+  a {
+    color: $darkgrey;
+  }
+  .machine-status-cell {
+    cursor: default;
+    pointer-events: none;
   }
 }
 
