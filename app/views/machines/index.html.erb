@@ -1,11 +1,11 @@
 <div class="table-container-wide">
   <div class="search-header">
-    <div class="col-md-2 add-machine-container">
+    <div class="add-machine-container">
       <%= link_to "Add a new machine", new_machine_path,
                                        class: "btn btn-warning add-machine-link",
                                        remote: true %>
     </div>
-    <div class="col-md-10 search-machines-container">
+    <div class="search-machines-container">
       <%= form_tag(machines_path, method: "get", class: "machines-searchbar", id: "machine-search") do %>
         <div class="input-group">
           <%= text_field_tag :search, params[:search],
@@ -28,7 +28,7 @@
         <%= machine_list_header("serial", "machine-serial-cell", "serial_number") %>
       </tr>
     </thead>
-    <tbody id="machine-table-body">
+    <tbody class="machine-table-body">
       <%= render @machines %>
     </tbody>
   </table>
