@@ -1,10 +1,3 @@
-function confirmListings() {
-  $('.listing-confirm-button').click(function() {
-    $(this).val('√');
-    $(this).removeClass('btn-primary');
-  });
-}
-
 function showMoreListing() {
   $('body').on('click', '.listing-show-more', function() {
     var listingId = $(this).attr('id');

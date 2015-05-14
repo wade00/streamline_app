@@ -5,42 +5,45 @@
   <div class="panel-body">
   <div class="text-center">
     <div id="ea-listing-container">
-      <%= form_for Listing.new, class: "listing-form-2", remote: true do |f| %>
+      <%= form_for Listing.new, remote: true do |f| %>
         <div class="row">
           <%= image_tag image_path("equipment-alley.png") %>
           <%= f.hidden_field :machine_id, value: machine.id %>
           <%= f.hidden_field :website, value: :equipment_alley %>
           <%= f.hidden_field :current, value: false %>
-          <p>
-            <%= f.submit "List on Equipment Alley", class: "btn btn-primary listing-confirm-button" %>
+          <p class="listing-submit-button">
+            <%= f.submit "List on Equipment Alley", class: "btn btn-primary listing-confirm-button",
+                                                    id: "equipment_alley_listing" %>
           </p>
         </div>
       <% end %>
     </div>
 
     <div id="els-listing-container">
-      <%= form_for Listing.new, class: "listing-form-2", remote: true do |f| %>
+      <%= form_for Listing.new, remote: true do |f| %>
         <div class="row">
           <%= image_tag image_path("equipment-locator.png") %>
           <%= f.hidden_field :machine_id, value: machine.id %>
           <%= f.hidden_field :website, value: :equipment_locator %>
           <%= f.hidden_field :current, value: false %>
-          <p>
-            <%= f.submit "List on Equipment Locator", class: "btn btn-primary listing-confirm-button" %>
+          <p class="listing-submit-button">
+            <%= f.submit "List on Equipment Locator", class: "btn btn-primary listing-confirm-button",
+                                                      id: "equipment_locator_listing" %>
           </p>
         </div>
       <% end %>
     </div>
 
     <div id="mt-listing-container">
-      <%= form_for Listing.new, class: "listing-form-2", remote: true do |f| %>
+      <%= form_for Listing.new, remote: true do |f| %>
         <div class="row">
           <%= image_tag image_path("machinery-trader.png") %>
           <%= f.hidden_field :machine_id, value: machine.id %>
           <%= f.hidden_field :website, value: :machinery_trader %>
           <%= f.hidden_field :current, value: false %>
-          <p>
-            <%= f.submit "List on Machinery Trader", class: "btn btn-primary listing-confirm-button" %>
+          <p class="listing-submit-button">
+            <%= f.submit "List on Machinery Trader", class: "btn btn-primary listing-confirm-button",
+                                                     id: "machinery_trader_listing" %>
           </p>
         </div>
       <% end %>

@@ -1,0 +1,4 @@
+var website = '<%= j @listing.website %>';
+$('#' + website + '_listing').val('√');
+$('#' + website + '_listing').addClass('unactive-link');
+$('.outdated-listing-count').html('<%= j(render 'layouts/outdated_listings_badge') %>');

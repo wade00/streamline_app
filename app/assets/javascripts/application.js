@@ -25,10 +25,6 @@ function setupMachinesIndex() {
 }
 
 function setupListingsIndex() {
-  if ($('#new_machine').length > 0) {
-    confirmListings();
-  }
-
   if ($('.listing-show-more').length > 0) {
     showMoreListing();
   }
