@@ -12,6 +12,8 @@ class ListingsController < ApplicationController
   end
 
   def edit
+    @machine = Machine.find(params[:machine_id])
+    @listings = @machine.listings
   end
 
   def create

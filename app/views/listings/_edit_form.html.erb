@@ -1,0 +1,56 @@
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h4>Change which sites you want to list stock <%= @machine.stock_number %> on:</h4>
+  </div>
+  <div class="panel-body text-center">
+    <% @listings.each do |listing| %>
+      <% case listing.website %>
+      <% when "equipment_alley" %>
+        <div id="ea-listing-container">
+          <div class="row">
+            <%= image_tag image_path("equipment-alley.png") %>
+            <p class="listing-submit-button">
+              <%= link_to "Stop listing on Equipment Alley", listing,
+                                                             method: "delete",
+                                                             class: "btn btn-primary listing-confirm-button",
+                                                             id: "equipment_alley_listing",
+                                                             remote: true %>
+            </p>
+          </div>
+        </div>
+      <% when "equipment_locator" %>
+        <div id="els-listing-container">
+          <div class="row">
+            <%= image_tag image_path("equipment-locator.png") %>
+            <p class="listing-submit-button">
+              <%= link_to "Stop listing on Equipment Locator", listing,
+                                                               method: "delete",
+                                                               class: "btn btn-primary listing-confirm-button",
+                                                               id: "equipment_locator_listing",
+                                                               remote: true %>
+            </p>
+          </div>
+        </div>
+      <% when "machinery_trader" %>
+        <div id="mt-listing-container">
+          <div class="row">
+            <%= image_tag image_path("machinery-trader.png") %>
+            <p class="listing-submit-button">
+              <%= link_to "Stop listing on Machinery Trader", listing,
+                                                              method: "delete",
+                                                              class: "btn btn-primary listing-confirm-button",
+                                                              id: "machinery_trader_listing",
+                                                              remote: true %>
+            </p>
+          </div>
+        </div>
+      <% end %>
+    <% end %>
+
+    <hr />
+
+    <p class="text-center">
+      <%= link_to "I'm Done", machines_path, class: "btn btn-primary" %>
+    </p>
+  </div>
+</div>

@@ -6,8 +6,10 @@
 }
 
 .edit-profile-container {
-  height: 90vh;
-  overflow-y: scroll;
+  margin-top: 8vh;
+  left: 20%;
+  position: absolute;
+  width: 70%;
 }
 
 .form-column-header {
@@ -36,8 +38,4 @@
 .dealerships-display {
   height: 50vh;
   overflow-y: scroll;
-}
-
-.delete-account-link {
-  color: darken($red, 30%);
 }

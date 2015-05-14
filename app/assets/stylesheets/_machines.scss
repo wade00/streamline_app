@@ -14,7 +14,7 @@
   left: 10%;
   position: absolute;
   width: 30%;
-  height: 90vh;
+  height: 100vh;
 }
 
 .edit-form-container-show {
@@ -145,6 +145,7 @@
   padding: 5px;
   position: absolute;
   right: 0;
+  text-shadow: 1px 1px darken($red, 10%);
   top: 8px;
 }
 

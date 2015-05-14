@@ -1,0 +1,6 @@
+var listingsForm = $('<%= j(render 'listings/edit_form') %>');
+listingsForm.hide();
+
+$('#edit-form-container').html('');
+$('#edit-form-container').html(listingsForm);
+listingsForm.fadeIn();

@@ -1,9 +1,17 @@
 <div class="panel panel-default">
   <div class="panel-heading">
     <% if @machine.persisted? %>
-      <h3 class="panel-title">Edit stock <%= @machine.stock_number %></h3>
+      <h3 class="panel-title panel-header-text-left">Edit stock <%= @machine.stock_number %></h3>
     <% else %>
-      <h3 class="panel-title">Add a Machine</h3>
+      <h3 class="panel-title panel-header-text-left">Add a Machine</h3>
+    <% end %>
+    <% if @machine.persisted? %>
+      <p class="header-link-right">
+        <%= link_to "Delete Machine", @machine,
+                                      method: "delete",
+                                      confirm: "Are you sure you want to delete this machine?",
+                                      class: "btn pull-right delete-link" %>
+      </p>
     <% end %>
   </div>
   <div class="panel-body">
@@ -110,12 +118,14 @@
           or
           <%= link_to "Cancel", machines_path, class: "cancel-machine", remote: true %>
         </p>
-        <% if @machine.persisted? %>
-          <%= link_to "Delete Machine", machine_path(@machine.id),
-                                        method: "delete",
-                                        confirm: "Are you sure you want to delete this machine?",
-                                        class: "btn btn-danger delete-machine" %>
-        <% end %>
+      </div>
+      <div class="col-md-12 text-center">
+        <p>
+          <%= link_to "Change which sites I'm listing this machine on",
+                      edit_listing_path(@machine.listings.first, params: {machine_id: @machine.id}),
+                      class: "cancel-machine",
+                      remote: true %>
+        </p>
       </div>
     </div>
   <% end %>
