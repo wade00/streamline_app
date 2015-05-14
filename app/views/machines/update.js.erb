@@ -1,8 +1,5 @@
 if (<%= @machine.save %>) {
   toggleForm();
-  $('.machine-preview').removeClass('machine-preview-override');
-  $('.machine-preview').removeClass('unactive-link');
-
   $('#<%= dom_id @machine %>').html('<%= j(render 'machine_content', machine: @machine) %>');
   $('.outdated-listing-count').html('<%= j(render 'layouts/outdated_listings_badge') %>');
 }

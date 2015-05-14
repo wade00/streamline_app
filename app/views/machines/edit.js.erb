@@ -1,8 +1,3 @@
 var editMachineForm = $('<%= j(render 'form') %>');
-editMachineForm.hide();
-
-$('#edit-form-container').html(editMachineForm);
-
-editMachineForm.fadeIn(1200);
-
-$('.edit-form-container-show').addClass('edit-form-container-show-background', 1200);
+$('.edit-form-container').html(editMachineForm);
+toggleForm();

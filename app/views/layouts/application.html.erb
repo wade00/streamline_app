@@ -12,7 +12,7 @@
     <%= render 'layouts/landing_page_header' unless current_user.present? %>
     <%= render 'layouts/sidebar' if current_user.present? %>
     <% unless flash.empty? %>
-      <div class="row table-container-wide">
+      <div class="flash-container">
         <%= render 'shared/flash_messages' %>
       </div>
     <% end %>

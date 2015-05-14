@@ -17,26 +17,25 @@
   height: 100vh;
 }
 
-.edit-form-container-show {
+.edit-form-container {
+  background: $offwhitehover;
+  display: none;
   height: 100vh;
   margin: 0px;
-  padding: 2em;
   position: absolute;
   right: 0;
   top: 0;
-  width: 60%;
+  width: 75%;
+  z-index: 9999;
+  box-shadow: -5px 2px 12px -6px rgba(61,61,61,1);
+  -webkit-box-shadow: -5px 2px 12px -6px rgba(61,61,61,1);
+  -moz-box-shadow: -5px 2px 12px -6px rgba(61,61,61,1);
+  .machine-form-panel {
+    margin: 2em;
+  }
   form {
     padding-top: 1em;
   }
-}
-
-.edit-form-container-show-background {
-  background: $offwhitehover;
-}
-
-.edit-form-container-show-narrow {
-  width: 30%;
-  left: 40%;
 }
 
 .add-machine-container {
@@ -71,10 +70,6 @@
   top: 0;
   width: 70%;
   z-index: 999;
-}
-
-.sort-header-narrow {
-  width: 30%;
 }
 
 .machine-inventory-list {
@@ -150,15 +145,6 @@
 }
 
 /* Blur effects for edit form */
-
-.machine-preview-blur {
-  -webkit-filter: blur(1px);
-  -moz-filter: blur(1px);
-  -o-filter: blur(1px);
-  -ms-filter: blur(1px);
-  filter: blur(1px);
-  opacity: 0.5;
-}
 
 .machine-preview-override {
   background: $offwhitehover;

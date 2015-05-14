@@ -2,7 +2,7 @@ if (<%= @machine.save %>) {
   var listingsForm = $('<%= j(render 'listings/form', machine: current_user.machines.last) %>');
   listingsForm.hide();
 
-  $('#edit-form-container').html('');
-  $('#edit-form-container').html(listingsForm);
+  $('.edit-form-container').html('');
+  $('.edit-form-container').html(listingsForm);
   listingsForm.fadeIn();
 }
