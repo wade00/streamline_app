@@ -4,6 +4,9 @@
       <span class="sorted-by"><%= machine.stock_number %></span>
     <% end %>
   </strong>
+  <% if add_outdated_banner(machine) %>
+    <span class="outdated-banner">Outdated</span>
+  <% end %>
 </td>
 
 <td class="make-cell">

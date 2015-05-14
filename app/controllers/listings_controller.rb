@@ -55,7 +55,7 @@ class ListingsController < ApplicationController
     end
 
     def outdated_listings(site_number)
-      @outdated_listings = current_user.listings.where(current: false)
-      return @outdated_listings.where(website: site_number)
+      outdated_listings = current_user.listings.where(current: false)
+      return outdated_listings.where(website: site_number)
     end
 end

@@ -6,4 +6,9 @@ module MachinesHelper
       end
     end
   end
+
+  def add_outdated_banner(machine)
+    listings_array = machine.listings.where(current: false)
+    listings_array.length > 0 ? true : false
+  end
 end

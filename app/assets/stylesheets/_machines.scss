@@ -1,13 +1,4 @@
-.no-machine-alert{
-  color: $darkgrey;
-  font-size: 36px;
-  font-weight: 500;
-  margin-left: 20%;
-  position: absolute;
-  text-align: center;
-  top: 30vh;
-  width: 60%;
-}
+/* Containers */
 
 .table-container-wide {
   left: 20%;
@@ -79,6 +70,7 @@
   margin-top: 10vh;
   padding: 0;
   overflow-y: scroll;
+  table-layout: fixed;
   tbody {
     width: 100%;
   }
@@ -91,9 +83,8 @@
   a {
     color: $darkgrey;
   }
-  .machine-status-cell {
-    cursor: default;
-    pointer-events: none;
+  th {
+    height: 60px;
   }
 }
 
@@ -105,6 +96,7 @@
   td {
     height: 60px;
     overflow: hidden;
+    position: relative;
     text-overflow: ellipsis;
     white-space: nowrap;
   }
@@ -112,9 +104,6 @@
     color: $darkgrey;
     padding: 10em;
     margin: -10em;
-  }
-  th {
-    height: 60px;
   }
 }
 
@@ -125,7 +114,7 @@
   vertical-align: middle;
 }
 
-.stock-number-cell, .machine-status-cell {
+.stock-number-cell, .machine-serial-cell {
   width: 15%;
 }
 
@@ -141,6 +130,24 @@
   color: $yellow;
   font-weight: 700;
 }
+
+.edit-machine-link {
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.outdated-banner {
+  background: $red;
+  color: $white;
+  font-size: 12px;
+  padding: 5px;
+  position: absolute;
+  right: 0;
+  top: 8px;
+}
+
+/* Blur effects for edit form */
 
 .machine-preview-blur {
   -webkit-filter: blur(1px);
@@ -163,46 +170,9 @@
   filter: blur(0px) !important;
 }
 
-.edit-machine-link {
-  &:hover {
-    text-decoration: none;
-  }
-}
-
 /* Edit Form */
 
 .machine-form-column {
   padding-left: 40px;
   padding-right: 40px;
-}
-
-.machine-form-header {
-  height: 9vh;
-  margin: 0;
-  padding: 0;
-  h1 {
-    margin: 0;
-    color: $darkgrey;
-  }
-}
-
-/* Site Checklist */
-
-.current-listing {
-  background: $green;
-  &:hover {
-    background: darken($green, 5%);
-  }
-}
-
-.outdated-listing {
-  background: $red;
-  &:hover {
-    background: darken($red, 5%);
-  }
-}
-
-.site-checkbox {
-  margin-bottom: 1em;
-  padding: 1em 0;
 }
