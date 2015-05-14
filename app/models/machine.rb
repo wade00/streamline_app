@@ -18,6 +18,10 @@ class Machine < ActiveRecord::Base
     end
   end
 
+  def self.already_listed(website)
+    self.listings.where(website: website).count > 0 ? true : false
+  end
+
   private
 
   def format_machine_categories

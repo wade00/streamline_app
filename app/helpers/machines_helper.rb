@@ -11,4 +11,8 @@ module MachinesHelper
     listings_array = machine.listings.where(current: false)
     listings_array.length > 0 ? true : false
   end
+
+  def already_listed(machine, website_number)
+    machine.listings.where(website: website_number).count > 0 ? true : false
+  end
 end

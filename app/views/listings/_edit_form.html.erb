@@ -1,6 +1,6 @@
 <div class="panel panel-default machine-form-panel">
   <div class="panel-heading">
-    <h4>Change which sites you want to list stock <%= @machine.stock_number %> on:</h4>
+    <h4>Review which sites you're listing on: <%= @machine.stock_number %> on:</h4>
   </div>
   <div class="panel-body text-center">
     <% @listings.each do |listing| %>
@@ -59,7 +59,7 @@
 
     <div class="col-md-12 text-center">
       <p class="text-center">
-        <%= link_to "I'm Done", machines_path, class: "btn btn-primary" %>
+        <%= link_to "I'm Done", machines_path, class: "btn btn-primary", remote: true %>
       </p>
     </div>
   </div>
