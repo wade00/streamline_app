@@ -30,8 +30,10 @@
   </strong>
 </td>
 
-<td class="machine-status-cell">
+<td class="machine-serial-cell">
   <strong class="stock-number">
-    <%= link_to "Status", listings_path, class: "btn btn-xs btn-warning" %>
+    <%= link_to edit_machine_path(machine), class: "edit-machine-link", remote: true do %>
+      <%= machine.serial_number %>
+    <% end %>
   </strong>
 </td>
