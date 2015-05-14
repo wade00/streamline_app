@@ -7,10 +7,10 @@ class Machine < ActiveRecord::Base
   validates :stock_number, :serial_number, uniqueness: { scope: :owner },
                                            allow_blank: true
 
-  before_save :format_machine_categories
+  before_save :format_machine_categories, :listings_outdated?
 
   def listings_outdated?
-    if self.changed?
+    if self.changed? && self.valid?
       self.listings.each do |listing|
         listing.current = false
         listing.save

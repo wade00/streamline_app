@@ -6,7 +6,9 @@
     <% end %>
     <%= link_to listings_path, class: "listings-link" do %>
       <div>
-        <span class="badge outdated-listing-count"><%= current_user.listings.where(current: false).count %></span>
+        <span class="badge outdated-listing-count">
+          <%= render 'layouts/outdated_listings_badge' %>
+        </span>
       </div>
       <small>Outdated Listings</small>
     <% end %>
