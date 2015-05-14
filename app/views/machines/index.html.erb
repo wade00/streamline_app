@@ -1,5 +1,10 @@
 <div class="table-container-wide">
   <div class="search-header">
+    <div class="col-md-2 add-machine-container">
+      <%= link_to "Add a new machine", new_machine_path,
+                                       class: "btn btn-warning add-machine-link",
+                                       remote: true %>
+    </div>
     <div class="col-md-10 search-machines-container">
       <%= form_tag(machines_path, method: "get", class: "machines-searchbar", id: "machine-search") do %>
         <div class="input-group">
@@ -11,11 +16,6 @@
           </span>
         </div>
       <% end %>
-    </div>
-    <div class="col-md-2 search-machines-container">
-      <%= link_to "Add a new machine", new_machine_path,
-                                       class: "btn btn-warning add-machine-link pull-right",
-                                       remote: true %>
     </div>
   </div>
   <table class="table table-hover machine-inventory-list">

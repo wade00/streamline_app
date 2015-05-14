@@ -48,15 +48,22 @@
   left: 40%;
 }
 
+.add-machine-container {
+  padding-right: 1em;
+  padding-left: 0;
+  border-right: 1px solid $lightgrey;
+}
+
 .search-machines-container {
-  padding: 0;
+  padding-left: 1em;
+  padding-right: 0;
 }
 
 /* Table */
 
 .search-header {
   background: $offwhite;
-  border-bottom: 1px solid #EEE;
+  border-bottom: 1px solid $lightgrey;
   height: 10vh;
   padding: 2em 0;
   position: fixed;
