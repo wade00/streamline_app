@@ -46,11 +46,21 @@
         </div>
       <% end %>
     <% end %>
+    <div class="col-md-12 text-center">
+      <p>
+        <%= link_to "Add another site",
+                    new_listing_path(params: {machine_id: @machine.id}),
+                    class: "cancel-machine",
+                    remote: true %>
+      </p>
+    </div>
 
     <hr />
 
-    <p class="text-center">
-      <%= link_to "I'm Done", machines_path, class: "btn btn-primary" %>
-    </p>
+    <div class="col-md-12 text-center">
+      <p class="text-center">
+        <%= link_to "I'm Done", machines_path, class: "btn btn-primary" %>
+      </p>
+    </div>
   </div>
 </div>

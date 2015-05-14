@@ -8,6 +8,7 @@ class ListingsController < ApplicationController
   end
 
   def new
+    @machine = Machine.find(params[:machine_id])
     @listing = Listing.new
   end
 

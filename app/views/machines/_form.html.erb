@@ -119,14 +119,25 @@
           <%= link_to "Cancel", machines_path, class: "cancel-machine", remote: true %>
         </p>
       </div>
-      <div class="col-md-12 text-center">
-        <p>
-          <%= link_to "Change which sites I'm listing this machine on",
-                      edit_listing_path(@machine.listings.first, params: {machine_id: @machine.id}),
-                      class: "cancel-machine",
-                      remote: true %>
-        </p>
-      </div>
+      <% if @machine.persisted? %>
+        <div class="col-md-12 text-center">
+          <% if @machine.listings.count > 0 %>
+            <p>
+              <%= link_to "Change which sites I'm listing this machine on",
+                          edit_listing_path(@machine.listings.first, params: {machine_id: @machine.id}),
+                          class: "cancel-machine",
+                          remote: true %>
+            </p>
+          <% else %>
+            <p>
+              <%= link_to "Not listing on any sites? Add some here",
+                          new_listing_path(params: {machine_id: @machine.id}),
+                          class: "cancel-machine",
+                          remote: true %>
+            </p>
+          <% end %>
+        </div>
+      <% end %>
     </div>
   <% end %>
 </div>
