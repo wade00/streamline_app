@@ -8,6 +8,8 @@
 var ready;
 ready = function() {
   setupListingsIndex();
+  setupBase();
+  flashTimeout();
 };
 
 $(document).ready(ready);
@@ -18,3 +20,16 @@ function setupListingsIndex() {
     showMoreListing();
   }
 }
+
+function setupBase() {
+  if ($('.sidebar-link').length > 0) {
+    activeSidebarLink();
+  }
+
+  if ($('#flash').length > 0) {
+    setTimeout(function() {
+      $('#flash').fadeOut();
+    }, 2000);
+  }
+}
+

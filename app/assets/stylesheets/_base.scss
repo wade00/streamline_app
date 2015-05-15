@@ -44,8 +44,24 @@ label {
 }
 
 .sidebar-clicked {
-  background: darken($grey, 10%);
-  border-bottom: 4px solid $darkgrey;
+  background: $offwhite;
+  border-radius: 2px 0 0 2px;
+  margin-left: 10px;
+  margin-top: 10px;
+  a {
+    color: $grey !important;
+    border-radius: 2px 0 0 2px !important;
+    &:hover {
+      background: darken($offwhite, 2%) !important;
+    }
+  }
+}
+
+.sign-out {
+  bottom: 0;
+  padding-bottom: 1em;
+  position: absolute;
+  width: 100%;
 }
 
 .outdated-listing-count {
