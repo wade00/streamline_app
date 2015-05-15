@@ -111,29 +111,33 @@
       <div class="col-md-12 text-center">
         <p>
           <% if @machine.persisted? %>
-            <%= f.submit "Save changes", class: "btn btn-success" %>
+            <%= f.submit "Save changes", class: "btn btn-primary" %>
           <% else %>
-            <%= f.submit "Create machine", class: "btn btn-success create-machine" %>
+            <%= f.submit "Create machine", class: "btn btn-primary create-machine" %>
           <% end %>
           or
-          <%= link_to "Cancel", machines_path, class: "cancel-machine", remote: true %>
+          <small><%= link_to "Cancel", machines_path, class: "cancel-machine", remote: true %></small>
         </p>
       </div>
       <% if @machine.persisted? %>
         <div class="col-md-12 text-center">
           <% if @machine.listings.count > 0 %>
             <p>
+            <small>
               <%= link_to "Change which sites I'm listing this machine on",
                           edit_listing_path(@machine.listings.first, params: {machine_id: @machine.id}),
                           class: "cancel-machine",
                           remote: true %>
+            </small>
             </p>
           <% else %>
             <p>
-              <%= link_to "Not listing on any sites? Add some here",
-                          new_listing_path(params: {machine_id: @machine.id}),
-                          class: "cancel-machine",
-                          remote: true %>
+              <small>
+                <%= link_to "Not listing on any sites? Add some here",
+                            new_listing_path(params: {machine_id: @machine.id}),
+                            class: "cancel-machine",
+                            remote: true %>
+              </small>
             </p>
           <% end %>
         </div>

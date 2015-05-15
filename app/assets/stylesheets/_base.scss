@@ -49,7 +49,7 @@ label {
 }
 
 .outdated-listing-count {
-  background: $yellow;
+  background: $primarygreen;
   color: $grey;
   font-size: 22px;
 }
@@ -87,4 +87,37 @@ label {
 
 .delete-link {
   color: darken($red, 30%);
+}
+
+
+/* Bootstrap Overrides */
+.btn {
+  border-radius: 0px;
+}
+
+.btn-default {
+  background-color: $lightgrey;
+  border: 1px solid $lightgrey;
+  border-bottom: 2px solid darken($lightgrey, 10%);
+  &:hover {
+    background-color: darken($lightgrey, 5%);
+    border: 1px solid darken($lightgrey, 5%);
+    border-bottom: 2px solid darken($lightgrey, 15%);
+  }
+}
+
+.btn-primary {
+  background-color: $primarygreen;
+  border: 1px solid $primarygreen;
+  border-bottom: 2px solid darken($primarygreen, 10%);
+  &:hover {
+    background-color: darken($primarygreen, 5%);
+    border: 1px solid darken($primarygreen, 5%);
+    border-bottom: 2px solid darken($primarygreen, 15%);
+  }
+  &:active {
+    background-color: lighten($primarygreen, 5%);
+    border: 1px solid lighten($primarygreen, 5%);
+    border-bottom: 2px solid darken($primarygreen, 5%);
+  }
 }

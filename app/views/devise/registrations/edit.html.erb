@@ -41,7 +41,7 @@
 
           <div class="form-group">
               <%= f.label :password, class: 'control-label' %>
-              <i>(leave blank if you don't want to change it)</i>
+              <small><em>(leave blank if you don't want to change it)</em></small>
               <%= f.password_field :password, class: 'form-control', autocomplete: "off" %>
             </div>
 
@@ -75,9 +75,11 @@
                     <%= link_to "Edit", edit_dealership_path(dealership), class: "btn" %>
                   </p>
                 </div>
-                <div class="panel-body">
-                  <p><%= dealership.address %></p>
-                  <p><%= dealership.city %>, <%= dealership.state %> <%= dealership.zip %></p>
+                <div class="panel-body dealership-info">
+                  <small>
+                    <p><%= dealership.address %></p>
+                    <p><%= dealership.city %>, <%= dealership.state %> <%= dealership.zip %></p>
+                  </small>
                 </div>
               </div>
             <% end %>
@@ -89,7 +91,7 @@
           <hr />
 
           <div class="actions">
-            <%= f.submit "Update my Account", class: 'btn btn-warning' %>
+            <%= f.submit "Update my Account", class: 'btn btn-primary' %>
             or
             <%= link_to "Cancel", machines_path %>
           </div>

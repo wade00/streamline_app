@@ -1,7 +1,13 @@
-<div class="row table-container-wide edit-profile-container">
+<div class="row edit-profile-container">
   <div class="panel panel-default">
     <div class="panel-heading">
-      <h3 class="panel-title">Edit Dealership Info</h3>
+      <h3 class="panel-title panel-header-text-left">Edit Dealership Info</h3>
+      <p class="header-link-right">
+        <%= link_to "Delete Dealership", @dealership,
+                                          class: "btn delete-link",
+                                          method: "delete",
+                                          confirm: "Are you sure you want to delete this machine?" %>
+      </p>
     </div>
     <div class="panel-body">
       <%= render 'form' %>
