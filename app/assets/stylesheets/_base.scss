@@ -120,6 +120,11 @@ label {
     border: 1px solid darken($lightgrey, 5%);
     border-bottom: 2px solid darken($lightgrey, 15%);
   }
+  &:active {
+    background-color: darken($lightgrey, 5%);
+    border: 1px solid darken($lightgrey, 5%);
+    border-bottom: 2px solid darken($lightgrey, 5%);
+  }
 }
 
 .btn-primary {

@@ -24,7 +24,7 @@
           <div class="form-group">
             <%= f.label :password, class: 'control-label' %>
             <% if @validatable %>
-              <em>(<%= @minimum_password_length %> characters minimum)</em>
+              <small><em>(<%= @minimum_password_length %> characters minimum)</em></small>
             <% end %>
             <%= f.password_field :password, class: 'form-control', autocomplete: "off" %>
           </div>
@@ -37,10 +37,10 @@
           <hr />
 
           <div class="actions">
-            <%= f.submit "Sign up", class: "btn btn-warning" %>
+            <%= f.submit "Sign up", class: "btn btn-primary" %>
           </div>
           <div class="login-links">
-            <p>Already have an account? <%= link_to "Log in", new_session_path(resource_name) %></p>
+            <p><small>Already have an account? <%= link_to "Log in", new_session_path(resource_name) %></small></p>
           </div>
         </div>
       <% end %>
