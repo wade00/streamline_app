@@ -20,10 +20,12 @@ label {
   background-color: $grey;
   height: 100vh;
   left: 0;
+  list-style: none;
+  padding-left: 0;
   position: absolute;
   text-align: center;
   width: 10%;
-  nav {
+  li {
     a {
       color: $lightgrey;
       display: block;
@@ -43,7 +45,7 @@ label {
   }
 }
 
-.sidebar-clicked {
+.current {
   background: $offwhite;
   border-radius: 2px 0 0 2px;
   margin-left: 10px;

@@ -91,6 +91,9 @@ GEM
       nokogiri (>= 1.5.9)
     mail (2.6.3)
       mime-types (>= 1.16, < 3)
+    menu_builder (0.4.3)
+      actionpack (> 3.0)
+      activemodel (> 3.0)
     mime-types (2.4.3)
     mini_portile (0.6.2)
     minitest (5.5.1)
@@ -188,6 +191,7 @@ DEPENDENCIES
   jbuilder (~> 2.0)
   jquery-rails
   jquery-ui-rails
+  menu_builder (>= 0.4.1)
   pg
   quiet_assets
   rails (= 4.2.0)

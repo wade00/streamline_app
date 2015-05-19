@@ -1,32 +1,27 @@
-<div class="sidebar">
-  <nav class="nav">
-    <div class="sidebar-link">
-      <%= link_to machines_path, class: "sidebar-link" do %>
-        <div><%= icon("th-list") %></div>
-        <small>My Inventory</small>
-      <% end %>
-    </div>
-    <div class="sidebar-link">
-      <%= link_to listings_path, class: "listings-link" do %>
-        <div>
-          <span class="badge outdated-listing-count">
-            <%= render 'layouts/outdated_listings_badge' %>
-          </span>
-        </div>
-        <small>Outdated Listings</small>
-      <% end %>
-    </div>
-    <div class="sidebar-link">
-      <%= link_to edit_user_registration_path, class: "sidebar-link" do %>
-        <div><%= icon("user") %></div>
-        <small>Profile</small>
-      <% end %>
-    </div>
-    <div class="sign-out">
-      <%= link_to destroy_user_session_path, class: "sidebar-link", method: "delete" do %>
-        <div><%= icon("sign-out") %></div>
-        <small>Sign out</small>
-      <% end %>
-    </div>
-  </nav>
-</div>
+<nav class="nav">
+  <%= menu(class: "sidebar") do |m| %>
+    <%= m.inventory machines_path do %>
+      <div><%= icon("th-list") %></div>
+      <small>My Inventory</small>
+    <% end %>
+
+    <%= m.listings listings_path do %>
+      <div>
+        <span class="badge outdated-listing-count">
+          <%= render 'layouts/outdated_listings_badge' %>
+        </span>
+      </div>
+      <small>Outdated Listings</small>
+    <% end %>
+
+    <%= m.profile edit_user_registration_path do %>
+      <div><%= icon("user") %></div>
+      <small>My Profile</small>
+    <% end %>
+
+    <%= m.sign_out destroy_user_session_path, method: "delete" do %>
+      <div><%= icon("sign-out") %></div>
+      <small>Sign Out</small>
+    <% end %>
+  <% end %>
+</nav>
