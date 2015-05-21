@@ -65,7 +65,10 @@
 
           <div class="dealerships-display">
             <% if current_user.dealerships.count == 0 %>
-              <strong>No locations yet!</strong>
+              <div class="text-center">
+                <h3>No locations yet!</h3>
+                <%= link_to "Add a location", new_dealership_path, class: "btn" %>
+              </div>
             <% end %>
             <% current_user.dealerships.each do |dealership| %>
               <div class="panel panel-default dealerships-summary">

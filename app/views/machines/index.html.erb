@@ -1,9 +1,11 @@
 <div class="table-container-wide">
   <div class="search-header">
     <div class="add-machine-container">
-      <%= link_to "Add a new machine", new_machine_path,
-                                       class: "btn btn-primary add-machine-link",
-                                       remote: true %>
+      <% if current_user.dealerships.count > 0 %>
+        <%= link_to "Add a new machine", new_machine_path,
+                                         class: "btn btn-primary add-machine-link",
+                                         remote: true %>
+      <% end %>
     </div>
     <div class="search-machines-container">
       <%= form_tag(machines_path, method: "get", class: "machines-searchbar", id: "machine-search") do %>
@@ -29,7 +31,27 @@
       </tr>
     </thead>
     <tbody id="machine-table-body">
-      <%= render @machines %>
+      <% if @machines.count == 0 %>
+        <div class="add-new-no-machines text-center">
+          <h3>You've got no machines...</h3>
+          <% if current_user.dealerships.count > 0 %>
+            <p>
+              But now that we've got some locations saved let's add some!
+            </p>
+            <%= link_to "Add a new machine", new_machine_path,
+                                             class: "btn btn-primary add-machine-link",
+                                             remote: true %>
+          <% else %>
+            <p class="text-left">
+              We'll get on that ASAP, <strong>BUT FIRST</strong> add in your dealership's locations so we can use that info in your listings. After that we can start adding machines!
+            </p>
+            <%= link_to "Add a new location", new_dealership_path,
+                                             class: "btn btn-primary add-machine-link" %>
+          <% end %>
+        </div>
+      <% else %>
+        <%= render @machines %>
+      <% end %>
     </tbody>
   </table>
   </div>

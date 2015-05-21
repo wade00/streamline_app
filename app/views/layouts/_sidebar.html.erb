@@ -19,7 +19,7 @@
       <small>My Profile</small>
     <% end %>
 
-    <%= m.sign_out destroy_user_session_path, method: "delete" do %>
+    <%= m.sign_out destroy_user_session_path, method: "delete", class: "sign-out" do %>
       <div><%= icon("sign-out") %></div>
       <small>Sign Out</small>
     <% end %>
