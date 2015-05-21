@@ -3,7 +3,7 @@ class Machine < ActiveRecord::Base
   belongs_to :location, foreign_key: :dealership_id, class_name: "Dealership"
   has_many :listings, dependent: :destroy
 
-  validates :stock_number, :make, :machine_model, :machine_type, presence: true
+  validates :stock_number, :year, :make, :machine_model, :machine_type, :location, presence: true
   validates :stock_number, :serial_number, uniqueness: { scope: :owner },
                                            allow_blank: true
 
