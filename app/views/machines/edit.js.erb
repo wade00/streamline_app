@@ -1,3 +1,6 @@
 var editMachineForm = $('<%= j(render 'form') %>');
 $('.edit-form-container').html(editMachineForm);
-toggleForm();
+
+if (!<%= @machine.errors.any? %>) {
+  toggleForm();
+}
