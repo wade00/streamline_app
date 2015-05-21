@@ -144,3 +144,12 @@ label {
     border-bottom: 2px solid darken($primarygreen, 5%);
   }
 }
+
+.panel-default {
+  border-radius: 0;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.25);
+  .panel-heading {
+    background-color: #FCFCFC;
+    border-color: #F7F7F7;
+  }
+}
