@@ -1,81 +1,30 @@
-<div class="parallax">
-  <div class="parallax-group">
-    <div class="background-img parallax-layer parallax-layer-back"></div>
-    <div class="jumbotron landing-jumbo">
-      <div class="jumbo-container col-md-8">
-        <h1>Spend less time managing your equipment listings</h1>
-        <hr >
-        <div class="try-free-header col-md-12">
-          <h2>Sign up and start using Streamline FREE today</h2>
-          <%= link_to "Try it Now for Free", new_user_registration_path, class: "btn btn-warning" %>
-        </div>
-      </div>
-      <div class="signup-card col-md-4">
-        <div class="signup-card-header text-center">
-          <p>Get started right now!</p>
-        </div>
-        <div class="signup-form">
-          <%= form_for(User.new, url: registration_path(:user)) do |f| %>
-            <%= f.text_field :company_name,
-                             autofocus: true,
-                             class: "form-control",
-                             placeholder: "company name" %>
+<div class="background-img text-center">
+  <div class="jumbotron landing-jumbo">
+    <div class="jumbo-container col-md-8 col-md-offset-2">
+      <h1>Spend less time managing your equipment listings</h1>
 
-            <%= f.email_field :email,
-                              class: "form-control",
-                              placeholder: "email" %>
+      <hr />
 
-            <%= f.password_field :password,
-                                 autocomplete: "off",
-                                 class: "form-control",
-                                 placeholder: "password (#{@minimum_password_length} char min)" %>
-
-            <%= f.password_field :password_confirmation,
-                                 autocomplete: "off",
-                                 class: "form-control",
-                                 placeholder: "confirm password" %>
-
-            <%= f.submit "Get Started", class: "btn btn-warning btn-block" %>
-          <% end %>
-        </div>
-      </div>
     </div>
-
-    <div class="parallax-layer-base landing-page-copy landing-page-copy-light first-landing-copy">
-      <div class="container landing-copy-container">
-        <div class="col-md-10 col-md-offset-1">
-          <div class="col-md-8">
-            <h3>
-              Selling equipment online lets you reach more potential customers than ever before.
-            </h3>
-          </div>
-          <div class="col-md-4">
-            <h3><small>That's a good thing.</small></h3>
-          </div>
-        </div>
-        <div class="col-md-10 col-md-offset-1">
-          <div class="col-md-8">
-            <h3>
-              Finding time to keep all of those listings up to date?
-            </h3>
-          </div>
-          <div class="col-md-4">
-            <h3><small>Not such a good thing.</small></h3>
-          </div>
-        </div>
-      </div>
-      <h3 class="text-center">We know that, and we're here to help you out. &darr;</h3>
+    <div class="col-md-12">
+      <h3>
+        Streamline helps you add and update your online equipment faster and all from one simple dashboard.
+      </h3>
     </div>
-    <div class="parallax-layer-base landing-page-copy landing-page-copy-dark">
-      <div class="container landing-copy-container">
-        <div class="col-md-10 col-md-offset-1">
-        <div class="page-header"><h2>What Streamline does</h2></div>
-          <p>
-            Streamline gives you a master copy of your inventory that you can access on any listing site. With just one click you can update a listing and then move on to the next site. No more tabbing between windows copying and pasting one field into another. With Streamline it's easy - one click and all the fields are updated. <%= link_to "See how it works ->", "#" %>
-          </p>
-        </div>
-      </div>
-    </div>
-  </div> <!-- parallax group -->
-</div> <!-- parallax -->
+  </div>
+</div>
 
+<div class="learn-more-email text-center">
+  <h2>Sounds cool! Can you tell me more?</h2>
+  <div class="col-md-6 col-md-offset-3">
+    <h4>Yes! We'll be launching soon and we'd love to talk to you.</h4>
+    <h4>Send us your email address and we'll be in contact soon:</h4>
+  </div>
+  <div class="col-md-4 col-md-offset-4 form-group">
+    <%= email_field_tag "email", nil, class: "form-control", placeholder: "Here's my email address!" %>
+  </div>
+</div>
+
+<footer class="footer">
+  <p>We used to list equipment and thought it wasn't very fun. We're trying to change that at Streamline.</p>
+</footer>
