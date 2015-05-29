@@ -42,7 +42,7 @@
 }
 
 .learn-more-container {
-  background-image: url(image_path("homepage-stripes.jpg"));
+  background: url(image_path("homepage-stripes.jpg"));
   background-size: cover;
   color: $offwhite;
   height: 44vh;
@@ -71,4 +71,33 @@
   height: 3vh;
   padding-left: 50px;
   text-align: center;
+}
+
+@media all and (max-width: 500px) {
+  .background-img {
+    background-image: url(image_path("homepage-stripes.jpg"));
+    h1 {
+      font-size: 30px;
+    }
+    h3 {
+      font-size: 18px;
+    }
+  }
+
+  .learn-more-container {
+    height: 500px;
+    h2 {
+      font-size: 32px;
+    }
+    h4 {
+      font-size: 18px;
+    }
+    hr {
+      width: 200px;
+    }
+  }
+
+  .footer {
+    display: none;
+  }
 }
