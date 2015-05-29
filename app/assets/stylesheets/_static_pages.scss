@@ -1,5 +1,6 @@
 .background-img {
   background: url(image_path("streamline-equipment-lot.jpg")) no-repeat center center;
+  background-size: cover;
   height: 50vh;
 }
 
@@ -40,8 +41,9 @@
   }
 }
 
-.learn-more-email {
-  background: $grey;
+.learn-more-container {
+  background-image: url(image_path("homepage-stripes.jpg"));
+  background-size: cover;
   color: $offwhite;
   height: 44vh;
   padding: 5vh;
@@ -54,12 +56,19 @@
     font-weight: 100;
     line-height: 1.5;
   }
+  hr {
+    width: 600px;
+  }
+  a {
+    margin: 30px;
+  }
 }
 
 .footer {
-  background: $lightgrey;
+  background: $grey;
   color: darken($lightgrey, 20%);
   font-size: 14px;
   height: 3vh;
   padding-left: 50px;
+  text-align: center;
 }
