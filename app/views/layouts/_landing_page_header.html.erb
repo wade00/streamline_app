@@ -2,6 +2,8 @@
   <ul class="landing-nav-links">
     <li class="pull-left">Streamline</li>
     <li class="pull-right"><%= link_to "Log in", new_user_session_path %></li>
-    <li class="pull-right"><%= link_to "Sign up", new_user_registration_path %></li>
+    <div hidden>
+      <li class="pull-right"><%= link_to "Sign up", new_user_registration_path %></li>
+    </div>
   </ul>
 </nav>

@@ -1,14 +1,14 @@
 .background-img {
   background: url(image_path("streamline-equipment-lot.jpg")) no-repeat center center;
   background-size: cover;
-  height: 50vh;
+  height: 400px;
 }
 
 .landing-page-navbar {
   background: $grey;
   border: 0;
   border-radius: 0;
-  height: 3vh;
+  height: 25px;
   margin-bottom: 0;
   .landing-nav-links {
     color: $offwhite;
@@ -33,7 +33,7 @@
 .landing-jumbo {
   background: rgba(0,0,0,0.4);
   border-bottom: 10px solid $grey;
-  height: 50vh;
+  height: 400px;
   padding: 70px;
   margin-bottom: 0;
   h1, h3 {
@@ -45,8 +45,8 @@
   background: url(image_path("homepage-stripes.jpg"));
   background-size: cover;
   color: $offwhite;
-  height: 44vh;
-  padding: 5vh;
+  height: 400px;
+  padding: 30px;
   h2 {
     font-size: 42px;
     margin-bottom: 20px;
@@ -68,9 +68,12 @@
   background: $grey;
   color: darken($lightgrey, 20%);
   font-size: 14px;
-  height: 3vh;
+  height: 30px;
   padding-left: 50px;
   text-align: center;
+  p {
+    margin: 0;
+  }
 }
 
 @media (max-width: 600px) {
