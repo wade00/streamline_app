@@ -1,9 +1,9 @@
 <div class="panel panel-default machine-form-panel">
   <div class="panel-heading">
-    <h4>Review which sites you're listing stock <%= @machine.stock_number %> on:</h4>
+    <h4>Review which sites you're listing stock <%= machine.stock_number %> on:</h4>
   </div>
   <div class="panel-body text-center">
-    <% @listings.each do |listing| %>
+    <% machine.listings.each do |listing| %>
       <% case listing.website %>
       <% when "equipment_alley" %>
         <div id="ea-listing-container">
@@ -23,6 +23,7 @@
           <div class="row">
             <%= image_tag image_path("equipment-locator.png") %>
             <p class="listing-submit-button">
+              <%= check_box_tag 'list' %>
               <%= link_to "Stop listing on Equipment Locator", listing,
                                                                method: "delete",
                                                                class: "btn btn-default listing-confirm-button",
@@ -46,23 +47,15 @@
         </div>
       <% end %>
     <% end %>
-    <% if @machine.listings.count < 3 %>
+    <% if machine.listings.count < 3 %>
       <div class="col-md-12 text-center">
         <p>
           <%= link_to "Add another site",
-                      new_listing_path(params: {machine_id: @machine.id}),
+                      new_listing_path(params: {machine_id: machine.id}),
                       class: "cancel-machine",
                       remote: true %>
         </p>
       </div>
     <% end %>
-
-    <hr />
-
-    <div class="col-md-12 text-center">
-      <p class="text-center">
-        <%= link_to "I'm Done", machines_path, class: "btn btn-primary", remote: true %>
-      </p>
-    </div>
   </div>
 </div>

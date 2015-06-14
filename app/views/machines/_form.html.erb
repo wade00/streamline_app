@@ -1,13 +1,13 @@
 <div class="panel panel-default machine-form-panel">
   <div class="panel-heading">
-    <% if @machine.persisted? %>
-      <h3 class="panel-title panel-header-text-left">Edit stock <%= @machine.stock_number %></h3>
+    <% if machine.persisted? %>
+      <h3 class="panel-title panel-header-text-left">Edit stock <%= machine.stock_number %></h3>
     <% else %>
       <h3 class="panel-title panel-header-text-left">Add a Machine</h3>
     <% end %>
-    <% if @machine.persisted? %>
+    <% if machine.persisted? %>
       <p class="header-link-right">
-        <%= link_to "Delete Machine", @machine,
+        <%= link_to "Delete Machine", machine,
                                       data: { confirm: "Are you sure you want to delete this machine?" },
                                       method: "delete",
                                       class: "btn pull-right delete-link" %>
@@ -15,9 +15,9 @@
     <% end %>
   </div>
   <div class="panel-body">
-  <%= form_for @machine, remote: true do |f| %>
-    <% if @machine.errors.any? %>
-      <%= render "shared/errors", resource: @machine %>
+  <%= form_for machine, remote: true do |f| %>
+    <% if machine.errors.any? %>
+      <%= render "shared/errors", resource: machine %>
     <% end %>
 
     <div class="row">
@@ -26,14 +26,14 @@
           <%= f.label :stock, class: "control-label" %>
           <%= f.text_field :stock_number, class: "form-control",
                                           autofocus: "autofocus",
-                                          value: @machine.stock_number %>
+                                          value: machine.stock_number %>
         </div>
 
         <div class="form-group">
           <%= f.label :year, class: "control-label" %>
           <%= f.select :year, [], { prompt: "Select a year..." }, { class: "form-control" } do %>
-            <% if @machine.year != nil %>
-              <%= content_tag :option, @machine.year, selected: "selected" %>
+            <% if machine.year != nil %>
+              <%= content_tag :option, machine.year, selected: "selected" %>
               <%= content_tag :option, "--", disabled: "disabled" %>
             <% end %>
             <% 99.times do |n| %>
@@ -45,29 +45,29 @@
 
         <div class="form-group">
           <%= f.label :make, class: "control-label" %>
-          <%= f.text_field :make, class: "form-control", value: @machine.make %>
+          <%= f.text_field :make, class: "form-control", value: machine.make %>
         </div>
 
         <div class="form-group">
           <%= f.label :model, class: "control-label" %>
-          <%= f.text_field :machine_model, class: "form-control", value: @machine.machine_model %>
+          <%= f.text_field :machine_model, class: "form-control", value: machine.machine_model %>
         </div>
 
         <div class="form-group">
           <%= f.label :type, class: "control-label" %>
-          <%= f.text_field :machine_type, class: "form-control", value: @machine.machine_type %>
+          <%= f.text_field :machine_type, class: "form-control", value: machine.machine_type %>
         </div>
       </div>
 
       <div class="col-md-6 machine-form-column">
         <div class="form-group">
           <%= f.label :serial, class: "control-label" %>
-          <%= f.text_field :serial_number, class: "form-control", value: @machine.serial_number %>
+          <%= f.text_field :serial_number, class: "form-control", value: machine.serial_number %>
         </div>
 
         <div class="form-group">
           <%= f.label :hours, class: "control-label" %>
-          <%= f.text_field :hours, class: "form-control", value: @machine.hours %>
+          <%= f.text_field :hours, class: "form-control", value: machine.hours %>
         </div>
 
         <div class="form-group">
@@ -75,7 +75,7 @@
           <div class="input-group">
             <span class="input-group-addon">$</span>
             <%= f.text_field :price, class: "form-control",
-                                     value: @machine.price,
+                                     value: machine.price,
                                      placeholder: "No decimals, commas or dollar signs please!" %>
           </div>
         </div>
@@ -83,11 +83,11 @@
         <div class="form-group">
           <%= f.label :dealership_id, "Location", class: "control-label" %>
           <%= f.select :dealership_id, [], {}, { class: "form-control" } do %>
-            <% if @machine.year != nil %>
+            <% if machine.year != nil %>
               <%= content_tag :option,
-                              @machine.location.city,
+                              machine.location.city,
                               selected: "selected",
-                              value: @machine.location.id %>
+                              value: machine.location.id %>
               <%= content_tag :option, "--", disabled: "disabled" %>
             <% end %>
             <%= content_tag :option, "Choose a location...", disabled: "disabled"%>
@@ -99,17 +99,34 @@
 
         <div class="form-group">
           <%= f.label :description, class: "control-label" %>
-          <%= f.text_area :description, class: "form-control", rows: "4", value: @machine.description %>
+          <%= f.text_area :description, class: "form-control", rows: "4", value: machine.description %>
         </div>
       </div>
     </div>
+
+    <% if machine.persisted? %>
+      <div class="col-md-12 text-center">
+        <% if machine.listings.count > 0 %>
+          <%= render 'listings/edit_form', machine: machine %>
+        <% else %>
+          <p>
+            <small>
+              <%= link_to "Not listing on any sites? Add some here",
+                          new_listing_path(params: {machine_id: @machine.id}),
+                          class: "cancel-machine",
+                          remote: true %>
+            </small>
+          </p>
+        <% end %>
+      </div>
+    <% end %>
 
     <hr />
 
     <div class="row machine-form-buttons">
       <div class="col-md-12 text-center">
         <p>
-          <% if @machine.persisted? %>
+          <% if machine.persisted? %>
             <%= f.submit "Save changes", class: "btn btn-primary" %>
           <% else %>
             <%= f.submit "Create machine", class: "btn btn-primary create-machine" %>
@@ -118,29 +135,6 @@
           <small><%= link_to "Cancel", machines_path, class: "cancel-machine", remote: true %></small>
         </p>
       </div>
-      <% if @machine.persisted? %>
-        <div class="col-md-12 text-center">
-          <% if @machine.listings.count > 0 %>
-            <p>
-            <small>
-              <%= link_to "Change which sites I'm listing this machine on",
-                          edit_listing_path(@machine.listings.first, params: {machine_id: @machine.id}),
-                          class: "cancel-machine",
-                          remote: true %>
-            </small>
-            </p>
-          <% else %>
-            <p>
-              <small>
-                <%= link_to "Not listing on any sites? Add some here",
-                            new_listing_path(params: {machine_id: @machine.id}),
-                            class: "cancel-machine",
-                            remote: true %>
-              </small>
-            </p>
-          <% end %>
-        </div>
-      <% end %>
     </div>
   <% end %>
 </div>
