@@ -125,6 +125,16 @@
     padding: 10em;
     margin: -10em;
   }
+  &:hover {
+    background: darken($offwhite, 2%);
+  }
+}
+
+.machine-preview-outdated {
+  background: lighten($red, 20%);
+  &:hover {
+    background: lighten($red, 18%);
+  }
 }
 
 .stock-number {
@@ -146,15 +156,14 @@
 
 .outdated-banner {
   background: $red;
-  border-bottom: 2px solid darken($red, 10%);
   color: $white;
   font-size: 12px;
   opacity: 0.7;
-  padding: 5px;
+  padding: 1px 5px;
   position: absolute;
-  right: 0;
+  left: 0;
   text-shadow: 1px 1px darken($red, 10%);
-  top: 8px;
+  bottom: 5px;
 }
 
 /* Blur effects for edit form */
