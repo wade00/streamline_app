@@ -9,7 +9,6 @@ var ready;
 ready = function() {
   setupListingsIndex();
   setupBase();
-  flashTimeout();
 };
 
 $(document).ready(ready);
