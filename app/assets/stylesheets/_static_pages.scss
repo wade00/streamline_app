@@ -1,7 +1,7 @@
 .background-img {
   background: url(image_path("streamline-equipment-lot.jpg")) no-repeat center center;
   background-size: cover;
-  height: 500px;
+  height: 90vh;
 }
 
 .landing-page-navbar {
@@ -9,7 +9,7 @@
   border: 0;
   border-radius: 0;
   display: table-cell;
-  height: 50px;
+  height: 10vh;
   margin-bottom: 0;
   width: 100vw;
   vertical-align: middle;
@@ -34,10 +34,18 @@
   font-size: 30px;
 }
 
+.login {
+  background: lighten($grey, 10%);
+  &:hover {
+    background: lighten($grey, 15%);
+  }
+}
+
 .landing-jumbo {
   background: rgba(0,0,0,0.4);
-  height: 500px;
-  padding: 70px;
+  border-bottom: 10vh solid $grey;
+  height: 90vh;
+  padding: 40px;
   margin-bottom: 0;
   h1, h3 {
     color: $offwhite;
@@ -45,25 +53,62 @@
   }
 }
 
-.marketing-screenshot {
+.marketing-screenshot-laptop {
+  margin: 0 auto;
+  margin-top: -500px;
   width: 70%;
-  margin-top: -200px;
 }
 
-.marketing-description-container {
-  background: $grey;
-  color: $offwhite;
+.marketing-screenshot {
+  display: none;
+}
+
+.say-hello-mobile {
+  display: none;
+}
+
+.benefit-header {
+  color: #000;
+  font-size: 20px;
+  font-weight: 100;
+}
+
+.benefit-description-container {
+  background: $offwhite;
+  color: lighten($grey, 10%);
   padding: 100px 0;
   h2 {
-    color: $lightgrey;
+    color: $grey;
     font-size: 42px;
     font-weight: 300;
     margin-bottom: 20px;
   }
-  h4 {
-    font-size: 20px;
-    font-weight: 100;
-    line-height: 1.5;
+  hr {
+    width: 600px;
+  }
+}
+
+.benefits-description {
+  margin-top: 40px;
+  span {
+    font-size: 18px;
+    margin-top: 20px;
+  }
+  p {
+    line-height: 2;
+  }
+}
+
+.marketing-description-container {
+  background: $offwhite;
+  color: lighten($grey, 10%);
+  padding: 100px 0;
+  margin-top: 40px;
+  h2 {
+    color: $grey;
+    font-size: 42px;
+    font-weight: 300;
+    margin-bottom: 20px;
   }
   hr {
     width: 600px;
@@ -82,7 +127,6 @@
   margin: 0 auto;
   padding: 0 0 50px 0;
   width: 60%;
-  z-index: -1;
   img {
     margin: 15px;
   }
@@ -103,12 +147,6 @@
   }
 }
 
-.marketing-text-wide {
-  width: 60%;
-  margin: 0 auto;
-  font-weight: 300;
-}
-
 .bottom-footer {
   background: $grey;
   color: darken($lightgrey, 20%);
@@ -121,37 +159,40 @@
   }
 }
 
-@media (max-width: 600px) {
+@media only screen
+and (min-device-width : 320px)
+and (max-device-width : 568px)
+and (orientation : portrait) {
   .background-img {
-    background-image: url(image_path("homepage-stripes.jpg"));
-    h1 {
-      font-size: 30px;
-    }
-    h3 {
-      font-size: 18px;
-    }
+    background: url(image_path("streamline-equipment-lot.jpg")) no-repeat center center;
+    background-size: cover;
+    height: 300px;
   }
 
-  .learn-more-container {
-    height: 400px;
-    h2 {
-      display: none;
-    }
-    h4 {
-      font-size: 18px;
-    }
-    hr {
-      display: none;
-    }
-    span {
-      display: none;
-    }
-    a {
-      width:80%;
-    }
-  }
-
-  .footer {
+  .marketing-screenshot-laptop {
     display: none;
+  }
+
+  .landing-jumbo {
+    padding: 30px;
+  }
+
+  .marketing-description-container {
+    padding-top: 20px;
+  }
+
+  .marketing-screenshot {
+    box-shadow: 0 1px 3px rgba(0,0,0,0.25);
+    display: block;
+    margin: 50px auto;
+    width: 90%;
+  }
+
+  .say-hello-desktop {
+    display: none;
+  }
+
+  .say-hello-mobile {
+    display: block;
   }
 }

@@ -8,20 +8,47 @@
       <h3>
         Streamline helps you manage your online equipment from one simple dashboard.
       </h3>
-      <%= link_to "Tell me more", "#say-hello", class: "btn btn-primary" %>
     </div>
   </div>
 </div>
 
-<div class="marketing-description-container text-center">
-  <%= image_tag image_path("dashboard-laptop.png"), class: "marketing-screenshot" %>
-  <h2>Stay on top of your equipment listings.</h2>
+<div class="benefit-description-container text-center">
+  <%= image_tag image_path("dashboard-laptop.png"), class: "marketing-screenshot-laptop" %>
 
-  <hr />
 
-  <h4 class="marketing-text-wide">
-    Keeping listings up to date is HARD. That's why we remind you when a listing is outdated. If you change a machine's info on Streamline every listing associated with that site gets added to our 'outdated listings' section.
-  </h4>
+  <%= image_tag image_path("dashboard-screenshot.png"), class: "marketing-screenshot" %>
+
+  <div class="container benefits-description">
+    <h2>Stay on top of your equipment listings.</h2>
+    <div class="col-md-4">
+      <span class="badge">1</span>
+      <h4 class="benefit-header">
+        Keep track of listings
+      </h4>
+      <p class="text-left">
+        You’ll never forget to update a listing because our dashboard keeps track of which sites you’re listing each machine on.
+      </p>
+    </div>
+    <div class="col-md-4">
+      <span class="badge">2</span>
+      <h4 class="benefit-header">
+        Update forms faster
+      </h4>
+      <p class="text-left">
+        You can access any listing site directly from our dashboard and autofill listing forms in one click.
+      </p>
+    </div>
+    <div class="col-md-4">
+      <span class="badge">3</span>
+      <h4 class="benefit-header">
+        Keep things simple
+      </h4>
+      <p class="text-left">
+        Our uncluttered dashboard only focuses on the most basic machine information which means less fields for you to maintain.
+      </p>
+    </div>
+  </div>
+  <%= link_to "Tell me more", "#say-hello", class: "btn btn-primary say-hello-mobile" %>
 </div>
 
 <div class="marketing-description-container marketing-sites-container text-center">
