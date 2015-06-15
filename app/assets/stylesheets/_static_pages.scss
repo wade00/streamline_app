@@ -75,6 +75,7 @@
 
 .benefit-description-container {
   background: $offwhite;
+  border-bottom: 10vh solid lighten($grey, 5%);
   color: lighten($grey, 10%);
   padding: 100px 0;
   h2 {
@@ -118,24 +119,12 @@
   }
 }
 
-.marketing-sites-container {
-  background: lighten($grey, 5%);
-}
-
-.site-logos-container {
-  background: $offwhite;
-  margin: 0 auto;
-  padding: 0 0 50px 0;
-  width: 60%;
+.listing-sites {
   img {
-    margin: 15px;
+    margin: 20px 0;
   }
-  h2 {
-    color: $grey;
-    font-weight: 300;
-    margin: 0 auto;
-    padding: 10px;
-    width: 80%;
+  .sites-coming-soon {
+    margin-top: 40px;
   }
 }
 

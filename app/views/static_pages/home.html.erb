@@ -44,34 +44,49 @@
         Keep things simple
       </h4>
       <p class="text-left">
-        Our uncluttered dashboard only focuses on the most basic machine information which means less fields for you to maintain.
+        Our uncluttered dashboard focuses on the most basic machine information which means less fields for you to maintain.
       </p>
     </div>
   </div>
-  <%= link_to "Tell me more", "#say-hello", class: "btn btn-primary say-hello-mobile" %>
 </div>
 
-<div class="marketing-description-container marketing-sites-container text-center">
-
-  <div class="panel-default site-logos-container">
-    <div class="sites-work-with">
+<div class="marketing-sites-container text-center">
+  <div class="container">
+    <div class="listing-sites">
       <h2>Sites we work with:</h2>
+      <div class="col-md-4">
+        <%= image_tag image_path("logos/equipment-alley.png") %>
+      </div>
+      <div class="col-md-4">
+        <%= image_tag image_path("logos/equipment-locator.png") %>
+      </div>
+      <div class="col-md-4">
+        <%= image_tag image_path("logos/machinery-trader.png") %>
+      </div>
 
-      <hr />
-
-      <%= image_tag image_path("logos/equipment-alley.png") %>
-      <%= image_tag image_path("logos/equipment-locator.png") %>
-      <%= image_tag image_path("logos/machinery-trader.png") %>
-      <%= image_tag image_path("logos/coming_soon/bobcat-used.png") %>
-      <%= image_tag image_path("logos/coming_soon/cat-used.png") %>
-      <%= image_tag image_path("logos/coming_soon/equipment-trader-online.png") %>
-      <%= image_tag image_path("logos/coming_soon/machine-finder.png") %>
-      <%= image_tag image_path("logos/coming_soon/machinio.png") %>
-      <%= image_tag image_path("logos/coming_soon/rock-and-dirt.png") %>
+      <div class="sites-coming-soon">
+        <h2>Coming soon:</h2>
+        <div class="col-md-4">
+          <%= image_tag image_path("logos/coming_soon/bobcat-used.png") %>
+        </div>
+        <div class="col-md-4">
+          <%= image_tag image_path("logos/coming_soon/cat-used.png") %>
+        </div>
+        <div class="col-md-4">
+          <%= image_tag image_path("logos/coming_soon/equipment-trader-online.png") %>
+        </div>
+        <div class="col-md-4">
+          <%= image_tag image_path("logos/coming_soon/machine-finder.png") %>
+        </div>
+        <div class="col-md-4">
+          <%= image_tag image_path("logos/coming_soon/machinio.png") %>
+        </div>
+        <div class="col-md-4">
+          <%= image_tag image_path("logos/coming_soon/rock-and-dirt.png") %>
+        </div>
+      </div>
     </div>
   </div>
-
-
 </div>
 
 <div class="marketing-description-container learn-more-container text-center">
