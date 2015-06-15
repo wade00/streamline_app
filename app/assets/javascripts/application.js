@@ -35,4 +35,3 @@ function setupBase() {
     }, 2000);
   }
 }
-

@@ -1,9 +1,15 @@
 <nav class="landing-page-navbar">
   <ul class="landing-nav-links">
-    <li class="pull-left">Streamline</li>
-    <li class="pull-right"><%= link_to "Log in", new_user_session_path %></li>
+    <li class="pull-left">
+      <span class="homepage-logo">Streamline</span>
+    </li>
+    <li class="pull-right">
+      <%= link_to "Log in", new_user_session_path, class: "btn btn-primary" %>
+    </li>
     <div hidden>
-      <li class="pull-right"><%= link_to "Sign up", new_user_registration_path %></li>
+      <li class="pull-right sign-up">
+        <%= link_to "Sign up", new_user_registration_path, class: "btn" %>
+      </li>
     </div>
   </ul>
 </nav>

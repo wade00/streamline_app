@@ -1,15 +1,18 @@
 .background-img {
   background: url(image_path("streamline-equipment-lot.jpg")) no-repeat center center;
   background-size: cover;
-  height: 400px;
+  height: 500px;
 }
 
 .landing-page-navbar {
   background: $grey;
   border: 0;
   border-radius: 0;
-  height: 25px;
+  display: table-cell;
+  height: 50px;
   margin-bottom: 0;
+  width: 100vw;
+  vertical-align: middle;
   .landing-nav-links {
     color: $offwhite;
     list-style: none;
@@ -17,38 +20,44 @@
     width: 100%;
     li {
       display: inline-block;
-      font-size: 14px;
       padding-right: 50px;
       a {
         color: $offwhite;
-        &:hover {
-          color: darken($offwhite, 20%);
-          text-decoration: none;
-        }
+        font-size: 16px;
       }
     }
   }
 }
 
+.homepage-logo {
+  font-family: 'Fauna One', serif;
+  font-size: 30px;
+}
+
 .landing-jumbo {
   background: rgba(0,0,0,0.4);
-  border-bottom: 10px solid $grey;
-  height: 400px;
+  height: 500px;
   padding: 70px;
   margin-bottom: 0;
   h1, h3 {
     color: $offwhite;
+    text-shadow: 2px 2px #111;
   }
 }
 
-.learn-more-container {
-  background: url(image_path("homepage-stripes.jpg"));
-  background-size: cover;
+.marketing-screenshot {
+  width: 70%;
+  margin-top: -200px;
+}
+
+.marketing-description-container {
+  background: $grey;
   color: $offwhite;
-  height: 400px;
-  padding: 30px;
+  padding: 100px 0;
   h2 {
+    color: $lightgrey;
     font-size: 42px;
+    font-weight: 300;
     margin-bottom: 20px;
   }
   h4 {
@@ -62,6 +71,42 @@
   a {
     margin: 30px;
   }
+}
+
+.marketing-sites-container {
+  background: lighten($grey, 5%);
+}
+
+.site-logos-container {
+  background: $offwhite;
+  margin: 0 auto;
+  padding: 0 0 50px 0;
+  width: 60%;
+  z-index: -1;
+  img {
+    margin: 15px;
+  }
+  h2 {
+    color: $grey;
+    font-weight: 300;
+    margin: 0 auto;
+    padding: 10px;
+    width: 80%;
+  }
+}
+
+.learn-more-container {
+  background: lighten($grey, 10%);
+  height: 400px;
+  h2 {
+    margin-top: 0;
+  }
+}
+
+.marketing-text-wide {
+  width: 60%;
+  margin: 0 auto;
+  font-weight: 300;
 }
 
 .bottom-footer {

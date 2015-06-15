@@ -8,24 +8,63 @@
       <h3>
         Streamline helps you manage your online equipment from one simple dashboard.
       </h3>
+      <%= link_to "Tell me more", "#say-hello", class: "btn btn-primary" %>
     </div>
   </div>
 </div>
 
-<div class="learn-more-container text-center">
+<div class="marketing-description-container text-center">
+  <%= image_tag image_path("dashboard-laptop.png"), class: "marketing-screenshot" %>
+  <h2>Stay on top of your equipment listings.</h2>
+
+  <hr />
+
+  <h4 class="marketing-text-wide">
+    Keeping listings up to date is HARD. That's why we remind you when a listing is outdated. If you change a machine's info on Streamline every listing associated with that site gets added to our 'outdated listings' section.
+  </h4>
+</div>
+
+<div class="marketing-description-container marketing-sites-container text-center">
+
+  <div class="panel-default site-logos-container">
+    <div class="sites-work-with">
+      <h2>Sites we work with:</h2>
+
+      <hr />
+
+      <%= image_tag image_path("logos/equipment-alley.png") %>
+      <%= image_tag image_path("logos/equipment-locator.png") %>
+      <%= image_tag image_path("logos/machinery-trader.png") %>
+      <%= image_tag image_path("logos/coming_soon/bobcat-used.png") %>
+      <%= image_tag image_path("logos/coming_soon/cat-used.png") %>
+      <%= image_tag image_path("logos/coming_soon/equipment-trader-online.png") %>
+      <%= image_tag image_path("logos/coming_soon/machine-finder.png") %>
+      <%= image_tag image_path("logos/coming_soon/machinio.png") %>
+      <%= image_tag image_path("logos/coming_soon/rock-and-dirt.png") %>
+    </div>
+  </div>
+
+
+</div>
+
+<div class="marketing-description-container learn-more-container text-center">
   <h2>Sounds cool! Can you tell me more?</h2>
 
   <hr />
 
-  <h4><span>Yes!</span> We'll be launching soon and we'd love to talk to you.</h4>
-  <h4>Send us an email with your contact info and we'll get back to you today.</h4>
+  <h4 class="marketing-text-wide">
+    <span>Yes!</span> We'll be launching soon and we'd love to talk to you.
+  </h4>
+  <h4 class="marketing-text-wide">
+    Send us an email with your contact info and we'll get back to you today.
+  </h4>
   <%= mail_to "wade@streamlineapp.com", "Say Hello!",
                                         subject: "Hi Wade! Tell me more about Streamline.",
-                                        class: "btn btn-lg btn-primary" %>
-  </div>
+                                        class: "btn btn-lg btn-primary",
+                                        id: "say-hello" %>
+</div>
 
-  <div class="bottom-footer">
-    <p>We think listing equipment online is a pain in the butt. We're trying to change that at Streamline.</p>
-  </div>
+<div class="bottom-footer">
+  <p>We think listing equipment online is a pain in the butt. We're trying to change that at Streamline.</p>
 </div>
 
