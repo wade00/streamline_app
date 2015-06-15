@@ -107,12 +107,12 @@
     <% if machine.persisted? %>
       <div class="col-md-12 text-center">
         <% if machine.listings.count > 0 %>
-          <%= render 'listings/edit_form', machine: machine %>
+          <%= render "listings/new_form", machine: machine %>
         <% else %>
           <p>
             <small>
               <%= link_to "Not listing on any sites? Add some here",
-                          new_listing_path(params: {machine_id: @machine.id}),
+                          new_listing_path(params: {machine_id: machine.id}),
                           class: "cancel-machine",
                           remote: true %>
             </small>

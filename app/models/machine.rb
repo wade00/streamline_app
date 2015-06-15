@@ -22,6 +22,10 @@ class Machine < ActiveRecord::Base
     self.listings.where(website: website).count > 0 ? true : false
   end
 
+  def self.current?
+    self.listings.where(current: false).count > 0 ? false : true
+  end
+
   private
 
   def format_machine_categories

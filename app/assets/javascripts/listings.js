@@ -10,3 +10,9 @@ function showMoreListing() {
     }
   });
 }
+
+function submitListingForm() {
+  $('.listing-checkbox').change(function() {
+    $(this).submit();
+  });
+}

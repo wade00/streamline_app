@@ -7,16 +7,20 @@
 
 var ready;
 ready = function() {
-  setupListingsIndex();
+  setupListings();
   setupBase();
 };
 
 $(document).ready(ready);
 $(document).on('page:load', ready);
 
-function setupListingsIndex() {
+function setupListings() {
   if ($('.listing-show-more').length > 0) {
     showMoreListing();
+  }
+
+  if ($('.listing-checkbox').length > 0) {
+    submitListingForm();
   }
 }
 

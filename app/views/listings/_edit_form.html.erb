@@ -6,8 +6,6 @@
     <% machine.listings.each do |listing| %>
       <% case listing.website %>
       <% when "equipment_alley" %>
-        <div id="ea-listing-container">
-          <div class="row">
             <%= image_tag image_path("equipment-alley.png") %>
             <p class="listing-submit-button">
               <%= link_to "Stop listing on Equipment Alley", listing,
@@ -16,22 +14,16 @@
                                                              id: "equipment_alley_listing",
                                                              remote: true %>
             </p>
-          </div>
-        </div>
       <% when "equipment_locator" %>
-        <div id="els-listing-container">
-          <div class="row">
             <%= image_tag image_path("equipment-locator.png") %>
-            <p class="listing-submit-button">
-              <%= check_box_tag 'list' %>
+            <!-- <p class="listing-submit-button"> -->
+              <%= check_box_tag "list" %>
               <%= link_to "Stop listing on Equipment Locator", listing,
                                                                method: "delete",
                                                                class: "btn btn-default listing-confirm-button",
                                                                id: "equipment_locator_listing",
                                                                remote: true %>
-            </p>
-          </div>
-        </div>
+            <!-- </p> -->
       <% when "machinery_trader" %>
         <div id="mt-listing-container">
           <div class="row">

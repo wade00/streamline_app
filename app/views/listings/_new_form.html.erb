@@ -1,63 +1,64 @@
-<div class="panel panel-default machine-form-panel">
-  <div class="panel-heading">
-    <h4>Which sites do you want to list stock <%= machine.stock_number %> on?</h4>
+<hr />
+
+<div class="machine-listings-container">
+  <h3>Sites you're listing stock <%= machine.stock_number %> on</h3>
+
+  <div class="listing-select-container">
+    <% if already_listed(machine, 0) %>
+      <%= image_tag image_path("equipment-alley.png") %>
+      <%= check_box_tag "equipment_alley_list", "listed", checked: true %>
+      <%#= link_to "Stop listing on Equipment Alley", "#",
+                                                       method: "delete",
+                                                       id: "remove_equipment_alley_listing",
+                                                       remote: true %>
+    <% else %>
+      <%= form_for Listing.new, remote: true do |f| %>
+        <%= image_tag image_path("equipment-alley.png") %>
+        <%= f.hidden_field :machine_id, value: machine.id %>
+        <%= f.hidden_field :website, value: :equipment_alley %>
+        <%= f.hidden_field :current, value: false %>
+      <% end %>
+      <%= f.check_box "equipment_alley_list", "listed", false, class: "listing-checkbox" %>
+    <% end %>
   </div>
-  <div class="panel-body text-center">
-    <% unless already_listed(machine, 0) %>
-      <div id="ea-listing-container">
-        <%= form_for Listing.new, remote: true do |f| %>
-          <div class="row">
-            <%= image_tag image_path("equipment-alley.png") %>
-            <%= f.hidden_field :machine_id, value: machine.id %>
-            <%= f.hidden_field :website, value: :equipment_alley %>
-            <%= f.hidden_field :current, value: false %>
-            <p class="listing-submit-button">
-              <%= f.submit "List on Equipment Alley", class: "btn btn-default listing-confirm-button",
-                                                      id: "equipment_alley_listing" %>
-            </p>
-          </div>
-        <% end %>
-      </div>
+
+  <div class="listing-select-container">
+    <% if already_listed(machine, 1) %>
+      <%= image_tag image_path("equipment-locator.png") %>
+      <%= check_box_tag "equipment_locator_list", "listed", checked: true %>
+      <%#= link_to "Stop listing on Equipment Locator", "#",
+                                                       method: "delete",
+                                                       id: "remove_equipment_locator_listing",
+                                                       remote: true %>
+    <% else %>
+      <%= form_for Listing.new, remote: true do |f| %>
+        <%= image_tag image_path("equipment-locator.png") %>
+        <%= f.hidden_field :machine_id, value: machine.id %>
+        <%= f.hidden_field :website, value: :equipment_locator %>
+        <%= f.hidden_field :current, value: false %>
+      <% end %>
+      <%= check_box_tag "equipment_locator_list", "listed", false, class: "listing-checkbox" %>
     <% end %>
+  </div>
 
-    <% unless already_listed(machine, 1) %>
-      <div id="els-listing-container">
-        <%= form_for Listing.new, remote: true do |f| %>
-          <div class="row">
-            <%= image_tag image_path("equipment-locator.png") %>
-            <%= f.hidden_field :machine_id, value: machine.id %>
-            <%= f.hidden_field :website, value: :equipment_locator %>
-            <%= f.hidden_field :current, value: false %>
-            <p class="listing-submit-button">
-              <%= f.submit "List on Equipment Locator", class: "btn btn-default listing-confirm-button",
-                                                        id: "equipment_locator_listing" %>
-            </p>
-          </div>
-        <% end %>
-      </div>
+  <div class="listing-select-container">
+    <% if already_listed(machine, 2) %>
+      <%= image_tag image_path("machinery-trader.png") %>
+      <%= check_box_tag "machinery_trader_list", "listed", checked: true %>
+      <%#= link_to "Stop listing on Machinery Trader", "#",
+                                                       method: "delete",
+                                                       id: "remove_machinery_trader_listing",
+                                                       remote: true %>
+    <% else %>
+      <%= form_for Listing.new, remote: true do |f| %>
+        <%= image_tag image_path("machinery-trader.png") %>
+        <%= f.hidden_field :machine_id, value: machine.id %>
+        <%= f.hidden_field :website, value: :machinery_trader %>
+        <%= f.hidden_field :current, value: false %>
+      <% end %>
+      <%= check_box_tag "machinery_trader_list", "listed", false, class: "listing-checkbox" %>
     <% end %>
-
-    <% unless already_listed(machine, 2) %>
-      <div id="mt-listing-container">
-        <%= form_for Listing.new, remote: true do |f| %>
-          <div class="row">
-            <%= image_tag image_path("machinery-trader.png") %>
-            <%= f.hidden_field :machine_id, value: machine.id %>
-            <%= f.hidden_field :website, value: :machinery_trader %>
-            <%= f.hidden_field :current, value: false %>
-            <p class="listing-submit-button">
-              <%= f.submit "List on Machinery Trader", class: "btn btn-default listing-confirm-button",
-                                                       id: "machinery_trader_listing" %>
-            </p>
-          </div>
-        <% end %>
-      </div>
-    <% end %>
-
-    <hr />
-
-    <p class="text-center">
-      <%= link_to "I'm Done", machines_path, class: "btn btn-primary", remote: true %>
-    </p>
   </div>
 </div>
+
+<hr />

@@ -20,7 +20,7 @@ gem "menu_builder", '>=0.4.1'
 group :development, :test do
   gem 'byebug'
   gem 'web-console', '~> 2.0'
-  gem 'spring'
+  # gem 'spring'
   gem 'quiet_assets'
   gem 'better_errors'
   gem 'binding_of_caller'
