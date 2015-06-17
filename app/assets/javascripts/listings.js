@@ -12,7 +12,9 @@ function showMoreListing() {
 }
 
 function submitListingForm() {
-  $('.listing-checkbox').change(function() {
-    $(this).submit();
+  $('.new-listing-checkbox').change(function() {
+    if ($(this).prop('checked')) {
+      $(this).parent('form').submit();
+    }
   });
 }

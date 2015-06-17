@@ -1,4 +1,3 @@
-var website = '<%= j @listing.website %>';
-$('#' + website + '_listing').html('Removed');
-$('#' + website + '_listing').addClass('unactive-link');
 $('.outdated-listing-count').html('<%= j(render 'layouts/outdated_listings_badge') %>');
+$('.listing-form-container').html('<%= j(render 'listings/new_form', machine: @listing.machine) %>');
+submitListingForm();

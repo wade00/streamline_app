@@ -1,64 +1,51 @@
-<hr />
+<div class="listing-form-container">
+  <h3>Manage listing sites for stock <%= machine.stock_number %></h3>
 
-<div class="machine-listings-container">
-  <h3>Sites you're listing stock <%= machine.stock_number %> on</h3>
-
-  <div class="listing-select-container">
-    <% if already_listed(machine, 0) %>
-      <%= image_tag image_path("equipment-alley.png") %>
-      <%= check_box_tag "equipment_alley_list", "listed", checked: true %>
-      <%#= link_to "Stop listing on Equipment Alley", "#",
-                                                       method: "delete",
-                                                       id: "remove_equipment_alley_listing",
-                                                       remote: true %>
-    <% else %>
-      <%= form_for Listing.new, remote: true do |f| %>
-        <%= image_tag image_path("equipment-alley.png") %>
-        <%= f.hidden_field :machine_id, value: machine.id %>
-        <%= f.hidden_field :website, value: :equipment_alley %>
-        <%= f.hidden_field :current, value: false %>
+  <div class="col-md-4">
+    <%= form_for Listing.new, remote: true do |f| %>
+      <%= image_tag image_path("logos/equipment-alley.png") %>
+      <%= f.hidden_field :website, value: :equipment_alley %>
+      <%= f.hidden_field :machine_id, value: machine.id %>
+      <%= f.hidden_field :current, value: false %>
+      <% if already_listed(machine, 0) %>
+        <%= check_box_tag "equipment_alley_listing", "listed", true,
+                           data: { remote: true, method: "delete",
+                                   url: listing_path(machine.listings.find_by(website: 0)) } %>
+      <% else %>
+        <%= check_box_tag "equipment_alley_listing", "listed", false, class: "new-listing-checkbox" %>
       <% end %>
-      <%= f.check_box "equipment_alley_list", "listed", false, class: "listing-checkbox" %>
     <% end %>
   </div>
 
-  <div class="listing-select-container">
-    <% if already_listed(machine, 1) %>
-      <%= image_tag image_path("equipment-locator.png") %>
-      <%= check_box_tag "equipment_locator_list", "listed", checked: true %>
-      <%#= link_to "Stop listing on Equipment Locator", "#",
-                                                       method: "delete",
-                                                       id: "remove_equipment_locator_listing",
-                                                       remote: true %>
-    <% else %>
-      <%= form_for Listing.new, remote: true do |f| %>
-        <%= image_tag image_path("equipment-locator.png") %>
-        <%= f.hidden_field :machine_id, value: machine.id %>
-        <%= f.hidden_field :website, value: :equipment_locator %>
-        <%= f.hidden_field :current, value: false %>
+  <div class="col-md-4">
+    <%= form_for Listing.new, remote: true do |f| %>
+      <%= image_tag image_path("logos/equipment-locator.png") %>
+      <%= f.hidden_field :website, value: :equipment_locator %>
+      <%= f.hidden_field :machine_id, value: machine.id %>
+      <%= f.hidden_field :current, value: false %>
+      <% if already_listed(machine, 1) %>
+        <%= check_box_tag "equipment_locator_listing", "listed", true,
+                           data: { remote: true, method: "delete",
+                                   url: listing_path(machine.listings.find_by(website: 1)) } %>
+      <% else %>
+        <%= check_box_tag "equipment_locator_listing", "listed", false, class: "new-listing-checkbox" %>
       <% end %>
-      <%= check_box_tag "equipment_locator_list", "listed", false, class: "listing-checkbox" %>
     <% end %>
   </div>
 
-  <div class="listing-select-container">
-    <% if already_listed(machine, 2) %>
-      <%= image_tag image_path("machinery-trader.png") %>
-      <%= check_box_tag "machinery_trader_list", "listed", checked: true %>
-      <%#= link_to "Stop listing on Machinery Trader", "#",
-                                                       method: "delete",
-                                                       id: "remove_machinery_trader_listing",
-                                                       remote: true %>
-    <% else %>
-      <%= form_for Listing.new, remote: true do |f| %>
-        <%= image_tag image_path("machinery-trader.png") %>
-        <%= f.hidden_field :machine_id, value: machine.id %>
-        <%= f.hidden_field :website, value: :machinery_trader %>
-        <%= f.hidden_field :current, value: false %>
+  <div class="col-md-4">
+    <%= form_for Listing.new, remote: true do |f| %>
+      <%= image_tag image_path("logos/machinery-trader.png") %>
+      <%= f.hidden_field :website, value: :machinery_trader %>
+      <%= f.hidden_field :machine_id, value: machine.id %>
+      <%= f.hidden_field :current, value: false %>
+      <% if already_listed(machine, 2) %>
+        <%= check_box_tag "machinery_trader_listing", "listed", true,
+                           data: { remote: true, method: "delete",
+                                   url: listing_path(machine.listings.find_by(website: 2)) } %>
+      <% else %>
+        <%= check_box_tag "machinery_trader_listing", "listed", false, class: "new-listing-checkbox" %>
       <% end %>
-      <%= check_box_tag "machinery_trader_list", "listed", false, class: "listing-checkbox" %>
     <% end %>
   </div>
 </div>
-
-<hr />

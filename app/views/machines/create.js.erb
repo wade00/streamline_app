@@ -1,5 +1,5 @@
 if (<%= @machine.save %>) {
-  var listingsForm = $('<%= j(render 'listings/form', machine: current_user.machines.last) %>');
+  var listingsForm = $('<%= j(render 'form', machine: @machine) %>');
   listingsForm.hide();
 
   $('.edit-form-container').html('');

@@ -9,6 +9,7 @@ var ready;
 ready = function() {
   setupListings();
   setupBase();
+  setupMachines();
 };
 
 $(document).ready(ready);
@@ -17,10 +18,6 @@ $(document).on('page:load', ready);
 function setupListings() {
   if ($('.listing-show-more').length > 0) {
     showMoreListing();
-  }
-
-  if ($('.listing-checkbox').length > 0) {
-    submitListingForm();
   }
 }
 
@@ -33,5 +30,12 @@ function setupBase() {
     setTimeout(function() {
       $('#flash').fadeOut();
     }, 2000);
+  }
+}
+
+function setupMachines() {
+  if ($('.machine-preview').length > 0) {
+    submitEditMachineForm();
+    submitNewMachineForm();
   }
 }

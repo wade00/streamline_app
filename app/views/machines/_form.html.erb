@@ -1,7 +1,7 @@
 <div class="panel panel-default machine-form-panel">
   <div class="panel-heading">
     <% if machine.persisted? %>
-      <h3 class="panel-title panel-header-text-left">Edit stock <%= machine.stock_number %></h3>
+      <h3 class="panel-title panel-header-text-left">Edit Stock <%= machine.stock_number %></h3>
     <% else %>
       <h3 class="panel-title panel-header-text-left">Add a Machine</h3>
     <% end %>
@@ -103,38 +103,35 @@
         </div>
       </div>
     </div>
+  <% end %>
 
-    <% if machine.persisted? %>
-      <div class="col-md-12 text-center">
-        <% if machine.listings.count > 0 %>
-          <%= render "listings/new_form", machine: machine %>
-        <% else %>
-          <p>
-            <small>
-              <%= link_to "Not listing on any sites? Add some here",
-                          new_listing_path(params: {machine_id: machine.id}),
-                          class: "cancel-machine",
-                          remote: true %>
-            </small>
-          </p>
-        <% end %>
-      </div>
-    <% end %>
+  <% if machine.persisted? %>
+    <div class="col-md-12 text-center">
 
-    <hr />
+      <hr />
 
-    <div class="row machine-form-buttons">
-      <div class="col-md-12 text-center">
-        <p>
-          <% if machine.persisted? %>
-            <%= f.submit "Save changes", class: "btn btn-primary" %>
-          <% else %>
-            <%= f.submit "Create machine", class: "btn btn-primary create-machine" %>
-          <% end %>
-          or
-          <small><%= link_to "Cancel", machines_path, class: "cancel-machine", remote: true %></small>
-        </p>
-      </div>
+      <%= render "listings/new_form", machine: machine %>
+
+      <hr />
+
     </div>
   <% end %>
+
+  <div class="row machine-form-buttons">
+    <div class="col-md-12 text-center">
+
+      <hr />
+
+      <p>
+        <% if machine.persisted? %>
+          <%= link_to "Save", "#", class: "btn btn-primary save-machine",
+                                           id: "save_machine_#{machine.id}" %>
+        <% else %>
+          <%= link_to "Create machine", "#", class: "btn btn-primary create-machine" %>
+        <% end %>
+        or
+        <small><%= link_to "Close", machines_path, class: "cancel-machine", remote: true %></small>
+      </p>
+    </div>
+  </div>
 </div>

@@ -1,39 +1,44 @@
-<td class="stock-number-cell">
+<%= content_tag(:td, nil, class: (add_outdated_banner(machine) ?
+                                  "machine-preview-outdated stock-number-cell" : "stock-number-cell")) do %>
   <strong class="stock-number">
     <%= link_to edit_machine_path(machine), class: "edit-machine-link", remote: true do %>
       <span class="sorted-by"><%= machine.stock_number %></span>
     <% end %>
   </strong>
-</td>
+<% end %>
 
-<td class="make-cell">
+<%= content_tag(:td, nil, class: (add_outdated_banner(machine) ?
+                                  "machine-preview-outdated make-cell" : "make-cell")) do %>
   <strong class="stock-number">
     <%= link_to edit_machine_path(machine), class: "edit-machine-link", remote: true do %>
       <%= machine.make %>
     <% end %>
   </strong>
-</td>
+<% end %>
 
-<td class="machine-model-cell">
+<%= content_tag(:td, nil, class: (add_outdated_banner(machine) ?
+                                  "machine-preview-outdated machine-model-cell" : "machine-model-cell")) do %>
   <strong class="stock-number">
     <%= link_to edit_machine_path(machine), class: "edit-machine-link", remote: true do %>
       <%= machine.machine_model %>
     <% end %>
   </strong>
-</td>
+<% end %>
 
-<td class="machine-type-cell">
+<%= content_tag(:td, nil, class: (add_outdated_banner(machine) ?
+                                  "machine-preview-outdated machine-type-cell" : "machine-type-cell")) do %>
   <strong class="stock-number">
     <%= link_to edit_machine_path(machine), class: "edit-machine-link", remote: true do %>
       <%= machine.machine_type %>
     <% end %>
   </strong>
-</td>
+<% end %>
 
-<td class="machine-serial-cell">
+<%= content_tag(:td, nil, class: (add_outdated_banner(machine) ?
+                                  "machine-preview-outdated machine-serial-cell" : "machine-serial-cell")) do %>
   <strong class="stock-number">
     <%= link_to edit_machine_path(machine), class: "edit-machine-link", remote: true do %>
       <%= machine.serial_number %>
     <% end %>
   </strong>
-</td>
+<% end %>

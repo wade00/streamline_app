@@ -1,7 +1,3 @@
-<% if add_outdated_banner(machine) %>
-  <tr class="machine-preview machine-preview-outdated" id="<%= dom_id machine %>">
-<% else %>
-  <tr class="machine-preview" id="<%= dom_id machine %>">
-<% end %>
+<tr class="machine-preview" id="<%= dom_id machine %>">
   <%= render 'machine_content', machine: machine %>
 </tr>

@@ -1,7 +1,12 @@
-.listing-select-container {
-  display: inline-block;
-  padding: 20px 0;
-  width: 33%;
+.listing-form-header {
+  h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+}
+
+.remove-listing-link {
+  display: none;
 }
 
 .listing-submit-button {
