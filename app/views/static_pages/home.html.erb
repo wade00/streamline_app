@@ -1,3 +1,4 @@
+<%= render 'layouts/landing_page_header'%>
 <div class="background-img text-center">
   <div class="jumbotron landing-jumbo">
     <div class="jumbo-container col-md-8 col-md-offset-2">
@@ -14,7 +15,6 @@
 
 <div class="benefit-description-container text-center">
   <%= image_tag image_path("dashboard-laptop.png"), class: "marketing-screenshot-laptop" %>
-
 
   <%= image_tag image_path("dashboard-screenshot.png"), class: "marketing-screenshot" %>
 
@@ -52,8 +52,8 @@
 
 <div class="marketing-sites-container text-center">
   <div class="container">
-    <div class="listing-sites">
-      <h2>Sites we work with:</h2>
+    <div class="current-sites">
+      <h2>SITES WE WORK WITH</h2>
       <div class="col-md-4">
         <%= image_tag image_path("logos/equipment-alley.png") %>
       </div>
@@ -63,36 +63,33 @@
       <div class="col-md-4">
         <%= image_tag image_path("logos/machinery-trader.png") %>
       </div>
-
-      <div class="sites-coming-soon">
-        <h2>Coming soon:</h2>
-        <div class="col-md-4">
-          <%= image_tag image_path("logos/coming_soon/bobcat-used.png") %>
-        </div>
-        <div class="col-md-4">
-          <%= image_tag image_path("logos/coming_soon/cat-used.png") %>
-        </div>
-        <div class="col-md-4">
-          <%= image_tag image_path("logos/coming_soon/equipment-trader-online.png") %>
-        </div>
-        <div class="col-md-4">
-          <%= image_tag image_path("logos/coming_soon/machine-finder.png") %>
-        </div>
-        <div class="col-md-4">
-          <%= image_tag image_path("logos/coming_soon/machinio.png") %>
-        </div>
-        <div class="col-md-4">
-          <%= image_tag image_path("logos/coming_soon/rock-and-dirt.png") %>
-        </div>
+    </div>
+    <div class="coming-soon-sites">
+      <h2>COMING SOON</h2>
+      <div class="col-md-4">
+        <%= image_tag image_path("logos/coming_soon/bobcat-used.png") %>
+      </div>
+      <div class="col-md-4">
+        <%= image_tag image_path("logos/coming_soon/cat-used.png") %>
+      </div>
+      <div class="col-md-4">
+        <%= image_tag image_path("logos/coming_soon/equipment-trader-online.png") %>
+      </div>
+      <div class="col-md-4">
+        <%= image_tag image_path("logos/coming_soon/machine-finder.png") %>
+      </div>
+      <div class="col-md-4">
+        <%= image_tag image_path("logos/coming_soon/machinio.png") %>
+      </div>
+      <div class="col-md-4">
+        <%= image_tag image_path("logos/coming_soon/rock-and-dirt.png") %>
       </div>
     </div>
   </div>
 </div>
 
-<div class="marketing-description-container learn-more-container text-center">
+<div class="learn-more-container text-center">
   <h2>Sounds cool! Can you tell me more?</h2>
-
-  <hr />
 
   <h4 class="marketing-text-wide">
     <span>Yes!</span> We'll be launching soon and we'd love to talk to you.

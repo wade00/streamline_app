@@ -84,55 +84,53 @@
     font-weight: 300;
     margin-bottom: 20px;
   }
-  hr {
-    width: 600px;
+  .benefits-description {
+    margin-top: 40px;
+    span {
+      font-size: 18px;
+      margin-top: 20px;
+    }
+    p {
+      line-height: 2;
+    }
   }
 }
 
-.benefits-description {
-  margin-top: 40px;
-  span {
-    font-size: 18px;
-    margin-top: 20px;
-  }
-  p {
-    line-height: 2;
-  }
-}
-
-.marketing-description-container {
+.marketing-sites-container {
   background: $offwhite;
-  color: lighten($grey, 10%);
   padding: 100px 0;
-  margin-top: 40px;
   h2 {
     color: $grey;
-    font-size: 42px;
+    font-size: 32px;
     font-weight: 300;
     margin-bottom: 20px;
   }
-  hr {
-    width: 600px;
-  }
-  a {
-    margin: 30px;
-  }
-}
-
-.listing-sites {
   img {
     margin: 20px 0;
   }
-  .sites-coming-soon {
-    margin-top: 40px;
+  .coming-soon-sites {
+    clear: both;
+    padding-top: 20px;
   }
 }
 
+
 .learn-more-container {
   background: lighten($grey, 10%);
-  height: 400px;
+  padding: 100px 0;
   h2 {
-    margin-top: 0;
+    color: $offwhite;
+    font-size: 42px;
+    font-weight: 500;
+    margin-bottom: 40px;
+  }
+  h4 {
+    color: $offwhite;
+    font-size: 22px;
+    font-weight: 300;
+  }
+  a {
+    margin-top: 40px;
   }
 }
 
@@ -140,13 +138,15 @@
   background: $grey;
   color: darken($lightgrey, 20%);
   font-size: 14px;
-  height: 30px;
+  height: 10vh;
   padding-left: 50px;
   text-align: center;
   p {
     margin: 0;
   }
 }
+
+/* Mobile Screens */
 
 @media only screen
 and (min-device-width : 320px)

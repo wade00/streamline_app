@@ -4,11 +4,13 @@
       <span class="homepage-logo">Streamline</span>
     </li>
     <li class="pull-right">
+    <% unless current_page?(controller: 'devise/sessions', action: 'new') %>
       <%= link_to "Log in", new_user_session_path, class: "btn login" %>
+    <% end %>
     </li>
     <div hidden>
       <li class="pull-right sign-up">
-        <%= link_to "Sign up", new_user_registration_path, class: "btn" %>
+      <%= link_to "Sign up", new_user_registration_path, class: "btn" %>
       </li>
     </div>
   </ul>

@@ -10,8 +10,9 @@
 </head>
 <body>
   <div class="body-container">
-    <%= render 'layouts/landing_page_header' unless current_user.present? %>
-    <%= render 'layouts/sidebar' if current_user.present? %>
+    <% if current_user.present? %>
+      <%= render 'layouts/sidebar' unless current_page?(controller: 'static_pages', action: 'home') %>
+    <% end %>
     <% unless flash.empty? %>
       <div class="flash-container">
         <%= render 'shared/flash_messages' %>
