@@ -1,44 +1,34 @@
 <%= content_tag(:td, nil, class: (add_outdated_banner(machine) ?
                                   "machine-preview-outdated stock-number-cell" : "stock-number-cell")) do %>
-  <strong class="stock-number">
-    <%= link_to edit_machine_path(machine), class: "edit-machine-link", remote: true do %>
-      <span class="sorted-by"><%= machine.stock_number %></span>
-    <% end %>
-  </strong>
+  <%= link_to edit_machine_path(machine), class: "edit-machine-link", remote: true do %>
+    <span class="sorted-by"><%= machine.stock_number %></span>
+  <% end %>
 <% end %>
 
 <%= content_tag(:td, nil, class: (add_outdated_banner(machine) ?
                                   "machine-preview-outdated make-cell" : "make-cell")) do %>
-  <strong class="stock-number">
-    <%= link_to edit_machine_path(machine), class: "edit-machine-link", remote: true do %>
-      <%= machine.make %>
-    <% end %>
-  </strong>
+  <%= link_to edit_machine_path(machine), class: "edit-machine-link", remote: true do %>
+    <%= machine.make %>
+  <% end %>
 <% end %>
 
 <%= content_tag(:td, nil, class: (add_outdated_banner(machine) ?
                                   "machine-preview-outdated machine-model-cell" : "machine-model-cell")) do %>
-  <strong class="stock-number">
-    <%= link_to edit_machine_path(machine), class: "edit-machine-link", remote: true do %>
-      <%= machine.machine_model %>
-    <% end %>
-  </strong>
+  <%= link_to edit_machine_path(machine), class: "edit-machine-link", remote: true do %>
+    <%= machine.machine_model %>
+  <% end %>
 <% end %>
 
 <%= content_tag(:td, nil, class: (add_outdated_banner(machine) ?
                                   "machine-preview-outdated machine-type-cell" : "machine-type-cell")) do %>
-  <strong class="stock-number">
-    <%= link_to edit_machine_path(machine), class: "edit-machine-link", remote: true do %>
-      <%= machine.machine_type %>
-    <% end %>
-  </strong>
+  <%= link_to edit_machine_path(machine), class: "edit-machine-link", remote: true do %>
+    <%= machine.machine_type %>
+  <% end %>
 <% end %>
 
 <%= content_tag(:td, nil, class: (add_outdated_banner(machine) ?
                                   "machine-preview-outdated machine-serial-cell" : "machine-serial-cell")) do %>
-  <strong class="stock-number">
-    <%= link_to edit_machine_path(machine), class: "edit-machine-link", remote: true do %>
-      <%= machine.serial_number %>
-    <% end %>
-  </strong>
+  <%= link_to edit_machine_path(machine), class: "edit-machine-link", remote: true do %>
+    <%= machine.serial_number %>
+  <% end %>
 <% end %>
